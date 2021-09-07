@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css" />
 </head>
 
 <body>
@@ -14,18 +14,19 @@
   <script>
     window.$docsify = {
       name: 'Firmament Autopilot',
+      logo: 'figures/logo.png',
       repo: 'https://github.com/Firmament-Autopilot',
-      homepage: 'content_ch/introduce.md',
-      coverpage: true,
-      coverpage: 'coverpage.md',
-      loadNavbar: true,
-      loadNavbar: 'navbar.md',
       loadSidebar: true,
       loadSidebar: 'sidebar.md',
-      homepage: 'content_ch/introduce.md',
       subMaxLevel: 2,
+      loadNavbar: true,
+      coverpage: false
     }
   </script>
+  <nav>
+    <a href="#/">EN</a>
+    <a href="#/content_ch/">中文</a>
+  </nav>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>

@@ -1,0 +1,217 @@
+
+## System Configuration
+
+The FMT sytem is configured via a [toml](https://toml.io/en/) file. On boot process, the system will try to load the configuration file from `/sys/sysconfig.toml`. If the file does not exist, the default system configuration is used， which only contains very limited functions (e.g. rc and actuator are disabled). A default *sysconfig.toml* is provided in each target folder. You need upload this file to `/sys` folder on board via either QGC ftp or sd card reader.
+
+Here is the default *sysconfig.toml* for pixhawk FMUv5. To be noticed the target value should match with BSP's target name (defined in *bsp.h*). Otherwise the system won't boot because of the assertion failue.
+
+```
+# FMT System Configuration File
+
+# The target should match with BSP's target name
+target = "Pixhawk4 FMUv5"
+
+# Console Configuration
+[console]
+    # device list, the first device will be used by default
+    [[console.devices]]
+    type = "serial"             # type must be serial or mavlink
+    name = "serial0"            # device name
+    baudrate = 57600            # serial baudrate
+    auto-switch = true          # automatically switch to device if data received
+
+    [[console.devices]]
+    type = "mavlink"            # type must be serial or mavlink
+    name = "mav_console"        # device name
+    auto-switch = true          # automatically switch to device if data received
+
+# Mavproxy Device Configuration
+[mavproxy]
+    [[mavproxy.devices]]        # channel 0
+    type = "serial"
+    name = "serial1"            # device name
+    baudrate = 57600            # serial baudrate
+
+    [[mavproxy.devices]]        # channel 1
+    type = "usb"
+    name = "usbd0"              # device name
+    # automatically switch to usb if connected, switch back to default device is disconnected
+    auto-switch = true
+
+# Pilot CMD Configuration
+[pilot-cmd]
+    stick-channel = [4,3,1,2]   # channel mapping for [ls_lr,ls_ud,rs_lr,rs_ud]
+
+    [pilot-cmd.device]
+    type = "rc"                 # type must be rc
+    name = "rc"                 # device name
+    protocol = 1                # 1:sbus, 2:ppm
+    channel-num = 6             # channel in used, max supported channel: sbus:16, ppm:8
+    sample-time = 0.05          # sample time in second (-1 for inherit)
+    range = [1000,2000]         # min and max value
+
+    [[pilot-cmd.mode]]
+    mode = 2                    # position mode
+    channel = 5                 # mode channel
+    range = [1000,1200]         # if channel value in this range, the mode is selected
+
+    [[pilot-cmd.mode]]
+    mode = 3                    # altitude hold mode
+    channel = 5
+    range = [1400,1600]
+
+    [[pilot-cmd.mode]]
+    mode = 4                    # stabilize mode
+    channel = 5
+    range = [1800,2000]
+
+    [[pilot-cmd.command]]
+    type = 1                    # 1:event | 2:status
+    cmd = 1000                  # force-disarm: forcely disarm motors for safety concern
+    channel = 6                 # command channel
+    range = [1800,2000]         # if channel value in this range, the event is triggered
+
+# Actuator Configuration
+[actuator]
+    [[actuator.devices]]
+    protocol = "pwm"            # pwm or dshot
+    name = "main_out"           # device name
+    freq = 400                  # pwm frequency in Hz
+
+    [[actuator.devices]]
+    protocol = "pwm"            # pwm or dshot
+    name = "aux_out"            # device name, "main_out" or "aux_out"
+    freq = 400                  # pwm frequency in Hz
+
+    [[actuator.mappings]]
+    from = "control_out"
+    to = "main_out"
+    chan-map = [[1,2,3,4],[1,2,3,4]]
+```
+
+## Console Configuration
+
+`[console]` table is used to configure the console devices ant its parameters. e.g, this is a valid console configuration with three device used for console. There are three devices, '`serial0`, `serial1` and `mav_console`, included by console device list. The first two are general serial devices, mav_console is a virtual device, which read/write data to QGC mavlink console. When system bootup, the console will use the first device by default (serial0 in this case). The console will switch to the device that has data received with `auto-switch` is true.
+
+```
+[console]
+    # device list, the first device will be used by default
+    [[console.devices]]
+    type = "serial"             # type must be serial or mavlink
+    name = "serial0"            # device name
+    baudrate = 57600            # serial baudrate
+
+    [[console.devices]]
+    type = "serial"             # type must be serial or mavlink
+    name = "serial1"            # device name
+    baudrate = 57600            # serial baudrate
+    auto-switch = true          # automatically switch to device if data received
+
+    [[console.devices]]
+    type = "mavlink"            # type must be serial or mavlink
+    name = "mav_console"        # device name
+    auto-switch = true          # automatically switch to device if data received
+```
+
+## Mavproxy Configuration
+
+`[mavproxy]` table is used to configure the mavproxy module, which implements mavlink protocol to communicate with ground station. Similar to console configuration, the mavproxy device list can specify which devices are used for mavproxy. The first device is used by defdault.
+
+```
+[mavproxy]
+    [[mavproxy.devices]]        # channel 0
+    type = "serial"
+    name = "serial1"            # device name
+    baudrate = 57600            # serial baudrate
+
+    [[mavproxy.devices]]        # channel 1
+    type = "usb"
+    name = "usbd0"              # device name
+    # automatically switch to usb if connected, switch back to default device is disconnected
+    auto-switch = true
+```
+
+## Pilot CMD (RC) Configuration
+
+`[pilot-cmd]` table is used to configure the pilot_cmd (rc) module. You can specify the rc device, protocol (sbus or ppm), channel number, sample time and channel ranges in `[pilot-cmd.device]` table. The stick channel is configured by `stick-channel`, which is a array with 4 elements to represent the channel value for left-stick left/right, left-stick up/down, right-stick left/right and right-stick up/down. A typical pilot-cmd device configuration with stick-channel is shown below:
+
+```
+    stick-channel = [4,3,1,2]   # channel mapping for [ls_lr,ls_ud,rs_lr,rs_ud]
+
+    [pilot-cmd.device]
+    type = "rc"                 # type must be rc
+    name = "rc"                 # device name
+    protocol = 1                # 1:sbus, 2:ppm
+    channel-num = 6             # channel in used, max supported channel: sbus:16, ppm:8
+    sample-time = 0.05          # sample time in second (-1 for inherit)
+    range = [1000,2000]         # min and max value
+```
+
+Pilot control mode can be defined with `[[pilot-cmd.mode]]`. e.g. to define the stabilize mode:
+
+```
+    [[pilot-cmd.mode]]
+    mode = 4                    # stabilize mode
+    channel = 5
+    range = [1800,2000]
+```
+
+If rc channel 5 value is in the range of [1800, 2000], the stabilize mode will be selected. It is also possible to map multiple rc channels to a single mode, which can provide more mode choices with multiple rc channels.
+
+```
+    [[pilot-cmd.mode]]
+    mode = 4                    # stabilize mode
+    channel = [5,6]
+    range = [[1800,2000],[1400,1600]]
+```
+
+There are two types of pilot command:
+
+- *cmd1*: event command， valid only for 1 period, like a pulse signal.
+- *cmd2*: status command, valid all the time until new value arrive, like a step signal.
+
+The pilot command can be defined with `[[pilot-cmd.command]]` tables, e.g.
+
+```
+    [[pilot-cmd.command]]
+    type = 1                    # 1:event | 2:status
+    cmd = 1000                  # force-disarm: forcely disarm motors for safety concern
+    channel = 6                 # command channel
+    range = [1800,2000]         # if channel value in this range, the event is triggered
+
+    [[pilot-cmd.command]]
+    type = 2                            # 1:event | 2:status
+    cmd = 1001                          # for testing
+    channel = [4, 5]                    # command channel
+    range = [[1300,1500],[1200,1400]]   # if channel value in this range, the event is triggered
+```
+
+## Actuator Configuration
+
+`[actuator]` table is used to configure the actuator devices. `[[actuator.devices]]` tables defines which actuator devices are available. For pixhawk there are two actuator output (main_out/aux_out port), so a typical configuration is shown below. You can modify pwm frequency to what you need, the current support range is between 50Hz to 400Hz.
+
+```
+    [[actuator.devices]]
+    protocol = "pwm"            # pwm or dshot
+    name = "main_out"           # device name
+    freq = 400                  # pwm frequency in Hz
+
+    [[actuator.devices]]
+    protocol = "pwm"            # pwm or dshot
+    name = "aux_out"            # device name, "main_out" or "aux_out"
+    freq = 50                   # pwm frequency in Hz
+```
+
+`[[actuator.mappings]]` tables can be used to map the rc channels or controller output to any actuator device's channel. Here is an example. The first mapping maps the controller output channel of 1,2,3,4 to main_out actuator channel of 1,2,3,4. The second mapping maps rc channel 2 to aux_out actuator channel of 2,3,4.
+
+```
+    [[actuator.mappings]]
+    from = "control_out"
+    to = "main_out"
+    chan-map = [[1,2,3,4],[1,2,3,4]]
+
+    [[actuator.mappings]]
+    from = "rc_channels"
+    to = "aux_out"
+    chan-map = [[2,2,2],[2,3,4]]
+```
