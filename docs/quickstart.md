@@ -32,44 +32,44 @@ FMT uses the following cross-platform toolchain (Windows/Linux/Mac):
 - **USB Driver**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (Only required for Windows).
 
 ## Build Firmware
-Before building the firmware, please make sure the before mentioned toolchain mentioned are installed properly. Then you need add a new environment variable `RTT_EXEC_PATH` with the value set to compiler's path. e.g.
+Before building the firmware, please make sure the before mentioned toolchain are installed properly. Then you need add a new environment variable `RTT_EXEC_PATH` with the value set to compiler's path.
+
+e.g. in Linux:
 
 ```shell
 export RTT_EXEC_PATH=$arm-none-eabi-7-2018-q2-update/bin
 ```
 
-Pixhawk contains of two processors, FMU (Flight Management Unit) and IO (Input/Output). So we need build firmware for each processor and download sequentially.
+Pixhawk consists of two processors, FMU (Flight Management Unit) and IO (Input/Output). So we need build firmware for each processor and download the firmware sequentially.
 
 ### Build FMU Firmware
-To build the fmu firmware, first change directory to a specific target and type command `scons` to start the build process. 
+First build the fmu firmware. Change your directory to a specific target and type command `scons` to start build process. The generated fmu firmware is located in `FMT-Firmware/target/pixhawk/fmu-v5/build`. 
 
-e.g. To build pixhawk FMUv5 firmware, type the following command. `-jN` allows N jobs at once which makes your build process quiker.
+e.g. To build pixhawk FMUv5 firmware, use the following command.
 
 ```shell
 cd FMT-Firmware/target/pixhawk/fmu-v5/
 scons -j4
 ```
 
-The generated fmu firmware is located in `FMT-Firmware/target/pixhawk/fmu-v5/build`. 
+> `-jN` allows N jobs at once which makes your build process quiker.
 
 > If build fail, please clean the project with command`scons -c` then try to build again.
 
 ### Build IO Firmware
-To build the io firmware, type the following command.
+Then build the io firmware. Simply type the following command. The generated io firmware is located in `FMT-Firmware/target/pixhawk/fmt-io/project/build`.
 
 ```shell
 cd FMT-Firmware/target/pixhawk/fmt-io/project
 scons -j4
 ```
 
-The generated io firmware is located in `FMT-Firmware/target/pixhawk/fmt-io/project/build`.
-
 > If build fail, please clean the project with command`scons -c` then try to build again.
 
 ## Download Firmware
 The download process requires pixhawk bootloader, so please make sure your pixhawk has bootloader flashed already. If not, please visit [PX4-Bootloader](https://github.com/PX4/PX4-Bootloader) to learn how to build and flash the bootloader for your hardware. FMT reuses the pixhawk bootloader, therefore you can easily flash back to other firmware such as PX4 or APM.
 
-To download the `fmu firmware`, currently there are two methods:
+Currently there are two methods to download the fmu firmware,:
 
 - *Upload Script*: Change directory to a specific target and type `python uploader.py`. Then connect your hardware to PC via a usb cable, the download shuold start automatically.
 
@@ -96,11 +96,13 @@ Rebooting. Elapsed Time 6.803
 
 ```
 
-- *QGC Ground Station*: Go to *Firmware Setup* page，then connect your hardware to PC with a usb cable。In pop-up diaglog，select `Advanced Settings`->`Custom firmware file` with `fmt_fmu.bin` firmware。
+> If download is not started, unplug your usb cable then try it again.
+
+- *QGoundControl*: Go to **Firmware Setup** page，then connect your hardware to PC with a usb cable。In pop-up diaglog，select **Advanced Settings**->**Custom firmware file** with `fmt_fmu.bin` firmware。
 
 ![qgc_download](figures/qgc_download.png)
 
-If download success, power on the board and the system banner should be printed on `serial0` (`serial0` is the default serial used by console).
+If download success, power on the board and the system banner should be printed on `serial0` (`serial0` is the default serial used by console). If you don't have a serial cable, you can also connect to console via QGroundControl **Mavlink Console**.
 
 ```
    _____                               __ 
@@ -125,7 +127,7 @@ Task Initialize:
 msh />
 ```
 
-The next step is to download the `io firmware` which is achieved thought the fmu. First copy the io firmware `FMT-Firmware/target/pixhawk/fmt-io/project/build/fmt_io.bin` to the on board sd card. You can do that via QGC ftp (version 3.5.6, the FTP function is removed on higher version) or a sd card reader. Then type the following command in fmt console to flash the firmware to io processor.
+The next step is to upload the `io firmware` which is downloaded through the fmu. First copy the io firmware `target/pixhawk/fmt-io/project/build/fmt_io.bin` to the on board sd card. You can do that via QGroundControl ftp (version 3.5.6, the FTP function is removed on higher version) or a sd card reader. Then type the following command in fmt console to upload the firmware to io processor.
 
 ```
 msh /usr>fmtio upload /usr/fmt_io.bin
@@ -139,9 +141,11 @@ msh /usr>fmtio upload /usr/fmt_io.bin
 
 > On the first time to download the io firmware, you should click the io reset button after typing `fmtio upload` command to let io enter bootloader.
 
-After the download is complete, type `fmtio hello` command. You should receive the following message sent from the io processor.
+After the download is complete, type `fmtio hello` command. You should see the following message which sent from the io processor.
 
 ```
 msh />fmtio hello
 msh />[IO]:Hello, this is FMT IO!
 ```
+
+Congratulation! Now you have FMT up and running. :)
