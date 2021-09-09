@@ -1,3 +1,0 @@
-- [Introduce](content_en/introduce.md)
-- [Start](content_en/start.md)
-- [Development](content_en/development.md)

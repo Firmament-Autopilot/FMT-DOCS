@@ -28,4 +28,4 @@ CALIB:
 ......
 ```
 
-2. Save the calibration result by typing `param save` in console, otherwise the calibration result will lost when system power-off.
+2. Save the calibration result by typing `param save` in console, otherwise unsaved calibration result will lost when system power-off.

@@ -21,10 +21,10 @@ Model-based design provides an efficient approach for establishing a complex and
 - A stable and high performance embedded system designed with C/C++.
 - A powerful simulation framework with various algorithm library designed with MATLAB/Simulink.
 - Auto code generation from Simulink model adapted to different hardware platforms (ARM, AMD, Intel, etc).
-- Excellent real-time performance based on RT-Thread RTOS with active community and large number of third-party components.
+- Excellent real-time performance based on [RT-Thread](https://www.rt-thread.io/) RTOS with active community and large number of third-party components.
 - Support with most widely used open-source hardware Pixhawk (Both FMUv2 and FMUv5 are supported).
 - Cross-platform toolchain support with Windows/Linux/Mac.
-- Support with mavlink v1.0/v2.0.
+- Support with Mavlink v1.0/v2.0.
 
 ## Community
 
@@ -32,6 +32,7 @@ Model-based design provides an efficient approach for establishing a complex and
 - Jiachi Zou
 
 **Contributor**:
+- AmovLab
 - weety
 - wenzhi
 - yangjion
