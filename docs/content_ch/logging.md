@@ -1,11 +1,11 @@
 
-## Logging
+## 日志
 
-The purpose of the logging system is to provide the user with facilities to log information and to retrieve it later on. FMT logging system supports three kinds of log to empower the debug capability.
+日志系统的目的是为用户提供记录信息并在以后检索它的工具。 为使得调试更加简便，FMT日志系统支持三种日志形式。
 
-### Boot Log
+### 开机日志
 
-Boot log module records all console output during boot stage, which is useful to check system startup information. The boot log file will be created on each boot and saved into the work log session folder.
+Boot log模块记录启动阶段的所有控制台输出，有助于查看系统启动信息。启动日志文件将在每次系统启动时创建并保存到工作日志会话文件夹中。
 
 ```
 msh />cat /log/session_5/boot_log.txt
@@ -30,9 +30,9 @@ Task Initialize:
   vehicle...............................OK
 ```
 
-### Text Log
+### 文本日志
 
-Ulog is a very simple and easy to use component provided by RT-Thread. It provides the interface to write the text information to various backend, such as console, file system, etc.
+Ulog 是 RT-Thread 提供的一个非常简单易用的组件。 它提供了将文本信息写入各种后端的接口，例如控制台、文件系统等。
 
 ```
 [1708] W/Status: FMS Unknown Mode
@@ -45,13 +45,14 @@ Ulog is a very simple and easy to use component provided by RT-Thread. It provid
 [21673] I/Status: FMS Status Disarm
 ```
 
-> FS backend is disabled by default. You can add `#define ENABLE_ULOG_FS_BACKEND` in *fmtconfig.h* to enable it.
+> 文件系统后端默认关闭。你可以通过在*fmtconfig.h*中添加`#define ENABLE_ULOG_FS_BACKEND`来开启。
 
-### Data Log
+### 数据日志
 
-Mlog module provides the ability to record large amount of data in real-time, which can be laterly parsed into *.mat* files. 
+Mlog 模块提供了实时记录大量数据的能力，这些数据可以稍后被解析为 *.mat* 文件。
 
 To start logging, you can type command `mlog start` in console and the command `mlog stop` to stop logging. `mlog status` command will print out the recorded data information, such as what kind of data and how many messages are recorded.
+你可以在控制台中输入命令 `mlog start`开始日志记录， 使用命令 `mlog stop` 停止记录。 `mlog status`命令会打印出记录的数据信息，比如记录了什么样的数据，记录了多少条消息。
 
 ```
 msh />mlog start
@@ -70,7 +71,7 @@ log file: /log/session_10/mlog1.bin
 "Control_Out"        id:10  record:44       lost:0
 ```
 
-The MLog start/stop process can also be controlled by the parameter `MLOG_MODE`. You can use `param` command to change the value. Don't forget to use `param save` after value change. Otherwise all unsaved parameter will lost and use its default value on next boot.
+MLog的启动/停止过程也可以通过参数`MLOG_MODE`来控制。 你可以使用 `param` 命令来修改该参数的值。 不要忘记在参数值更改后使用 `param save`。 否则所有未保存的参数值将丢失并在下次启动时使用其默认值。
 
 ```c
 PARAM_GROUP(SYSTEM)
@@ -84,4 +85,4 @@ PARAM_DECLARE_GROUP(SYSTEM) = {
 };
 ```
 
-The [script](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) can be used to parse the log file and generate *.mat* files. Load *.mat files to Matlab for data visualization and do the simulation.
+[script](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) 脚本可以被用来解析日志并生成*.mat*文件。将 *.mat 文件加载到Matlab以进行数据可视化和仿真。

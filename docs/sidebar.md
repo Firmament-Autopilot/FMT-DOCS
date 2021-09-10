@@ -15,9 +15,10 @@
 
   - [Debug](debug.md)
   - [Logging](logging.md)
-  - Simulation
 
-    - [Model-In-The-Loop](MIL.md)
-    - [Open-Loop Simulation](openloop.md)
-    - [Simulation-In-Hardware](SIH.md)
-    - [Hardware-In-The-Loop](HIL.md)
+- Simulation
+
+  - [Model-In-The-Loop](MIL.md)
+  - [Open-Loop Simulation](openloop.md)
+  - [Simulation-In-Hardware](SIH.md)
+  - [Hardware-In-The-Loop](HIL.md)

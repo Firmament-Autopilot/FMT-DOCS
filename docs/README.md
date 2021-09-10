@@ -32,8 +32,8 @@ Model-based design provides an efficient approach for establishing a complex and
 - Jiachi Zou
 
 **Contributor**:
-- AmovLab
 - weety
-- wenzhi
+- AmovLab
 - yangjion
+- wenzhi
 - MOONCAKE_G

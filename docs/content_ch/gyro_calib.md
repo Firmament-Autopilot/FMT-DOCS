@@ -1,9 +1,9 @@
 
-## 校准步骤
+## 进行校准
 
 陀螺仪校准是通过QGroundControl进行。遵从QGroundControl的指导完成校准流程。
 
-1. 将无人机放置水平并保持不动，然后点击**Gyroscope**传感器按钮。
+1. 将机体放置水平并保持不动，然后点击**Gyroscope**传感器按钮。
 
 <img src="figures/gyro_calib1.png" width="50%">
 

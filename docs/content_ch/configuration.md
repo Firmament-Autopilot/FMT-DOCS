@@ -1,7 +1,7 @@
 
 ## 系统配置
 
-FMT系统可以通过[toml](https://toml.io/en/)来进行配置。这将带来很大的灵活性，您也可以根据需要来对系统进行配置。在启动阶段，系统会尝试从`/sys/sysconfig.toml`加载配置文件。如果这个文件不存在，那么将使用默认的系统配置。默认系统配置仅开启了少量功能（遥控和作动器未开启）。对应目标平台目录中提供了默认的*sysconfig.toml* 文件。您需要将该文件上传到`/sys`目录中以开启所有的系统功能。
+FMT系统可以通过[toml](https://toml.io/en/)来进行配置。这将带来很大的灵活性，你也可以根据需要来对系统进行配置。在启动阶段，系统会尝试从`/sys/sysconfig.toml`加载配置文件。如果这个文件不存在，那么将使用默认的系统配置。默认系统配置仅开启了少量功能（遥控和作动器未开启）。对应目标平台目录中提供了默认的*sysconfig.toml* 文件。你需要将该文件上传到`/sys`目录中以开启所有的系统功能。
 
 比如，[sysconfig.toml](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/pixhawk/fmu-v5/sysconfig.toml)是pixhawk FMUv5的默认系统配置文件。注意`target`必须跟BSP的目标名称（定义在bsp.h*文件中）相匹配，否则系统将因为断言失败而不会启动，这是为了防止系统使用错误的配置文件。
 
@@ -49,7 +49,7 @@ FMT系统可以通过[toml](https://toml.io/en/)来进行配置。这将带来�
 
 ## Pilot CMD(遥控)配置
 
-`[pilot-cmd]`表用来配置pilot_cmd（遥控）模块。您可以通过`[pilot-cmd.device]`表来配置rc设备，协议，通道数，采用周期，通道数值范围等。遥感通道通过`stick-channel`设置，它包含了四个元素，分别对应左摇杆左/右，左摇杆上/下，右摇杆左/右，右摇杆上/下。一个典型的遥控以及摇杆配置如下所示：
+`[pilot-cmd]`表用来配置pilot_cmd（遥控）模块。你可以通过`[pilot-cmd.device]`表来配置rc设备，协议，通道数，采用周期，通道数值范围等。遥感通道通过`stick-channel`设置，它包含了四个元素，分别对应左摇杆左/右，左摇杆上/下，右摇杆左/右，右摇杆上/下。一个典型的遥控以及摇杆配置如下所示：
 
 ```
     stick-channel = [4,3,1,2]   # channel mapping for [ls_lr,ls_ud,rs_lr,rs_ud]
@@ -81,7 +81,7 @@ FMT系统可以通过[toml](https://toml.io/en/)来进行配置。这将带来�
     range = [[1800,2000],[1400,1600]]
 ```
 
-您还可以配置遥控指令。当前支持两种类型的指令：
+你还可以配置遥控指令。当前支持两种类型的指令：
 
 - *cmd1*: 事件指令， 仅短期内有效，类似脉冲信号。
 - *cmd2*: 状态指令, 长时间有效，直到有新的状态指令到达，类似步进信号。
@@ -104,7 +104,7 @@ FMT系统可以通过[toml](https://toml.io/en/)来进行配置。这将带来�
 
 ## Actuator配置
 
-`[actuator]`表用来配置作动器设备。`[[actuator.devices]]`表定义系统包含哪些作动器设备。Pixhawk有两个作动器输出端口（main_out和aux_out），所以一个典型的配置如下所示。您可以修改pwm的频率，其中支持的pwm频率为50Hz到400Hz。
+`[actuator]`表用来配置作动器设备。`[[actuator.devices]]`表定义系统包含哪些作动器设备。Pixhawk有两个作动器输出端口（main_out和aux_out），所以一个典型的配置如下所示。你可以修改pwm的频率，其中支持的pwm频率为50Hz到400Hz。
 
 ```
     [[actuator.devices]]

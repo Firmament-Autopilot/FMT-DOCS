@@ -1,30 +1,30 @@
 
-## Debug with J-Link
+## 使用J-Link调试
 
-1. Install [J-Link Server](https://www.segger.com/downloads/jlink/) on your host system.
-2. Create a new enviroment variable `JLINK_SERVER` and set the value to the path of J-Link server. e.g.
+1. 在你的系统上安装[J-Link Server](https://www.segger.com/downloads/jlink/)。
+2. 创建一个新的环境变量`JLINK_SERVER`并将它的值设为J-Link Server的路径， 例如：
 
 ```
 export JLINK_SERVER=~/opt/SEGGER/JLink_Linux_V686f_x86_64/JLinkGDBServer
 ```
 
-3. Build fmt firmware with `BUILD = 'debug'` enabled in *rtconfig.py*.
+3. 在*rtconfig.py*中使能`BUILD = 'debug'`并重新编译fmt固件。
 
-4. Connect Jlink SWD pinout(pin 1,7,9,4) to FMU Debug port. You can also connect J-Link TX/RX for console.
+4. 连接Jlink SWD的引脚（引脚1,7,9,4）到FMU Debug端口。你也可以连接J-Link TX/RX作为控制台使用。
 
 <img src="figures/jlink_pinout.png" width="25%">
 
-5. Click **Debug Run** button in VS Code and select the right configuration for your target.
+5. 在VS Code中点击**Debug Run**按钮并选择对应的目标板配置。
 
 <img src="figures/jlink1.png" width="25%">
 
-6. Click **Start Debugging** button.
+6. 点击**Start Debugging**按钮。
 
 <img src="figures/jlink2.png" width="50%">
 
-## Pixhawk FMU Pinout
+## Pixhawk FMU引脚
 
-For more information about pixhawk pintout, please check the following link.
+更多关于pixhawk引脚的信息，请查看如下链接：
 
 [Pixhawk4 pinout](http://www.holybro.com/manual/Pixhawk4-Pinouts.pdf)
 

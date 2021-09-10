@@ -1,19 +1,19 @@
 
-## Simulation-In-Hardware (SIH)
+## 硬件仿真 (SIH)
 
-Simulation-In-Hardware (SIH) is an alternative to Hardware-In-The-Loop simulation (HITL). In this setup, everything is running on embedded hardware - the controller, the inertial navigation system, the flight management system and the simulator (plant). The Desktop computer is only used to display the virtual vehicle.
+硬件仿真 (SIH) 是硬件在环仿真 (HIL) 的一种替代方案。在该配置中，所有的算法都运行在嵌入式硬件平台 - 控制器，导航系统，飞行管理系统以及对象模型。桌面电脑仅用来作为可视化设备。
 
-The SIH provides two benefits over the HITL:
+SIH 相比 HIL 有以下两个优点:
 
-- It ensures synchronous timing by avoiding the bidirectional connection to the computer. As a result the user does not need such a powerful desktop computer.
+- 它通过避免与计算机的双向连接来确保时间同步。因此，用户不需要使用功能强大的台式计算机。
 
-- The whole simulation remains inside the FMT environment. Developers can more easily incorporate their own mathematical model into the simulator. They can, for instance, modify the aerodynamic model, or noise level of the sensors, or even add a sensor to be simulated.
+- 整个仿真运行在 FMT 环境中。开发人员可以更轻松地将他们自己的数学模型整合到仿真器中。例如，他们可以修改空气动力学模型或传感器的噪声水平，甚至可以添加新的要模拟的传感器。
 
-## Setting Up SIH
+## 设置 SIH
 
-SIH simulation is enabled by adding `#define FMT_USING_SIH` in *fmtconfig.h*. Then rebuild the system.
+SIH 仿真可以通过在 *fmtconfig.h* 中添加 `#define FMT_USING_SIH` 来开启。然后重新编译系统。
 
-When system is powered on, the system banner would list **Plant Model** information.
+当系统上电后，系统输出中将列出 **Plant Model** 模型信息。
 
 ```
    _____                               __ 

@@ -37,7 +37,7 @@ FMT使用如下跨平台的工具链 (Windows/Linux/Mac):
 
 ## 编译固件
 
-在编译固件之前请确保之前提到的工具链已经正确安装。然后您需要添加一个环境变量`RTT_EXEC_PATH`，将其值设为编译器的路径。
+在编译固件之前请确保之前提到的工具链已经正确安装。然后你需要添加一个环境变量`RTT_EXEC_PATH`，将其值设为编译器的路径。
 
 比如对于Linux：
 
@@ -75,11 +75,11 @@ scons -j4
 
 ## 下载固件
 
-固件下载需要用到pixhawk的bootloader，请先确保您的pixhawk已经烧写了bootloader。如果没有的话，请访问[PX4-Bootloader](https://github.com/PX4/PX4-Bootloader)来学习如何编译和烧写bootloader到您的硬件。FMT复用pixhawk的bootloader，所以您可以随时将Pixhawk刷回PX4或者APM的固件。
+固件下载需要用到pixhawk的bootloader，请先确保你的pixhawk已经烧写了bootloader。如果没有的话，请访问[PX4-Bootloader](https://github.com/PX4/PX4-Bootloader)来学习如何编译和烧写bootloader到你的硬件。FMT复用pixhawk的bootloader，所以你可以随时将Pixhawk刷回PX4或者APM的固件。
 
 当前fmu固件支持两种下载方式：
 
-- *下载脚本*: 切换当前目录到目标平台然后输入`python uploader.py`. 然后使用usb线将您的硬件连接到PC，下载将自动开始。
+- *下载脚本*: 切换当前目录到目标平台然后输入`python uploader.py`. 然后使用usb线将你的硬件连接到PC，下载将自动开始。
 
 ```
 ~/FMT-Firmware/target/pixhawk/fmu-v5$ python3 uploader.py 
@@ -110,7 +110,7 @@ Rebooting. Elapsed Time 6.803
 
 ![qgc_download](../figures/qgc_download.png)
 
-如果下载成功，给硬件上电，系统信息将被打印在`serial0`（serial0是默认的控制台设备）。如果您没有串口线，也可以使用QGroundControl的**Mavlink Console**来连接到控制台。
+如果下载成功，给硬件上电，系统信息将被打印在`serial0`（serial0是默认的控制台设备）。如果你没有串口线，也可以使用QGroundControl的**Mavlink Console**来连接到控制台。
 
 ```
    _____                               __ 
@@ -135,7 +135,7 @@ Task Initialize:
 msh />
 ```
 
-下一步是通过fmu来下载io固件。首先将io固件`target/pixhawk/fmt-io/project/build/fmt_io.bin`复制到板载的sd卡上。您可以通过QGroundControl的ftp功能（版本3.5.6，ftp功能在高版本上被移除）或者sd读卡器进行拷贝。然后在fmt的控制台输入如下指令进行io固件下载。
+下一步是通过fmu来下载io固件。首先将io固件`target/pixhawk/fmt-io/project/build/fmt_io.bin`复制到板载的sd卡上。你可以通过QGroundControl的ftp功能（版本3.5.6，ftp功能在高版本上被移除）或者sd读卡器进行拷贝。然后在fmt的控制台输入如下指令进行io固件下载。
 
 ```
 msh /usr>fmtio upload /usr/fmt_io.bin
@@ -156,4 +156,4 @@ msh />fmtio hello
 msh />[IO]:Hello, this is FMT IO!
 ```
 
-恭喜！现在您已经成功将FMT运行起来了。:)
+恭喜！现在你已经成功将FMT运行起来了。:)

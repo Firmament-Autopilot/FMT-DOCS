@@ -1,21 +1,21 @@
 
-## Perform Calibration
+## 进行校准
 
-The level horizon calibration process is done via the QGroundControl interface. Follow the guide of QGroundControl to complete the calibration process.
+水平校准通过QGroundControl进行。遵循QGroundControl的指导完成校准流程。
 
-1. Click the Level Horizon button.
+1. 点击**Level Horizon**按钮。
 
 <img src="figures/level_calib1.png" width="50%">
 
-2. Place the vehicle in its level flight orientation on a level surface.
-3. Press OK to start the calibration process.
-4. Wait until the calibration process is finished.
+2. 将机体按水平飞行方向放置在平面上。
+3. 点击**OK**按钮开始校准。
+4. 等待校准完成。
 
 <img src="figures/level_calib2.png" width="50%">
 
-## Check & Save Result
+## 查看&保存结果
 
-1. The calibration result can be seen by typing `param list CALIB` in console.
+1. 校准的结果可以通过在控制台输入`param list CALIB`指令查看。
 
 ```
 msh />param list CALIB
@@ -26,4 +26,4 @@ CALIB:
       LEVEL_ZOFF: 0.000000
 ```
 
-2. Save the calibration result by typing `param save` in console, otherwise the calibration result will lost when system power-off.
+2. 控制台输入`param save`保存校准结果，否则系统断电将丢失未保存的校准结果。

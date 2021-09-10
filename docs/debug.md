@@ -8,9 +8,9 @@
 export JLINK_SERVER=~/opt/SEGGER/JLink_Linux_V686f_x86_64/JLinkGDBServer
 ```
 
-3. Build fmt firmware with `BUILD = 'debug'` enabled in *rtconfig.py*.
+3. Rebuild fmt firmware with `BUILD = 'debug'` enabled in *rtconfig.py*.
 
-4. Connect Jlink SWD pinout(pin 1,7,9,4) to FMU Debug port. You can also connect J-Link TX/RX for console.
+4. Connect Jlink SWD pinout(pin 1,7,9,4) to FMU Debug port. You can also connect J-Link TX/RX for console usage.
 
 <img src="figures/jlink_pinout.png" width="25%">
 

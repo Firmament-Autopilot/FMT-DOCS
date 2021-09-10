@@ -15,9 +15,10 @@
 
   - [调试](content_ch/debug.md)
   - [日志](content_ch/logging.md)
-  - 仿真
 
-    - [模型在环仿真(MIL)](content_ch/MIL.md)
-    - [开环仿真](content_ch/openloop.md)
-    - [硬件仿真(SIH)](content_ch/SIH.md)
-    - [硬件在环仿真(HIL)](content_ch/HIL.md)
+- 仿真
+
+  - [模型在环仿真(MIL)](content_ch/MIL.md)
+  - [开环仿真](content_ch/openloop.md)
+  - [硬件仿真(SIH)](content_ch/SIH.md)
+  - [硬件在环仿真(HIL)](content_ch/HIL.md)

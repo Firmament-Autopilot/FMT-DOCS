@@ -25,7 +25,7 @@ Model-In-The-Loop simulation is a method in which you model is developed and exe
 
 ## Visualization
 
-The plant model generates vehicle states such as attitude, position, etc. These information can be used by any visualization software, such as Flightgear, Gazebo, Webots, etc.
+The plant model generates vehicle states such as attitude, position, etc. These information can be sent to any visualization software, such as Flightgear, Gazebo, Webots, etc.
 
 <img src="figures/matlab_3D.png" width="40%">
 <img src="figures/flightgear.png" width="40%">
