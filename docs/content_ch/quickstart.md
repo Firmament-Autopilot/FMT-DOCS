@@ -30,8 +30,8 @@
 
 FMT使用如下跨平台的工具链 (Windows/Linux/Mac):
 
-- **编译器**: [*arm-none-eabi- toolchain*](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
-- **构建工具**: [*Scons*](https://sourceforge.net/projects/scons/files/scons/2.3.6/) (version：`v2.3.6`, 需要python 2.7.). Python的版本可以在scons脚本的第一行进行指定，比如 `#! /usr/bin/python2`.
+- **编译器**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
+- **构建工具**: [Scons](https://sourceforge.net/projects/scons/files/scons/2.3.6/) (version：`v2.3.6`, 需要python 2.7.). Python的版本可以在scons脚本的第一行进行指定，比如 `#! /usr/bin/python2`.
 - **集成开发环境**: [Visual Studio Code](https://code.visualstudio.com/).
 - **USB驱动**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (仅针对Windows).
 
