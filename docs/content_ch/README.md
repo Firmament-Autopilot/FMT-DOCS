@@ -29,11 +29,11 @@ Firmament (FMT) 是一款基于模型设计 (Model-Based-Design, MBD) 的开源�
 ## 社区
 
 **开发者**:
-- Jiachi Zou
+- [Jiachi Zou](https://github.com/JcZou)
 
 **贡献者**:
-- weety
-- AmovLab
-- yangjion
-- wenzhi
-- MOONCAKE_G
+- [weety](https://github.com/weety)
+- [AmovLab](https://github.com/amov-lab)
+- [yangjion](https://github.com/yangjion)
+- [wenzhi](https://github.com/wenzhicode)
+- [MOONCAKE_G](https://github.com/mooncakeG)

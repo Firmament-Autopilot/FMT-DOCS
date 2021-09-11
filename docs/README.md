@@ -29,11 +29,11 @@ Model-based design provides an efficient approach for establishing a complex and
 ## Community
 
 **Maintainer**:
-- Jiachi Zou
+- [Jiachi Zou](https://github.com/JcZou)
 
 **Contributor**:
-- weety
-- AmovLab
-- yangjion
-- wenzhi
-- MOONCAKE_G
+- [weety](https://github.com/weety)
+- [AmovLab](https://github.com/amov-lab)
+- [yangjion](https://github.com/yangjion)
+- [wenzhi](https://github.com/wenzhicode)
+- [MOONCAKE_G](https://github.com/mooncakeG)
