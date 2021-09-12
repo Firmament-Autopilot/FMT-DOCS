@@ -5,7 +5,7 @@ The purpose of the logging system is to provide the user with facilities to log 
 
 ### Boot Log
 
-Boot log module records all console output during boot stage, which is useful to check system startup information. The boot log file will be created on each boot and saved into the work log session folder. The work log session id is stored in `/log/session_id`.
+Boot log module records all console output during boot stage, which is useful to check system startup information. The boot log file will be created on each boot and saved into the work log session folder. The work log session id is stored in `/log/session_id`. The session id is incremented on each boot.
 
 ```
 msh />cat /log/session_5/boot_log.txt
@@ -32,7 +32,7 @@ Task Initialize:
 
 ### Text Log
 
-Ulog is a very simple and easy to use component provided by RT-Thread. It provides the interface to write the text information to various backend, such as console, file system, etc.
+Ulog is a very simple and easy to use component provided by RT-Thread. It provides the interface to write the text information to various backend, such as console, file system, etc. The text log can be used to record some system run-time information.
 
 ```
 [1708] W/Status: FMS Unknown Mode

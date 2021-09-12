@@ -72,7 +72,9 @@ Pilot control mode can be defined with `[[pilot-cmd.mode]]`. e.g. to define the 
     range = [1800,2000]
 ```
 
-If rc channel 5 value is in the range of [1800, 2000], the stabilize mode will be selected. It is also possible to map multiple rc channels to a single mode, which provides more mode choices with limited rc channels.
+If rc channel 5 value is in the range of [1800, 2000], the stabilize mode will be selected. 
+
+It is also possible to map multiple rc channels to a single mode, which provides more mode choices with limited rc channels.
 
 ```
     [[pilot-cmd.mode]]
