@@ -22,3 +22,18 @@
   - [开环仿真](content_ch/openloop.md)
   - [硬件仿真(SIH)](content_ch/SIH.md)
   - [硬件在环仿真(HIL)](content_ch/HIL.md)
+
+- 基于模型设计
+
+  - [快速开始](content_ch/mbd_quickstart.md)
+
+  - 模型接口
+
+    - [FMS 接口](content_ch/fms_interface.md)
+    - [INS 接口](content_ch/ins_interface.md)
+    - [Controller 接口](content_ch/controller_interface.md)
+    - [Plant 接口](content_ch/plant_interface.md)
+
+  - [添加新模型](content_ch/new_model.md)
+  - [生成代码](content_ch/codegen.md)
+  - [部署代码](content_ch/code_deploy.md)
