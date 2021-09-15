@@ -56,4 +56,4 @@ After creating a new model, the next step is adding the path to the FMT Model pr
 - Delete the current used controller model path. e.g. `model/Controller/Base-Controller`.
 - Add your new model path. e.g. `model/Controller/Fixwing_Controller`.
 
-That's it, now you should be able to run the MIL simulation with newly added model.
+That's it, now you should be able to run the simulation with newly added model.
