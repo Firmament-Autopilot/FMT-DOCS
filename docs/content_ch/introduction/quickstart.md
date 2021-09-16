@@ -31,7 +31,7 @@
 FMT使用如下跨平台的工具链 (Windows/Linux/Mac):
 
 - **编译器**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
-- **构建工具**: [Scons](https://sourceforge.net/projects/scons/files/scons/2.3.6/) (version：`v2.3.6`, 需要python 2.7.). Python的版本可以在scons脚本的第一行进行指定，比如 `#! /usr/bin/python2`.
+- **构建工具**: [Scons](https://scons.org/) (*pip install SCons*).
 - **集成开发环境**: [Visual Studio Code](https://code.visualstudio.com/).
 - **USB驱动**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (仅针对Windows).
 
@@ -108,7 +108,7 @@ Rebooting. Elapsed Time 6.803
 
 - *QGoundControl*: 进入**Firmware Setup**页面，然后使用usb线将硬件连接到PC，在弹出的串口选择**Advanced Settings**->**Custom firmware file** 以及`fmt_fmu.bin` 固件。
 
-![qgc_download](../figures/qgc_download.png)
+![qgc_download](../../figures/qgc_download.png)
 
 如果下载成功，给硬件上电，系统信息将被打印在`serial0`（serial0是默认的控制台设备）。如果你没有串口线，也可以使用QGroundControl的**Mavlink Console**来连接到控制台。
 

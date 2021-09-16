@@ -31,7 +31,7 @@ The current supported hardware platforms are [Pixhawk(FMUv2)](https://docs.px4.i
 FMT uses the following cross-platform toolchain (Windows/Linux/Mac):
 
 - **Compiler**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
-- **Construction Tool**: [Scons](https://sourceforge.net/projects/scons/files/scons/2.3.6/) (version：`v2.3.6`, python 2.7 is required.). The python version can be explicitly specified by modifying the first line of scons script. e.g. `#! /usr/bin/python2`.
+- **Construction Tool**: [Scons](https://scons.org/) (*pip install SCons*).
 - **IDE**: [Visual Studio Code](https://code.visualstudio.com/).
 - **USB Driver**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (Only required for Windows).
 
@@ -108,7 +108,7 @@ Rebooting. Elapsed Time 6.803
 
 - *QGoundControl*: Go to **Firmware Setup** page，then connect your hardware to PC with a usb cable. In pop-up diaglog，select **Advanced Settings**->**Custom firmware file** with `fmt_fmu.bin` firmware.
 
-![qgc_download](figures/qgc_download.png)
+![qgc_download](../figures/qgc_download.png)
 
 If download success, power on the board and the system banner should be printed on `serial0` (serial0 is the default serial used by console). If you don't have a serial cable, you can also connect to console via QGroundControl **Mavlink Console**.
 
