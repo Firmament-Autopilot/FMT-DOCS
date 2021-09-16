@@ -4,43 +4,43 @@
 
 - Getting started
 
-  - [Quick Start](quickstart.md)
-  - [Configuration](configuration.md)
+  - [Quick Start](introduction/quickstart.md)
+  - [Configuration](introduction/configuration.md)
   - Sensor Calibration
   
-    - [Gyroscopic Calibration](gyro_calib.md)
-    - [Accelerometer Calibration](accel_calib.md)
-    - [Compass Calibration](mag_calib.md)
-    - [Level Horizon Calibration](level_calib.md)
+    - [Gyroscopic Calibration](introduction/calibration/gyro_calib.md)
+    - [Accelerometer Calibration](introduction/calibration/accel_calib.md)
+    - [Compass Calibration](introduction/calibration/mag_calib.md)
+    - [Level Horizon Calibration](introduction/calibration/level_calib.md)
 
-  - [Debug](debug.md)
-  - [Logging](logging.md)
+  - [Debug](introduction/debug.md)
+  - [Logging](introduction/logging.md)
 
 - Modules
 
-  - uMCN
-  - Param
-  - Mlog
-  - Mavproxy
+  - [uMCN](module/uMCN.md)
+  - [Param](module/param.md)
+  - [Mlog](module/mlog.md)
+  - [Mavproxy](module/mavproxy.md)
 
 - Simulation
 
-  - [Model-In-The-Loop](MIL.md)
-  - [Open-Loop Simulation](openloop.md)
-  - [Simulation-In-Hardware](SIH.md)
-  - [Hardware-In-The-Loop](HIL.md)
+  - [Model-In-The-Loop](simulation/MIL.md)
+  - [Open-Loop Simulation](simulation/openloop.md)
+  - [Simulation-In-Hardware](simulation/SIH.md)
+  - [Hardware-In-The-Loop](simulation/HIL.md)
 
 - Model-Based Design
 
-  - [Quick Start](mbd_quickstart.md)
+  - [Quick Start](mbd/mbd_quickstart.md)
 
   - Model Interface
 
-    - [FMS Interface](fms_interface.md)
-    - [INS Interface](ins_interface.md)
-    - [Controller Interface](controller_interface.md)
-    - [Plant Interface](plant_interface.md)
+    - [FMS Interface](mbd/interface/fms_interface.md)
+    - [INS Interface](mbd/interface/ins_interface.md)
+    - [Controller Interface](mbd/interface/controller_interface.md)
+    - [Plant Interface](mbd/interface/plant_interface.md)
 
-  - [Add New Model](new_model.md)
-  - [Code Generation](codegen.md)
-  - [Code Deployment](code_deploy.md)
+  - [Add New Model](mbd/new_model.md)
+  - [Code Generation](mbd/codegen.md)
+  - [Code Deployment](mbd/code_deploy.md)

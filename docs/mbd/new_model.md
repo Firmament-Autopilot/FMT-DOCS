@@ -20,7 +20,7 @@ To add a new controller model into FMT Model, please follow the steps below.
 
 The content of an example controller_model_init.m is shown below. The model execution frequency is 500Hz, which can be changed by modifying the `CONTROL_CONST.dt`. You can also add parameters for your model, which will be exported to FMT Firmware as well. So these parameters are accessible in the embedded layer.
 
-```
+```matlab
 % 
 % This is a template controller model
 % Firmament Autopilot

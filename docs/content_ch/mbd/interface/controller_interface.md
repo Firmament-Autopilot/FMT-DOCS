@@ -1,13 +1,13 @@
-## Controller Model Interface
+## Controller 模型接口
 
-### Input Interface
+### 输入接口
 
 | Port Name | Port ID | Bus Type    |
 | --------- | ------- | ----------- |
-| FMS_Out   | 1       | [FMS_Out_Bus](fms_interface.md#FMS_Out_Bus) |
-| INS_Out   | 2       | [INS_Out_Bus](ins_interface.md#INS_Out_Bus) |
+| FMS_Out   | 1       | [FMS_Out_Bus](content_ch/mbd/interface/fms_interface.md#FMS_Out_Bus) |
+| INS_Out   | 2       | [INS_Out_Bus](content_ch/mbd/interface/ins_interface.md#INS_Out_Bus) |
 
-### Output Interface
+### 输出接口
 
 | Port Name   | Port ID | Bus Type        |
 | ----------- | ------- | --------------- |

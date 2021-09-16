@@ -5,8 +5,8 @@
 | Port Name   | Port ID | Bus Type        |
 | ----------- | ------- | --------------- |
 | Pilot_Cmd   | 1       | [Pilot_Cmd_Bus](#Pilot_Cmd_Bus)   |
-| INS_Out     | 2       | [INS_Out_Bus](ins_interface.md#INS_Out_Bus)     |
-| Control_Out | 3       | [Control_Out_Bus](controller_interface.md#Control_Out_Bus) |
+| INS_Out     | 2       | [INS_Out_Bus](mbd/interface/ins_interface.md#INS_Out_Bus)     |
+| Control_Out | 3       | [Control_Out_Bus](mbd/interface/controller_interface.md#Control_Out_Bus) |
 
 ### Output Interface
 

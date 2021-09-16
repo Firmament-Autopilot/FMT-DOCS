@@ -20,7 +20,7 @@
 
 controller_model_init.m 的内容示例如下所示。模型的执行周期为 500Hz，可以通过修改 `CONTROL_CONST.dt` 来设定。你也可以为你的模型添加参数，这些参数可以在嵌入式层仿真。
 
-```
+```matlab
 % 
 % This is a template controller model
 % Firmament Autopilot

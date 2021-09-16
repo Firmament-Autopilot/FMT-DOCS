@@ -1,21 +1,21 @@
-## Plant 模型接口
+## Plant Model Interface
 
-### 输入接口
+### Input Interface
 
 | Port Name   | Port ID | Bus Type        |
 | ----------- | ------- | :-------------- |
-| Control_Out | 1       | [Control_Out_Bus](content_ch/controller_interface.md#Control_Out_Bus) |
+| Control_Out | 1       | [Control_Out_Bus](mbd/interface/controller_interface.md#Control_Out_Bus) |
 
-### 输出接口
+### Output Interface
 
 | Port Name       | Port ID | Bus Type            |
 | --------------- | ------- | ------------------- |
 | Plant_States    | 1       | [Plant_States_Bus](#Plant_States_Bus)    |
 | Extended_States | 2       | [Extended_States_Bus](Extended_States_Bus) |
-| IMU             | 3       | [IMU_Bus](content_ch/ins_interface.md#IMU_Bus) |
-| MAG             | 4       | [MAG_Bus](content_ch/ins_interface.md#MAG_Bus)             |
-| Barometer       | 5       | [Barometer_Bus](content_ch/ins_interface.md#Barometer_Bus)       |
-| GPS             | 6       | [GPS_uBlox_Bus](content_ch/ins_interface.md#GPS_uBlox_Bus)       |
+| IMU             | 3       | [IMU_Bus](mbd/interface/ins_interface.md#IMU_Bus) |
+| MAG             | 4       | [MAG_Bus](mbd/interface/ins_interface.md#MAG_Bus)             |
+| Barometer       | 5       | [Barometer_Bus](mbd/interface/ins_interface.md#Barometer_Bus)       |
+| GPS             | 6       | [GPS_uBlox_Bus](mbd/interface/ins_interface.md#GPS_uBlox_Bus)       |
 
 ### Control_Out_Bus
 
