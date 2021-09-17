@@ -51,7 +51,6 @@ Ulog 是 RT-Thread 提供的一个非常简单易用的组件。 它提供了将
 
 Mlog 模块提供了实时记录大量数据的能力，这些数据可以稍后被解析为 *.mat* 文件。
 
-To start logging, you can type command `mlog start` in console and the command `mlog stop` to stop logging. `mlog status` command will print out the recorded data information, such as what kind of data and how many messages are recorded.
 你可以在控制台中输入命令 `mlog start`开始日志记录， 使用命令 `mlog stop` 停止记录。 `mlog status`命令会打印出记录的数据信息，比如记录了什么样的数据，记录了多少条消息。
 
 ```
