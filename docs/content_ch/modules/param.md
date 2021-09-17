@@ -1,10 +1,10 @@
 # Param
 
-## Introduction
+## 介绍
 
-The parameter module provides functions to define, read and store parameters. The parameters can be stored in any storage device, such sd card or flash. The parameter is load from `/sys/param.xml` in system boot stage. If no parameter file existed, the default parameter value will be used.
+参数模块提供了参数的定义、读取和存储的功能。参数可以被存储在任意的存储设备，比如 sd 卡，flash等。在系统启动阶段，参数从 `/sys/param.xml` 进行加载。如果参数文件不存在，则使用默认参数。
 
-## API
+## 接口函数
 
 ```c
 fmt_err_t param_init(void);
@@ -24,11 +24,11 @@ param_t* param_get_by_index(int16_t index);
 param_group_t* param_find_group(const char* group_name);
 ```
 
-## Add New Parameter
+## 添加新参数
 
-Parameters are organized in units of groups. Each group contains one or more parameters. To add a new parameter, you must first select a group that it belongs to. You can also create a new group by following steps:
+参数使用组 (group) 来进行组织。每个组包含一个或者多个参数。在添加新参数之前，你必须先为该参数选定一个组。你可以按照如下步骤来建立一个新的组：
 
-- Add a new group to `param_list`. e.g
+- 在 `param_list` 添加新的组。例如：
 
 ```c
 param_list_t param_list = { 
@@ -37,7 +37,7 @@ param_list_t param_list = {
 };
 ```
 
-- Declare the new group.
+- 申明新的组.
 
 ```c
 typedef struct {
@@ -46,9 +46,9 @@ typedef struct {
 } param_list_t;
 ```
 
-Then you can add parameters into the group:
+然后你可以往该组里面加入参数：
 
-- Add new parameters.
+- 添加新参数
 
 ```c
 PARAM_GROUP(my_group) PARAM_DECLARE_GROUP(my_group) = \
@@ -58,7 +58,7 @@ PARAM_GROUP(my_group) PARAM_DECLARE_GROUP(my_group) = \
 };
 ```
 
-- Declare new parameters.
+- 申明新参数.
 
 ```c
 typedef struct {
@@ -67,9 +67,9 @@ typedef struct {
 } PARAM_GROUP(my_group);
 ```
 
-## Read Parameter
+## 读取参数
 
-The parameter module provides the following macros to quickly read the value of a parameter (non-query mode). The user needs to select the macro which matches the parameter type by giving the group and parameter name.
+参数模块提供了如下的宏来快速读取参数值 (非查询模式)。用户需要选择符合参数类型的宏并给定参数的组名和参数名。
 
 ```c
 #define PARAM_GET_INT8(_group, _name)
@@ -82,7 +82,7 @@ The parameter module provides the following macros to quickly read the value of 
 #define PARAM_GET_DOUBLE(_group, _name)
 ```
 
-The following functions can also be used to get the parameter's value. However it is relatively slow when too many parameters are defined, because these functions are based on query mode. So try to use macros to read parameter values.
+如下函数也可以用来读取参数的值。但是相比而言当参数量大时速度会比较慢，因为这些函数使用查询模式。所以请尽量使用宏来读取参数值。
 
 ```c
 param_t* param_get_by_name(const char* param_name);
@@ -90,9 +90,9 @@ param_t* param_get_by_full_name(const char* group_name, const char* param_name);
 param_t* param_get_by_index(int16_t index);
 ```
 
-## Set Parameter
+## 设置参数
 
-Similarly, the parameter module provides the macros to quickly set the value of a parameter.
+类似的，参数模块也提供了如下宏来快速设置参数值。
 
 ```c
 #define PARAM_SET_INT8(_group, _name, _val)
@@ -105,7 +105,7 @@ Similarly, the parameter module provides the macros to quickly set the value of 
 #define PARAM_SET_DOUBLE(_group, _name, _val)
 ```
 
-The following functions are provided to set the parameter's value with slower speed.
+如下函数也可以用来设置参数值但是速度更慢。
 
 ```c
 fmt_err_t param_set_val(param_t* param, void* val);
@@ -116,9 +116,9 @@ fmt_err_t param_set_string_val_by_name(char* param_name, char* val);
 fmt_err_t param_set_string_val_by_full_name(char* group_name, char* param_name, char* val);
 ```
 
-> Note that you need call `param_save(path)` to save parameters after value changed.
+> 注意，当你修改了参数值后，需要使用 `param_save(path)` 来存储参数。
 
-## Command
+## 命令
 
 ```
 usage: param <command> [options]

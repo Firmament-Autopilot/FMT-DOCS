@@ -31,7 +31,7 @@
 FMT使用如下跨平台的工具链 (Windows/Linux/Mac):
 
 - **编译器**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
-- **构建工具**: [Scons](https://scons.org/) (*pip install SCons*).
+- **构建工具**: [Scons](https://scons.org/) (你可以使用 *pip install SCons* 来安装 scons).
 - **集成开发环境**: [Visual Studio Code](https://code.visualstudio.com/).
 - **USB驱动**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (仅针对Windows).
 
@@ -77,9 +77,9 @@ scons -j4
 
 固件下载需要用到pixhawk的bootloader，请先确保你的pixhawk已经烧写了bootloader。如果没有的话，请访问[PX4-Bootloader](https://github.com/PX4/PX4-Bootloader)来学习如何编译和烧写bootloader到你的硬件。FMT复用pixhawk的bootloader，所以你可以随时将Pixhawk刷回PX4或者APM的固件。
 
-当前fmu固件支持两种下载方式：
+当前fmu固件支持三种下载方式：
 
-- *下载脚本*: 切换当前目录到目标平台然后输入`python uploader.py`. 然后使用usb线将你的硬件连接到PC，下载将自动开始。
+- **下载脚本**: 切换当前目录到目标平台然后输入`python uploader.py`. 然后使用usb线将你的硬件连接到PC，下载将自动开始。
 
 ```
 ~/FMT-Firmware/target/pixhawk/fmu-v5$ python3 uploader.py 
@@ -106,9 +106,11 @@ Rebooting. Elapsed Time 6.803
 
 > 如果下载失败，请拔掉usb线并重新尝试。
 
-- *QGoundControl*: 进入**Firmware Setup**页面，然后使用usb线将硬件连接到PC，在弹出的串口选择**Advanced Settings**->**Custom firmware file** 以及`fmt_fmu.bin` 固件。
+- **QGoundControl**: 进入**Firmware Setup**页面，然后使用usb线将硬件连接到PC，在弹出的串口选择**Advanced Settings**->**Custom firmware file** 以及`fmt_fmu.bin` 固件。
 
 ![qgc_download](../../figures/qgc_download.png)
+
+- **JLink**: 请参考[调试](content_ch/introduction/debug.md) 章节的内容。
 
 如果下载成功，给硬件上电，系统信息将被打印在`serial0`（serial0是默认的控制台设备）。如果你没有串口线，也可以使用QGroundControl的**Mavlink Console**来连接到控制台。
 

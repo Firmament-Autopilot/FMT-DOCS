@@ -4,7 +4,7 @@
 
 ## What is Firmament?
 
-Firmament (FMT) is an advanced autopilot system which is developed for Model-Based Design (MBD). 
+Firmament (FMT) is an advanced autopilot system which is developed for Model-Based Design (MBD), which can be used to quickly build control systems for unmanned aerial vehicles, cars, ships, robots, etc.
 
 The system is mainly composed of two parts.
 
@@ -23,7 +23,7 @@ Model-based design provides an efficient approach for establishing a complex and
 - Auto code generation from Simulink model adapted to different hardware platforms (ARM, AMD, Intel, etc).
 - Excellent real-time performance based on [RT-Thread](https://www.rt-thread.io/) RTOS with active community and large number of third-party components.
 - Support with most widely used open-source hardware Pixhawk (Both FMUv2 and FMUv5 are supported).
-- Cross-platform toolchain support with Windows/Linux/Mac.
+- Cross-platform development tool support with Windows/Linux/Mac.
 - Support with Mavlink v1.0/v2.0.
 
 ## Community

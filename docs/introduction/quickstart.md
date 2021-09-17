@@ -31,7 +31,7 @@ The current supported hardware platforms are [Pixhawk(FMUv2)](https://docs.px4.i
 FMT uses the following cross-platform toolchain (Windows/Linux/Mac):
 
 - **Compiler**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
-- **Construction Tool**: [Scons](https://scons.org/) (*pip install SCons*).
+- **Construction Tool**: [Scons](https://scons.org/) (You can use *pip install SCons* to install scons).
 - **IDE**: [Visual Studio Code](https://code.visualstudio.com/).
 - **USB Driver**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (Only required for Windows).
 
@@ -77,9 +77,9 @@ scons -j4
 
 The download process requires pixhawk bootloader, so please make sure your pixhawk has bootloader flashed already. If not, please visit [PX4-Bootloader](https://github.com/PX4/PX4-Bootloader) to learn how to build and flash the bootloader for your hardware. FMT reuses the pixhawk bootloader, therefore you can easily flash back to other firmware such as PX4 or APM.
 
-Currently there are two methods to download the fmu firmware,:
+Currently there are three methods to download the fmu firmware,:
 
-- *Upload Script*: Change directory to a specific target and type `python uploader.py`. Then connect your hardware to PC via a usb cable, the download shuold start automatically.
+- **Upload Script**: Change directory to a specific target and type `python uploader.py`. Then connect your hardware to PC via a usb cable, the download shuold start automatically.
 
 ```
 ~/FMT-Firmware/target/pixhawk/fmu-v5$ python3 uploader.py 
@@ -106,9 +106,11 @@ Rebooting. Elapsed Time 6.803
 
 > If download is not started, unplug your usb cable then try it again.
 
-- *QGoundControl*: Go to **Firmware Setup** page，then connect your hardware to PC with a usb cable. In pop-up diaglog，select **Advanced Settings**->**Custom firmware file** with `fmt_fmu.bin` firmware.
+- **QGoundControl**: Go to **Firmware Setup** page，then connect your hardware to PC with a usb cable. In pop-up diaglog，select **Advanced Settings**->**Custom firmware file** with `fmt_fmu.bin` firmware.
 
 ![qgc_download](../figures/qgc_download.png)
+
+- **JLink**: Please refer to [Debug](introduction/debug.md) section.
 
 If download success, power on the board and the system banner should be printed on `serial0` (serial0 is the default serial used by console). If you don't have a serial cable, you can also connect to console via QGroundControl **Mavlink Console**.
 

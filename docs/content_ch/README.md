@@ -4,7 +4,7 @@
 
 ## 什么是Firmament?
 
-Firmament (FMT) 是一款基于模型设计 (Model-Based-Design, MBD) 的开源自驾仪. 
+Firmament (FMT) 是一款基于模型设计 (Model-Based-Design, MBD) 的开源自驾仪，可被用来快速构建无人机，无人车，无人船，机器人等平台的控制系统。
 
 系统主要由两部分构成.
 
@@ -23,7 +23,7 @@ Firmament (FMT) 是一款基于模型设计 (Model-Based-Design, MBD) 的开源�
 - Simulink模型自动代码生成，支持众多硬件架构 (ARM, AMD, Intel, etc).
 - 出色的实时性能，基于国产RTOS [RT-Thread](https://www.rt-thread.org/), 拥有活跃的开源社区以及大量第三方组件。
 - 支持当前最广泛使用的开源硬件Pixhawk (同时支持 FMUv2 和 FMUv5版本).
-- 跨平台的编译工具链，支持Windows/Linux/Mac.
+- 跨平台的开发工具，支持Windows/Linux/Mac.
 - 支持Mavlink协议v1.0/v2.0.
 
 ## 社区

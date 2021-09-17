@@ -1,10 +1,10 @@
 # Mlog
 
-## Introduction
+## 介绍
 
-Mlog module provides the function to record data in binary format, which works like a black-box.
+Mlog 模块提供了数据记录的功能。其中日志以二进制方式进行存储，类似于黑匣子的功能。
 
-## API
+## 接口函数
 
 ```c
 fmt_err_t mlog_add_desc(char* desc);
@@ -19,11 +19,11 @@ fmt_err_t mlog_init(void);
 void mlog_async_output(void);
 ```
 
-## Add New Data
+## 添加新数据
 
-Mlog is organized in units of bus and each bus contains one or more elements. One element represents a single log information. To record new data you can add new elements into an existed bus or create a new bus.
+Mlog 是以总线 (bus) 为单位进行组织，每个总线上包含一个或者多个元素（element）。单个元素代表单条日志信息。为了添加新的数据，你可以在已有总线上添加元素，或者建立新的总线。
 
-For instance, you can create a bus of MAG which contains elements of magnetometer values.
+举例来说，建立一个新的 MAG 总线，该总线包含磁力计数据元素：
 
 ```c
 mlog_elem_t MAG_Elems[] = {
@@ -34,7 +34,7 @@ mlog_elem_t MAG_Elems[] = {
 };
 ```
 
-You can also add vector type of data with macro `MLOG_ELEMENT_VEC(_name, _type, _num)`.
+你也可以使用宏 `MLOG_ELEMENT_VEC(_name, _type, _num)` 来添加数组类型的数据：
 
 ```c
 mlog_elem_t MAG_Elems[] = {
@@ -43,7 +43,7 @@ mlog_elem_t MAG_Elems[] = {
 };
 ```
 
-Then add your bus into `_mlog_bus` bus lists with a unique id.
+然后将你新加的总线添加到 `_mlog_bus` 总线列表中并提供一个独一的 id 号。
 
 ```c
 mlog_bus_t _mlog_bus[] = {
@@ -52,9 +52,9 @@ mlog_bus_t _mlog_bus[] = {
 };
 ```
 
-## Record Data
+## 记录数据
 
-To record a single log message, you can use `mlog_push_msg(const uint8_t* payload, uint8_t msg_id, uint16_t len)` function. e.g.
+要记录单条数据，你可以使用函数 `mlog_push_msg(const uint8_t* payload, uint8_t msg_id, uint16_t len)`，例如：
 
 ```c
     if (ins_handle.mag_updated) {
@@ -65,13 +65,13 @@ To record a single log message, you can use `mlog_push_msg(const uint8_t* payloa
     }
 ```
 
-Generally, the data is recorded after the data is updated to prevent duplicate data from being recorded.
+一般是在数据更新之后记录数据，以防止记录重复的数据。
 
-> The bus usually contains a timestamp element, which is used to parse the log into a *timeseries* data type with time information.
+> 总线通常包含一个时间戳元素，用于将日志解析成带时间信息的 *timeseries* 数据类型。
 
-## Start & Stop Recording
+## 开始 & 结束记录
 
-The mlog start/stop process is controlled by `MLOG_MODE` parameter.
+Mlog 的开始/结束流程由 `MLOG_MODE` 参数进行控制。
 
 ```c
 PARAM_DECLARE_GROUP(SYSTEM) = {
@@ -84,9 +84,9 @@ PARAM_DECLARE_GROUP(SYSTEM) = {
 };
 ```
 
-You can also use the command to start/stop mlog logging.
+你也可以使用命令来开始或者结束日志的记录。
 
-## Command
+## 命令
 
 ```
 usage: mlog <command> [options]
