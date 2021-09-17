@@ -5,7 +5,7 @@
 
 模型在环仿真是一种在仿真环境（如 Simulink）中开发和运行仿真模型的方法。 一个典型的自驾仪系统模型结构如图所示：
 
-<img src="figures/mil_model.png" width="60%">
+<img src="figures/mil_model.png" width="50%">
 
 ## 设置 MIL 仿真
 

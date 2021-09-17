@@ -12,11 +12,11 @@ export JLINK_SERVER=~/opt/SEGGER/JLink_Linux_V686f_x86_64/JLinkGDBServer
 
 4. Connect Jlink SWD pinout(pin 1,7,9,4) to FMU Debug port. You can also connect J-Link TX/RX for console usage.
 
-<img src="figures/jlink_pinout.png" width="25%">
+<img src="figures/jlink_pinout.png" width="15%">
 
 5. Click **Debug Run** button in VS Code and select the right configuration for your target.
 
-<img src="figures/jlink1.png" width="25%">
+<img src="figures/jlink1.png" width="20%">
 
 6. Click **Start Debugging** button.
 

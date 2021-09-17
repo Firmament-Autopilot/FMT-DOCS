@@ -7,4 +7,4 @@ Model-based design (MBD) is a mathematical and visual method of addressing probl
 
 Model-based deisgn plays a very important role in the most stages of system development. Such as Model & Simulation, SIL, HIL and so on. The model-based design makes it easier to comply with V-Model development process which helps create a safer and more reliable system.
 
-<img src="figures/v_model.png" width="50%">
+<img src="figures/v_model.png" width="40%">

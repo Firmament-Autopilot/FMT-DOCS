@@ -3,7 +3,7 @@
 
 开环仿真是一种在基于模型设计领域分析软件性能的十分有效的方法。*Mlog* 模块记录必要的模型输入数据，其功能类似于黑匣子。将日志解析并喂给仿真模型进行开环仿真，我们可以获得模型的输出数据和所有的内部信号。
 
-<img src="figures/openloop_diagram.png" width="60%">
+<img src="figures/openloop_diagram.png" width="50%">
 
 ## 设置开环仿真
 
@@ -22,4 +22,4 @@
 
 这是一个使用 SDI 的示例。可以看到仿真数据（红线）和记录的真实数据（蓝线）完全吻合。
 
-<img src="figures/sdi.png" width="75%">
+<img src="figures/sdi.png" width="50%">

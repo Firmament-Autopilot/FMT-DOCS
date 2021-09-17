@@ -5,7 +5,7 @@ Model-In-The-Loop is the simulation in an early development phase of modeling in
 
 Model-In-The-Loop simulation is a method in which you model is developed and executed in a simulation environment such as Simulink. A typical model structure for autopilot system is shown blow.
 
-<img src="figures/mil_model.png" width="60%">
+<img src="figures/mil_model.png" width="50%">
 
 ## Setting Up MIL Simulation
 

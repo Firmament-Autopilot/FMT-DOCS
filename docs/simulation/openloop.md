@@ -3,7 +3,7 @@
 
 Open-Loop simulation is a vary useful way to analyze your software performance in the area of model-based design. The necessary model input data are logged by *Mlog* module, which works like a black box. Parse log data and feed it to model in simulation environment to run open-loop simulation, we can retrieve the output of model and all internal signal.
 
-<img src="figures/openloop_diagram.png" width="60%">
+<img src="figures/openloop_diagram.png" width="50%">
 
 ## Setting Up Open-Loop Simulation
 
@@ -22,4 +22,4 @@ You can use the Simulation Data Inspector (SDI) to visualize the data you genera
 
 Here is an example using SDI. You can see that the simulation results (red lines) are completely matched with recorded actual results (blue lines).
 
-<img src="figures/sdi.png" width="75%">
+<img src="figures/sdi.png" width="50%">

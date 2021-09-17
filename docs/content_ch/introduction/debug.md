@@ -12,11 +12,11 @@ export JLINK_SERVER=~/opt/SEGGER/JLink_Linux_V686f_x86_64/JLinkGDBServer
 
 4. 连接Jlink SWD的引脚（引脚1,7,9,4）到FMU Debug端口。你也可以连接J-Link TX/RX作为控制台使用。
 
-<img src="figures/jlink_pinout.png" width="25%">
+<img src="figures/jlink_pinout.png" width="15%">
 
 5. 在VS Code中点击**Debug Run**按钮并选择对应的目标板配置。
 
-<img src="figures/jlink1.png" width="25%">
+<img src="figures/jlink1.png" width="20%">
 
 6. 点击**Start Debugging**按钮。
 

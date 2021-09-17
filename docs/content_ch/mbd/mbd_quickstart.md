@@ -9,4 +9,4 @@ Model-based deisgn plays a very important role in the most stages of system deve
 
 基于模型设计在系统开发的大多数阶段都扮演者非常重要的角色。例如建模与仿真、SIL、HIL 等。基于模型设计的方法更容易遵循 V-Model 开发流程，有助于构建更安全、更可靠的系统。
 
-<img src="figures/v_model.png" width="50%">
+<img src="figures/v_model.png" width="40%">
