@@ -21,7 +21,7 @@ SIH 仿真可以通过在 *fmtconfig.h* 中添加 `#define FMT_USING_SIH` 来开
  / _// / __/  ' \/ _ `/  ' \/ -_) _ \/ __/
 /_/ /_/_/ /_/_/_/\_,_/_/_/_/\__/_//_/\__/ 
 Firmware....................FMT FMU v0.1.0
-Kernel....................RT-Thread v3.0.5
+Kernel....................RT-Thread v4.0.3
 RAM.................................512 KB
 Target......................Pixhawk4 FMUv5
 Vehicle.........................Quadcopter

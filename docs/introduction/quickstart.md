@@ -30,10 +30,16 @@ The current supported hardware platforms are [Pixhawk(FMUv2)](https://docs.px4.i
 
 FMT uses the following cross-platform toolchain (Windows/Linux/Mac):
 
-- **Compiler**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
-- **Construction Tool**: [Scons](https://scons.org/) (You can use *pip install SCons* to install scons).
-- **IDE**: [Visual Studio Code](https://code.visualstudio.com/).
-- **USB Driver**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (Only required for Windows).
+- **Compiler**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads): Version:*7-2018-q2-update*， other version are not well tested.
+- **Construction Tool**: [Scons](https://scons.org/): You can use `pip3 install SCons` to install scons. The scons path should be added into *Path* environment variable after installation.
+- **IDE**: [Visual Studio Code](https://code.visualstudio.com/): Visual Studio Code is the recommend IDE. However you can use any other IDE that you are familar with.
+- **USB Driver**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html): Only required for Windows platform.
+
+## Download
+
+```
+git clone --recursive https://github.com/Firmament-Autopilot/FMT-Firmware.git
+```
 
 ## Build Firmware
 
@@ -120,7 +126,7 @@ If download success, power on the board and the system banner should be printed 
  / _// / __/  ' \/ _ `/  ' \/ -_) _ \/ __/
 /_/ /_/_/ /_/_/_/\_,_/_/_/_/\__/_//_/\__/ 
 Firmware....................FMT FMU v0.1.0
-Kernel....................RT-Thread v3.0.5
+Kernel....................RT-Thread v4.0.3
 RAM.................................512 KB
 Target......................Pixhawk4 FMUv5
 Vehicle.........................Quadcopter

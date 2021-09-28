@@ -30,10 +30,16 @@
 
 FMT使用如下跨平台的工具链 (Windows/Linux/Mac):
 
-- **编译器**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) (version:`7-2018-q2-update`， other version is not well tested).
-- **构建工具**: [Scons](https://scons.org/) (你可以使用 *pip install SCons* 来安装 scons).
-- **集成开发环境**: [Visual Studio Code](https://code.visualstudio.com/).
-- **USB驱动**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html) (仅针对Windows).
+- **编译器**: [arm-none-eabi- toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads): Version:*7-2018-q2-update*， 其它版本未测试.
+- **构建工具**: [Scons](https://scons.org/): 你可以使用 `pip3 install SCons` 来安装 scons. 安装完成后需要将scons加入*Path*环境变量.
+- **集成开发环境**: [Visual Studio Code](https://code.visualstudio.com/): 推荐使用 Visual Studio Code， 但是你也可以使用其它你熟悉的 IDE.
+- **USB驱动**: [STM32 USB Driver](https://www.st.com/en/development-tools/stsw-stm32102.html): 仅Windows平台需要.
+
+## 下载
+
+```
+git clone --recursive https://github.com/Firmament-Autopilot/FMT-Firmware.git
+```
 
 ## 编译固件
 
@@ -120,7 +126,7 @@ Rebooting. Elapsed Time 6.803
  / _// / __/  ' \/ _ `/  ' \/ -_) _ \/ __/
 /_/ /_/_/ /_/_/_/\_,_/_/_/_/\__/_//_/\__/ 
 Firmware....................FMT FMU v0.1.0
-Kernel....................RT-Thread v3.0.5
+Kernel....................RT-Thread v4.0.3
 RAM.................................512 KB
 Target......................Pixhawk4 FMUv5
 Vehicle.........................Quadcopter

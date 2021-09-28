@@ -15,7 +15,7 @@ msh />cat /log/session_5/boot_log.txt
  / _// / __/  ' \/ _ `/  ' \/ -_) _ \/ __/
 /_/ /_/_/ /_/_/_/\_,_/_/_/_/\__/_//_/\__/ 
 Firmware....................FMT FMU v0.1.0
-Kernel....................RT-Thread v3.0.5
+Kernel....................RT-Thread v4.0.3
 RAM.................................512 KB
 Target......................Pixhawk4 FMUv5
 Vehicle.........................Quadcopter
