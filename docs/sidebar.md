@@ -23,13 +23,6 @@
   - [Mlog](module/mlog.md)
   - [Mavproxy](module/mavproxy.md)
 
-- Simulation
-
-  - [Model-In-The-Loop](simulation/MIL.md)
-  - [Open-Loop Simulation](simulation/openloop.md)
-  - [Simulation-In-Hardware](simulation/SIH.md)
-  - [Hardware-In-The-Loop](simulation/HIL.md)
-
 - Model-Based Design
 
   - [Quick Start](mbd/mbd_quickstart.md)
@@ -44,3 +37,10 @@
   - [Add New Model](mbd/new_model.md)
   - [Code Generation](mbd/codegen.md)
   - [Code Deployment](mbd/code_deploy.md)
+
+- Simulation
+
+  - [Model-In-The-Loop](simulation/MIL.md)
+  - [Open-Loop Simulation](simulation/openloop.md)
+  - [Simulation-In-Hardware](simulation/SIH.md)
+  - [Hardware-In-The-Loop](simulation/HIL.md)

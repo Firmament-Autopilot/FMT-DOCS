@@ -23,13 +23,6 @@
   - [Mlog](content_ch/modules/mlog.md)
   - [Mavproxy](content_ch/modules/mavproxy.md)
 
-- 仿真
-
-  - [模型在环仿真(MIL)](content_ch/simulation/MIL.md)
-  - [开环仿真](content_ch/simulation/openloop.md)
-  - [纯硬件仿真(SIH)](content_ch/simulation/SIH.md)
-  - [硬件在环仿真(HIL)](content_ch/simulation/HIL.md)
-
 - 基于模型设计
 
   - [快速开始](content_ch/mbd/mbd_quickstart.md)
@@ -44,3 +37,10 @@
   - [添加新模型](content_ch/mbd/new_model.md)
   - [生成代码](content_ch/mbd/codegen.md)
   - [部署代码](content_ch/mbd/code_deploy.md)
+
+- 仿真
+
+  - [模型在环仿真(MIL)](content_ch/simulation/MIL.md)
+  - [开环仿真](content_ch/simulation/openloop.md)
+  - [纯硬件仿真(SIH)](content_ch/simulation/SIH.md)
+  - [硬件在环仿真(HIL)](content_ch/simulation/HIL.md)
