@@ -12,6 +12,7 @@
     - [加速度计校准](content_ch/introduction/calibration/accel_calib.md)
     - [罗盘校准](content_ch/introduction/calibration/mag_calib.md)
     - [水平校准](content_ch/introduction/calibration/level_calib.md)
+    - [电调校准](content_ch/introduction/calibration/esc_calib.md)
 
   - [调试](content_ch/introduction/debug.md)
   - [日志](content_ch/introduction/logging.md)

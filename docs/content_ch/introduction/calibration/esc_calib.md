@@ -1,0 +1,64 @@
+
+## 电调校准
+
+电调校准将更新电调的最大和最小 PWM 输入值，以确保每一个电调对 PWM 值都有相同的响应。
+
+## 校准方式
+
+不同的电调可能校准方式不同，具体请参阅对应电调的说明，这里仅针对普通的电调校准方法进行说明。
+
+- 飞控上电
+- 将对应电机输出设置为最大值 (比如2000)
+- 连接电池，给电机和电调上电
+- 在听到提示音后将对应电机输出设置为最小值（比如1000）
+- 校准完成
+
+## 使用遥控校准
+
+将遥控的通道直接映射到对应电机输出是最简单的校准方式。比如将油门杆通道映射到四个主电机输出，同时取消控制器到电机输出的映射，可以按照如下方式配置。
+
+```
+[actuator]
+    [[actuator.devices]]
+    protocol = "pwm"
+    name = "main_out"
+    freq = 400                  # pwm frequency in Hz
+
+    [[actuator.devices]]
+    protocol = "pwm"
+    name = "aux_out"
+    freq = 400                  # pwm frequency in Hz
+
+    [[actuator.mappings]]
+    from = "rc_channels"
+    to = "main_out"
+    chan-map = [[3,3,3,3],[1,2,3,4]]
+```
+
+这样主电机的输出将直接由遥控信号的通道3（油门杆）来决定，然后按照电调的校准方式进行校准。
+
+## 使用指令校准
+
+由于遥控通道可能本身存在一定误差，这将导致校准后的电调存在误差。为了避免遥控通道本身的误差而影响电调校准的结果，我们可以使用 `act` 指令来进行校准。
+
+同样我们需要先取消控制器到电机输出的映射，以避免控制器的输出影响指令的使用。
+
+```
+[actuator]
+    [[actuator.devices]]
+    protocol = "pwm"
+    name = "main_out"
+    freq = 400                  # pwm frequency in Hz
+
+    [[actuator.devices]]
+    protocol = "pwm"
+    name = "aux_out"
+    freq = 400                  # pwm frequency in Hz
+```
+
+然后我们可以在控制台输入如下指令来将对应电机的输出设置为最大或最小值：
+
+```
+act set --all -d main_out 2000
+act set --all -d main_out 1000
+```

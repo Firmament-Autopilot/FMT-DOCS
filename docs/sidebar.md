@@ -12,6 +12,7 @@
     - [Accelerometer Calibration](introduction/calibration/accel_calib.md)
     - [Compass Calibration](introduction/calibration/mag_calib.md)
     - [Level Horizon Calibration](introduction/calibration/level_calib.md)
+    - [ESC Calibration](introduction/calibration/esc_calib.md)
 
   - [Debug](introduction/debug.md)
   - [Logging](introduction/logging.md)
