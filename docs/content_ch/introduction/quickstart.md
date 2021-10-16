@@ -55,7 +55,7 @@ Pixhawk包含两颗处理器，FMU (Flight Management Unit) 和 IO (Input/Output
 
 ### 编译FMU固件
 
-首先编译fmu固件。将当前目录切换到对应的目前平台然后输入`scons`指令开始进行编译。生成的fmu附件在`FMT-Firmware/target/pixhawk/fmu-v5/build`目录下。
+首先编译fmu固件。将当前目录切换到对应的目标平台然后输入`scons`指令开始进行编译。生成的fmu固件在`FMT-Firmware/$target/build`目录下。
 
 以编译FMUv5固件为例，使用如下指令：
 
@@ -64,7 +64,7 @@ cd FMT-Firmware/target/pixhawk/fmu-v5/
 scons -j4
 ```
 
-> `-jN` 可同时执行N个工作，可以编译更快完成。
+> `-jN` 可同时执行N个工作，可以使得编译更快完成。
 
 > 如果编译失败，请先使用`scons -c`来清理工程，并再次尝试编译。
 
