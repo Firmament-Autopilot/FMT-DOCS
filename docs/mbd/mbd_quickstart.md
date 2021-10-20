@@ -14,7 +14,7 @@ FMT-Model is develped in MATLAB 2018b, which is the recommend version. However, 
 ## Download
 To get the FMT-Model, use the following command. This will clone the code base of FMT-Model with all submodules (INS, FMS, Controller, Plant).
 ```
-git clone --recursive https://github.com/Firmament-Autopilot/FMT-Model.git
+git clone https://github.com/Firmament-Autopilot/FMT-Model.git --recursive
 ```
 
 ## Code Catalogue

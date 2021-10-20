@@ -38,7 +38,7 @@ FMT uses the following cross-platform toolchain (Windows/Linux/Mac):
 ## Download
 
 ```
-git clone --recursive https://github.com/Firmament-Autopilot/FMT-Firmware.git
+git clone https://github.com/Firmament-Autopilot/FMT-Firmware.git --recursive --shallow-submodules
 ```
 
 ## Build Firmware

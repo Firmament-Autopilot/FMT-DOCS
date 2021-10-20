@@ -14,7 +14,7 @@ Model-based deisgn plays a very important role in the most stages of system deve
 ## 下载
 使用如下指令来下载 FMT-Model 和所有子模块的代码（INS，FMS，Controller，Plant）。
 ```
-git clone --recursive https://github.com/Firmament-Autopilot/FMT-Model.git
+git clone https://github.com/Firmament-Autopilot/FMT-Model.git --recursive
 ```
 
 ## 代码目录

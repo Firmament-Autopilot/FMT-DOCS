@@ -38,7 +38,7 @@ FMT使用如下跨平台的工具链 (Windows/Linux/Mac):
 ## 下载
 
 ```
-git clone --recursive https://github.com/Firmament-Autopilot/FMT-Firmware.git
+git clone https://github.com/Firmament-Autopilot/FMT-Firmware.git --recursive --shallow-submodules
 ```
 
 ## 编译固件
