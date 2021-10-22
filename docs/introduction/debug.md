@@ -4,21 +4,29 @@
 1. Install [J-Link Server](https://www.segger.com/downloads/jlink/) on your host system.
 2. Create a new enviroment variable `JLINK_SERVER` and set the value to the path of J-Link server. e.g.
 
+Linux:
 ```
-export JLINK_SERVER=~/opt/SEGGER/JLink_Linux_V686f_x86_64/JLinkGDBServer
+JLINK_SERVER = $JLink/JLinkGDBServerCLExe
 ```
 
-3. Rebuild fmt firmware with `BUILD = 'debug'` enabled in *rtconfig.py*.
+Windows:
+```
+JLINK_SERVER = $JLink/JLinkGDBServerCL
+```
+
+3. Set`BUILD = 'debug'` in *rtconfig.py* and rebuild the firmware.
 
 4. Connect Jlink SWD pinout(pin 1,7,9,4) to FMU Debug port. You can also connect J-Link TX/RX for console usage.
 
 <img src="figures/jlink_pinout.png" width="15%">
 
-5. Click **Debug Run** button in VS Code and select the right configuration for your target.
+5. Install `cortex-debug` expension in VSCode.
+
+6. Click **Debug Run** button in VS Code and select the right configuration for your target.
 
 <img src="figures/jlink1.png" width="20%">
 
-6. Click **Start Debugging** button.
+7. Click **Start Debugging** button.
 
 <img src="figures/jlink2.png" width="50%">
 
