@@ -41,19 +41,10 @@ In this way, the output of the main motor will be directly determined by channel
 
 Because the rc channel itself may have certain errors, this will cause errors in the ESC after calibration. In order to avoid the error of the rc channel itself affecting the ESC calibration result, we can use the `act` command to calibrate.
 
-Similarly, we need to cancel the mapping from the controller to the motor output first to avoid the controller's output from affecting the use of command.
+Similarly, we need to disable the output of the controller first to prevent it from overwriting the output of the act instruction. To disable the controller's output, we can simply run the following command:
 
 ```
-[actuator]
-    [[actuator.devices]]
-    protocol = "pwm"
-    name = "main_out"
-    freq = 400                  # pwm frequency in Hz
-
-    [[actuator.devices]]
-    protocol = "pwm"
-    name = "aux_out"
-    freq = 400                  # pwm frequency in Hz
+mcn suspend control_output
 ```
 
 Then we can enter the following command in the console to set the output of the corresponding motor to the maximum or minimum value:

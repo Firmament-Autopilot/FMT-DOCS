@@ -41,19 +41,10 @@
 
 由于遥控通道可能本身存在一定误差，这将导致校准后的电调存在误差。为了避免遥控通道本身的误差而影响电调校准的结果，我们可以使用 `act` 指令来进行校准。
 
-同样我们需要先取消控制器到电机输出的映射，以避免控制器的输出影响指令的使用。
+同样我们需要先禁止控制器的输出，以防止它覆盖act指令的输出。我们可以使用如下指令来禁止控制器的输出：
 
 ```
-[actuator]
-    [[actuator.devices]]
-    protocol = "pwm"
-    name = "main_out"
-    freq = 400                  # pwm frequency in Hz
-
-    [[actuator.devices]]
-    protocol = "pwm"
-    name = "aux_out"
-    freq = 400                  # pwm frequency in Hz
+mcn suspend control_output
 ```
 
 然后我们可以在控制台输入如下指令来将对应电机的输出设置为最大或最小值：
