@@ -14,7 +14,7 @@ McnNode_t mcn_subscribe(McnHub_t hub, MCN_EVENT_HANDLE event, void (*pub_cb)(voi
 fmt_err_t mcn_unsubscribe(McnHub_t hub, McnNode_t node);
 fmt_err_t mcn_publish(McnHub_t hub, const void* data);
 bool mcn_poll(McnNode_t node_t);
-bool mcn_poll_sync(McnNode_t node_t, int32_t timeout);
+bool mcn_wait(McnNode_t node_t, int32_t timeout);
 fmt_err_t mcn_copy(McnHub_t hub, McnNode_t node_t, void* buffer);
 fmt_err_t mcn_copy_from_hub(McnHub_t hub, void* buffer);
 void mcn_suspend(McnHub_t hub);
@@ -100,7 +100,7 @@ McnNode_t my_nod = mcn_subscribe(MCN_ID(my_topic), NULL, NULL);
 
 ```c
 data_content read_data;
-if(mcn_poll_sync(my_nod, RT_WAIT_FOREVER)){
+if(mcn_wait(my_nod, RT_WAIT_FOREVER)){
 	mcn_copy(MCN_ID(my_topic), my_nod, &read_data);
 }
 ```

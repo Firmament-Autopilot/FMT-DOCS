@@ -57,7 +57,7 @@ E.g. This is the default [sysconfig.toml](https://github.com/Firmament-Autopilot
     [pilot-cmd.device]
     type = "rc"                 # type must be rc
     name = "rc"                 # device name
-    protocol = 1                # 1:sbus, 2:ppm
+    protocol = "sbus"           # sbus or ppm
     channel-num = 6             # channel in used, max supported channel: sbus:16, ppm:8
     sample-time = 0.05          # sample time in second (-1 for inherit)
     range = [1000,2000]         # min and max value
@@ -67,7 +67,7 @@ Pilot control mode can be defined with `[[pilot-cmd.mode]]`. e.g. to define the 
 
 ```
     [[pilot-cmd.mode]]
-    mode = 4                    # stabilize mode
+    mode = 3                    # stabilize mode
     channel = 5
     range = [1800,2000]
 ```
@@ -78,7 +78,7 @@ It is also possible to map multiple rc channels to a single mode, which provides
 
 ```
     [[pilot-cmd.mode]]
-    mode = 4                    # stabilize mode
+    mode = 3                    # stabilize mode
     channel = [5,6]
     range = [[1800,2000],[1400,1600]]
 ```
@@ -93,13 +93,13 @@ The pilot command can be defined with `[[pilot-cmd.command]]` tables, e.g.
 ```
     [[pilot-cmd.command]]
     type = 1                    # 1:event | 2:status
-    cmd = 1000                  # force-disarm: forcely disarm motors for safety concern
+    cmd = 1002                  # force-disarm: forcely disarm motors for safety concern
     channel = 6                 # command channel
     range = [1800,2000]         # if channel value in this range, the event is triggered
 
     [[pilot-cmd.command]]
     type = 2                            # 1:event | 2:status
-    cmd = 1001                          # for testing
+    cmd = 2001                          # for testing
     channel = [4, 5]                    # command channel
     range = [[1300,1500],[1200,1400]]   # if channel value in this range, the event is triggered
 ```

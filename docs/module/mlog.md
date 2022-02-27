@@ -26,12 +26,13 @@ Mlog is organized in units of bus and each bus contains one or more elements. On
 For instance, you can create a bus of MAG which contains elements of magnetometer values.
 
 ```c
-mlog_elem_t MAG_Elems[] = {
-    MLOG_ELEMENT("timestamp", MLOG_UINT32),
-    MLOG_ELEMENT("mag_x", MLOG_FLOAT),
-    MLOG_ELEMENT("mag_y", MLOG_FLOAT),
-    MLOG_ELEMENT("mag_z", MLOG_FLOAT),
+static mlog_elem_t MAG_Elems[] = {
+    MLOG_ELEMENT(timestamp, MLOG_UINT32),
+    MLOG_ELEMENT(mag_x, MLOG_FLOAT),
+    MLOG_ELEMENT(mag_y, MLOG_FLOAT),
+    MLOG_ELEMENT(mag_z, MLOG_FLOAT),
 };
+MLOG_BUS_DEFINE(MAG, MAG_Elems);
 ```
 
 You can also add vector type of data with macro `MLOG_ELEMENT_VEC(_name, _type, _num)`.
@@ -41,9 +42,10 @@ mlog_elem_t MAG_Elems[] = {
     MLOG_ELEMENT("timestamp", MLOG_UINT32),
     MLOG_ELEMENT_VEC("mag", MLOG_FLOAT, 3),
 };
+MLOG_BUS_DEFINE(MAG, MAG_Elems);
 ```
 
-Then add your bus into `_mlog_bus` bus lists with a unique id.
+> Note: To ensure that the log data can be recorded correctly, the element data of the log bus should be aligned by 4 bytes.
 
 ```c
 mlog_bus_t _mlog_bus[] = {
@@ -65,6 +67,8 @@ To record a single log message, you can use `mlog_push_msg(const uint8_t* payloa
     }
 ```
 
+Here `MLOG_MAG_ID` is the ID of the log bus, which can be obtained by the `mlog_get_bus_id("MAG")` function.
+
 Generally, the data is recorded after the data is updated to prevent duplicate data from being recorded.
 
 > The bus usually contains a timestamp element, which is used to parse the log into a *timeseries* data type with time information.
@@ -85,6 +89,10 @@ PARAM_DECLARE_GROUP(SYSTEM) = {
 ```
 
 You can also use the command to start/stop mlog logging.
+
+## Parse log
+
+Use [parse_mlog.m](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) to parse log file and obtain .mat files.
 
 ## Command
 

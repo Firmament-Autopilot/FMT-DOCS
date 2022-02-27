@@ -57,7 +57,7 @@ FMT系统可以通过[toml](https://toml.io/en/)来进行配置。这将带来�
     [pilot-cmd.device]
     type = "rc"                 # type must be rc
     name = "rc"                 # device name
-    protocol = 1                # 1:sbus, 2:ppm
+    protocol = "sbus"           # sbus or ppm
     channel-num = 6             # channel in used, max supported channel: sbus:16, ppm:8
     sample-time = 0.05          # sample time in second (-1 for inherit)
     range = [1000,2000]         # min and max value
@@ -99,7 +99,7 @@ FMT支持将遥控多个通道映射到一个控制模式，这将使得有限�
 
     [[pilot-cmd.command]]
     type = 2                            # 1:event | 2:status
-    cmd = 1001                          # for testing
+    cmd = 2001                          # for testing
     channel = [4, 5]                    # command channel
     range = [[1300,1500],[1200,1400]]   # if channel value in this range, the event is triggered
 ```

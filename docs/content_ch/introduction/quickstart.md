@@ -1,7 +1,10 @@
 
 ## 硬件
 
-当前支持硬件平台 [Pixhawk(FMUv2)](https://docs.px4.io/master/en/flight_controller/pixhawk.html) 和 [Pixhawk 4(FMUv5)](https://docs.px4.io/master/en/flight_controller/pixhawk4.html). 请访问[网站](https://pixhawk.org/)来获得更多硬件信息.
+当前支持硬件平台如下：
+- [Pixhawk(FMUv2)](https://docs.px4.io/master/en/flight_controller/pixhawk.html)
+- [Pixhawk 4(FMUv5)](https://docs.px4.io/master/en/flight_controller/pixhawk4.html)
+- [CUAV V5+](https://www.cuav.net/v5autopilot/)
 
 ### FMUv2 串口映射
 

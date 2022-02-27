@@ -1,7 +1,10 @@
 
 ## Hardware
 
-The current supported hardware platforms are [Pixhawk(FMUv2)](https://docs.px4.io/master/en/flight_controller/pixhawk.html) and [Pixhawk 4(FMUv5)](https://docs.px4.io/master/en/flight_controller/pixhawk4.html). Please visit the [websit](https://pixhawk.org/) to get more information about the hardware.
+The current supported hardware platforms are listed below:
+- [Pixhawk(FMUv2)](https://docs.px4.io/master/en/flight_controller/pixhawk.html)
+- [Pixhawk 4(FMUv5)](https://docs.px4.io/master/en/flight_controller/pixhawk4.html)
+- [CUAV V5+](https://www.cuav.net/en/v5-autopilot/)
 
 ### FMUv2 Serial Port Mapping
 
