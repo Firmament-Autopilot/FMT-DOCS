@@ -8,8 +8,8 @@
 | MAG          | 3       | [MAG_Bus](#MAG_Bus)          |
 | Barometer    | 4       | [Barometer_Bus](#Barometer_Bus)    |
 | GPS_uBlox    | 5       | [GPS_uBlox_Bus](#GPS_uBlox_Bus)    |
-| Rangefinder  | 6       | Rangefinder_Bus        |
-| Optical_Flow | 7       | Optical_Flow_Bus |
+| Rangefinder  | 6       | [Rangefinder_Bus](#Rangefinder_Bus)        |
+| Optical_Flow | 7       | [Optical_Flow_Bus](#Optical_Flow_Bus) |
 
 ### Output Interface
 
@@ -81,6 +81,24 @@ uint32 | headingAcc       | 1e5 deg     | heading accurancy
 uint16 | pDOP             | 1e2 deg     | position DOP
 uint16 | reserved2        | -           | -
 
+### Rangefinder_Bus
+
+Type   | Name              | Unit       | Comments
+-----  | --------------    | ---------- | ----------------
+uint32 | timestamp         | ms         | rangefinder timestamp
+float  | distance          | m          | measured distance. -1 indicates invalid
+
+### Optical_Flow_Bus
+
+Type   | Name              | Unit       | Comments
+-----  | --------------    | ---------- | ----------------
+uint32 | timestamp         | ms         | optical_flow timestamp
+float  | vx                | m/s        | relative velosity x in body frame
+float  | vy                | m/s        | relative velosity y in body frame
+uint8  | quality           | [0 255]    | optical_flow quality, large is better
+uint8  | reserved1         | -          | -
+uint16 | reserved2         | -          | -
+
 ### INS_Out_Bus
 
 Type   | Name             | Unit        | Comments
@@ -99,7 +117,7 @@ single | az               | m/s^2       | specific force z in body frame
 single | vn               | m/s         | north velocity
 single | ve               | m/s         | east velocity
 single | vd               | m/s         | down velocity
-single | reserved         | -           | -
+single | airspeed         | m/s         | airspeed
 double | lon              | deg         | longitude
 double | lat              | deg         | latitude
 double | alt              | m           | altitude
@@ -119,7 +137,7 @@ bit    | Comments
 2      | attitude valid
 3      | heading valid
 4      | velocity valid
-5      | position valid
+5      | position (WGS84) valid
 6      | relative position valid
 7      | relative height valid
 8      | height above ground valid
