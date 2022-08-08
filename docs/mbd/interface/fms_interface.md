@@ -24,7 +24,7 @@ single | stick_throttle   | [-1 1]      | stick value of throttle channel
 single | stick_roll       | [-1 1]      | stick value of roll channel
 single | stick_pitch      | [-1 1]      | stick value of pitch channel
 uint32 | mode             | enum PilotMode | pilot mode:<br>0: None<br>1: Manual<br>2: Acro<br>3: Stabilize<br>4: Altitude<br>5: Position<br>6: Mission<br>7: Offboard
-uint32 | cmd_1            | enum FMS_Cmd | fms command_1 (event command)
+uint32 | cmd_1            | enum FMS_Cmd | fms command_1 (event command):<br>0: None<br>1000: CMD_PreArm<br>1001: CMD_Arm<br>1002: CMD_Disarm<br>1003: CMD_Takeoff<br>1004: CMD_Land<br>1005: CMD_Return<br>1006: CMD_Pause<br>1007: CMD_Continue
 uint32 | cmd_2            | -           | fms command_2 (status command)
 
 ### FMS_Out_Bus
