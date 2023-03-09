@@ -5,13 +5,18 @@
 - Getting started
 
   - [Quick Start](introduction/quickstart.md)
-  - [Configuration](introduction/configuration.md)
+  - [Configuration](introduction/configuration/configuration.md)
+    - [Console Configuration](introduction/configuration/console_config.md)  
+    - [Mavproxy Configuration](introduction/configuration/mavproxy_config.md)  
+    - [Pilot-Cmd Configuration](introduction/configuration/pilot_cmd_config.md)  
+    - [Actuator Configuration](introduction/configuration/actuator_config.md)  
   - Sensor Calibration
   
     - [Gyroscopic Calibration](introduction/calibration/gyro_calib.md)
     - [Accelerometer Calibration](introduction/calibration/accel_calib.md)
     - [Compass Calibration](introduction/calibration/mag_calib.md)
     - [Level Horizon Calibration](introduction/calibration/level_calib.md)
+    - [RC Calibration](introduction/calibration/rc_calib.md)
     - [ESC Calibration](introduction/calibration/esc_calib.md)
 
   - [Debug](introduction/debug.md)
