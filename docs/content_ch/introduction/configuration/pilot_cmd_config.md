@@ -57,7 +57,7 @@ mode的数值定义了遥控模式，它可以被FMS（Flight Management System�
 |   Mission |    6   | mode that execute the mission data defined in */sys/mission.txt* |
 |   Offboard |    7   | mode that accept external command via *auto_cmd* topic. |
 
-支持使用多个遥控通道来定义模式。对于通道有限的遥控来说，浙江可以提供更多的模式选择。
+支持使用多个遥控通道来定义模式。对于通道有限的遥控来说，这将可以提供更多的模式选择。
 
 例如如下表示当遥控通道5的数值在[1800, 2000]范围同时遥控通道6自动数值在[1400, 1600]的范围时，定高模式被选中。
 
