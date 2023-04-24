@@ -4,12 +4,12 @@
 
 ## What is Firmament?
 
-Firmament (FMT) is an advanced autopilot system which is developed for Model-Based Design (MBD), which can be used to quickly build control systems for unmanned aerial vehicles, cars, ships, robots, etc.
+Firmament (FMT) is an advanced autopilot system based on the Model-Based Design (MBD) methodology, which allows for the efficient and rapid development of high-quality control systems for a wide range of unmanned vehicles, including aerial vehicles, ground vehicles, marine vessels, and robots. With its intuitive graphical interface and extensive libraries of pre-built blocks, FMT provides users with a powerful toolset for building and testing complex control algorithms, as well as for generating highly optimized code for deployment on embedded systems. Furthermore, FMT is highly flexible and customizable, allowing users to tailor the system to their specific application requirements and to easily integrate it with other hardware and software platforms. As such, FMT is an ideal choice for researchers, developers, and engineers looking to quickly and effectively build and test control systems for a wide range of unmanned vehicle applications.
 
-The system is mainly composed of two parts.
+The system is a comprehensive and advanced autopilot solution that is primarily composed of two distinct parts: the *FMT-Firmware* and the *FMT-Model*.
 
-- [FMT-Firmware](https://github.com/Firmament-Autopilot/FMT-Firmware): A stable and high performance embedded system designed with C/C++.
-- [FMT-Model](https://github.com/Firmament-Autopilot/FMT-Model): A simulation framework with algorithm libraries designed with MATLAB/Simulink.
+- [FMT-Firmware](https://github.com/Firmament-Autopilot/FMT-Firmware): A powerful embedded system that has been specifically designed to provide users with a stable and high-performance platform for running control algorithms and processing sensor data in real-time. It is built using C/C++ programming languages and has been optimized for use on embedded systems. The firmware is extremely flexible and customizable, and it can be easily modified and adapted to suit a wide range of applications.
+- [FMT-Model](https://github.com/Firmament-Autopilot/FMT-Model): A simulation framework that has been designed using MATLAB/Simulink. It provides a comprehensive platform for developing and testing control algorithms in a virtual environment, without the need for physical hardware. The FMT-Model includes a wide range of algorithm libraries, making it easy to implement advanced techniques such as control, inertial navigation system, guide system and so on. The simulation framework is highly customizable, allowing users to create their own models and scenarios, and to test the performance of their control algorithms under a range of different conditions.
 
 ## Motivation
 

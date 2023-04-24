@@ -1,7 +1,7 @@
 
 ## Logging
 
-The purpose of the logging system is to provide the user with facilities to log information and to retrieve it later on. FMT logging system supports three kinds of log to empower the debug capability.
+The aim of the logging system is to equip users with the means to record data and retrieve it at a later stage. To enhance its debugging capability, the FMT logging system features three types of logs, namely **Boot Log**, **Text Log**, and **Data Log**. This feature enables developers to conduct efficient and effective debugging operations by examining the relevant log file and detecting the underlying issues.
 
 ### Boot Log
 

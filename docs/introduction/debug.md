@@ -1,17 +1,19 @@
 
 ## Debug with J-Link
 
-1. Install [J-Link Server](https://www.segger.com/downloads/jlink/) on your host system.
-2. Create a new enviroment variable `JLINK_SERVER` and set the value to the path of J-Link server. e.g.
+J-Link is a powerful debug probe which can be used to debug FMT-Firmware code. Please follow these steps to set it up.
+
+1. Install [J-Link Server](https://www.segger.com/downloads/jlink/) on your host system. Normally you could install the latest version.
+2. Create a new environment variable `JLINK_SERVER` and set the value to the path of J-Link server. e.g.
 
 Linux:
 ```
-JLINK_SERVER = $JLink/JLinkGDBServerCLExe
+JLINK_SERVER = <J-link server path>/JLinkGDBServerCLExe
 ```
 
 Windows:
 ```
-JLINK_SERVER = $JLink/JLinkGDBServerCL
+JLINK_SERVER = <J-link server path>/JLinkGDBServerCL
 ```
 
 3. Set`BUILD = 'debug'` in *rtconfig.py* and rebuild the firmware.
@@ -20,20 +22,14 @@ JLINK_SERVER = $JLink/JLinkGDBServerCL
 
 <img src="figures/jlink_pinout.png" width="15%">
 
-5. Install `cortex-debug` expension in VSCode.
+5. Install `cortex-debug` expension in VSCode. You need install `v1.4.4` or lower version.
 
-6. Click **Debug Run** button in VS Code and select the right configuration for your target.
+<img src="figures/cortex-debug.png" width="30%">
+
+5. Click **Debug Run** button in VS Code and **select the right configuration** for your target. We've already added debug configurations in the *.vscode/launch* for each target.
 
 <img src="figures/jlink1.png" width="20%">
 
 7. Click **Start Debugging** button.
 
 <img src="figures/jlink2.png" width="50%">
-
-## Pixhawk FMU Pinout
-
-For more information about pixhawk pintout, please check the following link.
-
-[Pixhawk4 pinout](http://www.holybro.com/manual/Pixhawk4-Pinouts.pdf)
-
-[Pixhawk2 pinout](https://docs.px4.io/master/en/flight_controller/pixhawk.html)
