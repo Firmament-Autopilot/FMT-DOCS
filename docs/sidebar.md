@@ -47,7 +47,7 @@
 - Simulation
 
   - [Model-In-The-Loop](simulation/MIL.md)
-  - [Open-Loop Simulation](simulation/openloop.md)
+  - [Data Simulation](simulation/DataSIM.md)
   - [Simulation-In-Hardware](simulation/SIH.md)
   - [Software-In-The-Loop](simulation/SIL.md)
   - [Hardware-In-The-Loop](simulation/HIL.md)
