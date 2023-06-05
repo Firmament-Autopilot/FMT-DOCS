@@ -7,8 +7,6 @@ In HIL simulations, an external machine is generally required to run the Plant m
 
 <img src="figures\sih_diag.png" width="70%">
 
-
-
 ### Setting Up SIH
 
 SIH simulation is enabled by adding `#define FMT_USING_SIH` in *fmtconfig.h* at BSP folder. Then rebuild the system.
