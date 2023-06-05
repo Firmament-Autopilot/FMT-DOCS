@@ -15,7 +15,7 @@ QEMU emulator version 7.1.94 (v7.2.0-rc4-11947-g2dabd50cfb-dirty)
 Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 ```
 
-Change cwd to QEMU target and do the compilation.
+Change current work folder to QEMU BSP folder and do the compilation.
 ```
 cd FMT-Firmware/target/qemu/qemu-vexpress-a9
 scons -j4
@@ -24,7 +24,7 @@ scons -j4
 When compilation is completed, run `qemu.sh` (Linux) or `qemu.bat` (Windows).
 
 ```
-FMT-Firmware\target\qemu\qemu-vexpress-a9>qemu-system-arm -M vexpress-a9 -kernel build/fmt_qemu-vexpress-a9.bin -display none -device sd-card,drive=sdcard_drive -drive file=sd.bin,format=raw,id=sdcard_drive -serial stdio -serial udp:127.0.0.1:14550@127.0.0.1:14551 -serial udp:127.0.0.1:14552@127.0.0.1:14553
+qemu-system-arm -M vexpress-a9 -kernel build/fmt_qemu-vexpress-a9.bin -display none -device sd-card,drive=sdcard_drive -drive file=sd.bin,format=raw,id=sdcard_drive -serial stdio -serial udp:127.0.0.1:14550@127.0.0.1:14551 -serial udp:127.0.0.1:14552@127.0.0.1:14553
 [I/SDIO] SD card capacity 65536 KB.
 can not load /sys/sih_param.xml, use default parameter value.
 TOML: No config file: /sys/sysconfig.toml, use default configuration.
@@ -64,7 +64,7 @@ SIH simulation can support multiple-vehicle simulation without the need to prepa
 
 You can use multiple shell processes to run a SIL FMT program in each console. For each SIL FMT instance, you need set a specific *MAV_SYS_ID*. For example, for instance 1, set MAV_SYS_ID to 1. For instance 2 set MAV_SYS_ID to 2, etc.
 
-You can use following command in FMT console to set MAV_SYS_ID and it's a reboot of  the SIL FMT is required to take effect.
+You can use following command in FMT console to set MAV_SYS_ID and a reboot of  the SIL FMT is required to take effect.
 
 ```shell
 msh />param set MAV_SYS_ID 2
