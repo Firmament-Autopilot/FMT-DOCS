@@ -121,6 +121,11 @@ single | airspeed         | m/s         | airspeed
 double | lon              | deg         | longitude
 double | lat              | deg         | latitude
 double | alt              | m           | altitude
+double | lon_0              | deg         | reference longitude
+double | lat_0              | deg         | reference latitude
+double | alt_0              | m           | reference altitude
+double | dx_dlat              | m/deg         | gradient of  position_x/latitude
+double | dy_dlon              | m/deg         | gradient of position_y/longitude
 single | x_R              | m           | relative position x
 single | y_R              | m           | relative position y
 single | h_R              | m           | relative height
