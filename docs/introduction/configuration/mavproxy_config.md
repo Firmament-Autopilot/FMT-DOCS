@@ -30,6 +30,8 @@ Here is an example configuration that includes two devices reserved for channel 
 
 By default, the system will utilize the first device defined for the `mavproxy` channel. However, if multiple devices are defined for a channel, the system has the capability to switch to other available devices. For instance, if a USB connection is established, `mavproxy` channel 0 can switch to the `usb0` device. If the USB connection is disconnected, `mavproxy` channel 0 will automatically switch back to the `serial1` device.
 
+
+
 The **chan** has following choices:
 
 - 0: Channel for ground control station.
