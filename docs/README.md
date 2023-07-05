@@ -22,6 +22,7 @@ Model-based design provides an efficient approach for establishing a complex and
 - A powerful simulation framework with various algorithm library designed with MATLAB/Simulink.
 - Auto code generation from Simulink model adapted to different hardware platforms (ARM, AMD, Intel, etc).
 - Excellent real-time performance based on [RT-Thread](https://www.rt-thread.io/) RTOS with active community and large number of third-party components.
-- Support various hardware platform.
+- Support various hardware platform. Please refer to [target folder]([FMT-Firmware/target at master · Firmament-Autopilot/FMT-Firmware (github.com)](https://github.com/Firmament-Autopilot/FMT-Firmware/tree/master/target)).
 - Cross-platform development tool support with Windows/Linux/Mac.
 - Support with Mavlink v1.0/v2.0.
+- Support with ROS1/ROS2.
