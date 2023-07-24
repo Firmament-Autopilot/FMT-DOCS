@@ -6,6 +6,7 @@
 
   - [Download](introduction/download.md)
   - [Build](introduction/build.md)
+  - [Ground Control Station](introduction/gcs.md)
   - [Vehicle/Airframe](introduction/vehicle_type.md)
   - [Configuration](introduction/configuration/configuration.md)
     - [Console Configuration](introduction/configuration/console_config.md)  
