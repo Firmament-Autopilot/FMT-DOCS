@@ -4,7 +4,9 @@
 
 - Getting started
 
-  - [Quick Start](introduction/quickstart.md)
+  - [Download](introduction/download.md)
+  - [Build](introduction/build.md)
+  - [Vehicle/Airframe](introduction/vehicle_type.md)
   - [Configuration](introduction/configuration/configuration.md)
     - [Console Configuration](introduction/configuration/console_config.md)  
     - [Mavproxy Configuration](introduction/configuration/mavproxy_config.md)  
