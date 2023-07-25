@@ -38,7 +38,7 @@ FMT-Firmware/
 Explanation of directories and files:
 
 1. **src/**: This directory holds the primary source code files of the firmware. The `startup.c` file is typically the entry point of the firmware. Other directories, such as `driver`, `hal`, `lib`, `modules`, etc., represent distinct components of the firmware, making it modular and organized.
-2. **rtos/**: Within this directory, you'll find the code related to the Real-Time Operating System (RTOS) utilized in the FMT-Firmware project. It specifically contains the RTOS implementation, and in this case, it utilizes the "rt-thread" RTOS.
+2. **rtos/**: Within this directory, you'll find the code related to the Real-Time Operating System (RTOS) utilized in the FMT-Firmware project. It specifically contains the RTOS implementation, and in this case, it utilizes the [rt-thread](https://www.rt-thread.io/) RTOS.
 3. **target/**: This folder accommodates the Board Support Package (BSP) specific to the hardware targeted for the firmware. The BSP is a crucial component that facilitates interaction between the firmware and the hardware it runs on.
 4. **unit_test/**: The `unit_test/` directory comprises code for unit tests, which play a vital role in testing individual components or units of the firmware in isolation, ensuring robustness and correctness. Unit tests are essential for maintaining the reliability of the firmware.
 
@@ -71,7 +71,7 @@ cd FMT-Firmware/target/amov/icf5
 scons -j4
 ```
 
-The `-j4` flag enables parallel building with 4 jobs, accelerating the build process and reducing compilation time. By default, the firmware is built for the Quadcopter vehicle (`vehicle=Multicopter --airframe=1`). For other vehicle and airframe types, please refer to the [Vehicle/Airframe](introduction/vehicle_type.md) section.
+The `-j4` flag enables parallel building with 4 jobs, accelerating the build process and reducing compilation time. By default, the firmware is built for the Quadcopter x vehicle (`vehicle=Multicopter --airframe=1`). For other vehicle and airframe types, please refer to the [Vehicle/Airframe](introduction/vehicle_type.md) section.
 
 ### Download Firmware
 
