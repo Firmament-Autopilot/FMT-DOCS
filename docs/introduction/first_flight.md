@@ -6,7 +6,7 @@ Before the first flight, you need to perform some checks to ensure safety.
 
 #### Check RC
 
-First, you need to check if the remote control function is working properly. First check if the remote control data is received by entering `mcn list` to verify that the publication frequency of the **rc_channels** data is non-zero. If the publication frequency is zero, indicating that no RC signals are received, please ensure that your RC receiver is correctly connected and your sysconfig.toml is properly configured. For more information about RC configuration, please refer to [Pilot-Cmd Configuration](https://chat.openai.com/introduction/configuration/pilot_cmd_config.md).
+First, you need to check if the remote control function is working properly. First check if the remote control data is received by entering `mcn list` to verify that the publication frequency of the **rc_channels** data is non-zero. If the publication frequency is zero, indicating that no RC signals are received, please ensure that your RC receiver is correctly connected and your sysconfig.toml is properly configured. For more information about RC configuration, please refer to [Pilot-Cmd Configuration](introduction/configuration/pilot_cmd_config.md).
 
 ```bash
 msh />mcn list
@@ -114,7 +114,7 @@ The aircraft's arm and disarm operations can also be performed by QGroundControl
 
 #### Check Motors
 
-First, check the installation order and rotation direction of the motors. This is crucial because installing the motors incorrectly can lead to the destruction of the aircraft. To verify the motor installation order and direction, please refer to the [Vehicle/Airframe](https://chat.openai.com/introduction/vehicle_type.md) section.
+First, check the installation order and rotation direction of the motors. This is crucial because installing the motors incorrectly can lead to the destruction of the aircraft. To verify the motor installation order and direction, please refer to the [Vehicle/Airframe](introduction/vehicle_type.md) section.
 
 To verify the motor installation, you can use `act` command to drive each motor individually. **However, before doing so, ensure all motor propellers are removed for safety reasons**. 
 
@@ -172,7 +172,7 @@ Before the flight, you should also verify if the attitude is correct via QGround
 
 #### Simulated Flight
 
-For users who are not familiar with aircraft controls, it is recommended to first practice flying using the SIH simulation mode to become familiar with the aircraft's operation. The operation of SIH is completely consistent with that of real aircraft. For instructions on how to enable the SIH simulation mode, please refer to the simulation steps in [Simulation-In-Hardware](https://chat.openai.com/simulation/SIH.md).
+For users who are not familiar with aircraft controls, it is recommended to first practice flying using the SIH simulation mode to become familiar with the aircraft's operation. The operation of SIH is completely consistent with that of real aircraft. For instructions on how to enable the SIH simulation mode, please refer to the simulation steps in [Simulation-In-Hardware](simulation/SIL.md).
 
 #### Real Flight
 
