@@ -26,7 +26,7 @@ After installing the compiler, the next step is to create a new environment vari
    - **Windows**: Open the Control Panel, go to System and Security > System > Advanced system settings > Environment Variables. Click on "New" under "User variables" and enter the variable name as `RTT_EXEC_PATH` and the variable value as the full path to the compiler's bin directory.
 
     <p align="center">
-        <img src="./figures/win_exec_path.png" width="30%">
+    	<img src="./figures/win_exec_path.png" width="30%">
     </p>
 
    - **Linux/Mac**: Open a terminal and edit the shell configuration file (e.g., `~/.bashrc`, `~/.bash_profile`, or `~/.zshrc`, depending on your shell). Add the following line to the file:
@@ -86,7 +86,7 @@ To begin coding for the FMT-Firmware project in Visual Studio Code, follow these
 Now, you have the FMT-Firmware project opened in Visual Studio Code, and you can start coding, modifying, and managing the project using the various features and extensions provided by the IDE. Happy coding!
 
 <p align="center">
-  <img src="./figures/vscode.png" width="50%">
+  <img src="./figures/vscode.png" width="30%">
 </p>
 
 Absolutely, installing useful Visual Studio Code (VS Code) plugins can significantly enhance your development experience when working with the FMT-Firmware project. Two essential plugins for the FMT-Firmware project are:
