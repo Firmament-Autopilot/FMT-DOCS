@@ -20,3 +20,5 @@ However, for other hardware configurations like ICF5, you may need to create the
 <p align="center">
 	<img src="./figures/qgc_connect.png" width="60%">
 </p>
+
+> For usb connection, the baud rate doesn't matter.
