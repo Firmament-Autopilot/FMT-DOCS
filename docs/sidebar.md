@@ -22,6 +22,7 @@
     - [RC Calibration](introduction/calibration/rc_calib.md)
     - [ESC Calibration](introduction/calibration/esc_calib.md)
 
+  - [First Flight](introduction/first_flight.md)
   - [Debug](introduction/debug.md)
   - [Logging](introduction/logging.md)
 
