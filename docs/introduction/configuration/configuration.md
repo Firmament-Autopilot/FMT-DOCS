@@ -17,6 +17,8 @@ To upload the configuration file, you have two options:
 
 1. **QGC Onboard Files (QGC 3.5.6 only)**: If you are using QGroundControl (QGC) version 3.5.6, you can utilize the "Onboard Files" feature to upload the configuration file directly to the system. This simplifies the process and allows you to manage the configuration easily through QGC.
 
-   <img src="../../figures/onboard_files.png" width="30%">
+    <p align="center">
+      <img src="./figures/onboard_files.png" width="30%">
+    </p>
 
 2. **SD Card Reader**: Alternatively, you can use an SD card reader to upload the configuration file to the system. Simply copy the configuration file onto the SD card and insert it into the system. This method works independently of the QGC version and is suitable for systems without access to QGC Onboard Files.

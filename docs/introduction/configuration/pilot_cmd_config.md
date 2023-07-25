@@ -42,7 +42,9 @@ To define pilot control mode, you can add `[[pilot-cmd.mode]]` to toml file. Bel
 
 The meaning of this configuration is that if rc channel 5 value is in the range of [1800, 2000], the stabilize mode will be selected. The calibrated rc value is used here, which is published via `rc_trim_channels` topic. You can see the values of rc channel using `mcn echo rc_trim_channels`. The rc channels index start from 1.
 
-<img src="figures/rc_trim_channels.png" width="30%">
+<p align="center">
+  <img src="./figures/rc_trim_channels.png" width="20%">
+</p>
 
 The value of mode defines the pilot mode, which is recognizable by FMS (Flight Management System). The full definition of pilot mode is shown below. You can also define your own pilot mode as long as FMS can recognize it.
 

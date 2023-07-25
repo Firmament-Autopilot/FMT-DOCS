@@ -3,7 +3,9 @@
 
 The console module is useful to print system information and provide command interaction. and can be redirected to difference devices. 
 
-<img src="figures/console_out.png" width="30%">
+<p align="center">
+  <img src="./figures/console_out.png" width="25%">
+</p>
 
 `[console]` table is used to configure the console module, which contains one or more `[[console.devices]]` that the console can use with. The bellowing is a valid configuration with three devices reserved for console. They are *serial0*, *serial1* and *mav_console* respectively grouped by *[[console.devices]]* subtables. The first two are general serial devices, while the *mav_console* is a special one (virtual device), which provide read/write interface to transfer data with QGC Mavlink Console. 
 

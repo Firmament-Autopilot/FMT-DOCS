@@ -20,16 +20,24 @@ JLINK_SERVER = <J-link server path>/JLinkGDBServerCL
 
 4. Connect Jlink SWD pinout(pin 1,7,9,4) to FMU Debug port. You can also connect J-Link TX/RX for console usage.
 
-<img src="figures/jlink_pinout.png" width="15%">
+<p align="center">
+  <img src="./figures/jlink_pinout.png" width="15%">
+</p>
 
 5. Install `cortex-debug` expension in VSCode. You need install `v1.4.4` or lower version.
 
-<img src="figures/cortex-debug.png" width="30%">
+<p align="center">
+  <img src="./figures/cortex-debug.png" width="20%">
+</p>
 
 5. Click **Debug Run** button in VS Code and **select the right configuration** for your target. We've already added debug configurations in the *.vscode/launch* for each target.
 
-<img src="figures/jlink1.png" width="20%">
+<p align="center">
+  <img src="./figures/jlink1.png" width="20%">
+</p>
 
 7. Click **Start Debugging** button.
 
-<img src="figures/jlink2.png" width="50%">
+<p align="center">
+  <img src="./figures/jlink2.png" width="50%">
+</p>
