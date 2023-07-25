@@ -16,8 +16,9 @@ Follow these steps to do the rc calibration.
 - Step2：Type the `rc calib` command and follow the prompts to finish the calibration process.
 
 <p align="center">
-  <img src="./figures/rc_calib2.png" width="30%">
+  <img src="./figures/rc_calib2.jpg" width="30%">
 </p>
+
 
 - Step3：Once complete，Once the calibration is complete, the calibration parameters will be updated to the `RC` parameter group, which can be viewed via the `param list RC` command. The calibrated rc signal is published via `rc_trim_channels` topic, and the max/min/mid values should be 2000/1000/1500 respectively.
 - Step4：After confirming that the calibration parameters are correct, enter `param save` in the console to save the calibration results, otherwise the system will lose the unsaved calibration results if the system is powered off.
