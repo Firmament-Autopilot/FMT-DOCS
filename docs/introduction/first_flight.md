@@ -170,6 +170,34 @@ exec check_motor.sh
 
 Before the flight, you should also verify if the attitude is correct via QGroundControl (QGC). This is to ensure that your flight controller is mounted at the right position and direction, and that your sensors are correctly calibrated.
 
+#### Check Mode
+
+Before takeoff, please ensure that the flight mode displayed on the ground station matches the flight mode you have set. 
+
+<p align="center">
+	<img src="./figures/check_mode.png" width="40%">
+</p>
+
+If they do not match, it could be due to sensor data not meeting the requirements, resulting in control degradation. For instance, if you have set the flight mode to **Position**, but the ground station shows **Altitude**, the possible reason could be the absence of GPS connection or insufficient GPS accuracy, leading to a lack of available position information and thereby preventing the entry into **Position** mode.
+
+You can also check the INS (Inertial Navigation System) status by entering `mcn echo ins_output`. If the `xy` and `h` flags are both zero, it indicates that position and height information is not available, which means the aircraft cannot enter the Position mode.
+
+```
+msh />mcn echo ins_output
+timestamp:206396
+att: -0.01 -0.03 -0.01
+rate: 0.01 0.00 -0.00
+accel: -0.10 -0.01 -9.86
+vel: 0.00 0.00 -0.00 airspeed:0.10
+xyh: -0.06 -0.08 0.05, h_AGL: 0.05
+LLA: 0.656730 -2.136100 4.557099 LLA0: 0.656730 -2.136100 4.509699
+dx/dlat: 6359226.852620 dy/dlon: 5057753.479151
+standstill:1 att:1 heading:1 vel:1 LLA:1 xy:1 h:1 h_AGL:0
+sensor status, imu1:1 imu2:0 mag:1 baro:1 gps:1 rf:0 optflow:0
+```
+
+
+
 #### Simulated Flight
 
 For users who are not familiar with aircraft controls, it is recommended to first practice flying using the SIH simulation mode to become familiar with the aircraft's operation. The operation of SIH is completely consistent with that of real aircraft. For instructions on how to enable the SIH simulation mode, please refer to the simulation steps in [Simulation-In-Hardware](simulation/SIL.md).
