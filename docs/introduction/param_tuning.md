@@ -154,3 +154,7 @@ TASK_EXPORT __fmt_task_desc = {
 ##### Offline Data Viewing
 
 The second method involves offline data viewing through Data Simulation, which is a highly recommended approach. By using this method, you can access all the data you need for analysis and testing purposes. For further details, please refer to the [Data Simulation](simulation/DataSIM.md) section.
+
+<p align="center">
+	<img src="./figures/sdi_signal.png" width="30%">
+</p>
