@@ -85,3 +85,13 @@ PARAM_DECLARE_GROUP(SYSTEM) = {
 ```
 
 The [script](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) can be used to parse the log file and generate *.mat* files. Load *.mat files to Matlab for data visualization and do the simulation.
+
+## Download Log
+
+To download logs, you can use QGroundControl (QGC) version 3.5.6 or an older version. QGC offers a feature called **Onboard Files**, which enables access to the flight controller's file system through the FTP protocol. With this functionality, you can easily retrieve logs and other files from the flight controller.
+
+<p align="center">
+  <img src="./figures/onboard_files.png" width="30%">
+</p>
+
+Alternatively, you can remove the SD card from the flight controller and use an SD card reader to access the logs directly. This method allows you to extract the logs without relying on QGroundControl and fast download speed, providing an additional option for retrieving log data.
