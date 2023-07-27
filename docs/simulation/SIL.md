@@ -57,7 +57,9 @@ Task Initialize:
 
 If you need connect QGC, open it before running qemu command. The QGC will be automatically connected when qemu is up and running.
 
-<img src="figures\qemu_bootlog.png" width="50%">
+<p align="center">
+	<img src="./figures/qemu_bootlog.png" width="40%">
+</p>
 
 ### Multi-Vehicle Simulation
 SIH simulation can support multiple-vehicle simulation without the need to prepare multiple flight controller hardware.
@@ -74,4 +76,6 @@ parameter save to /sys/sih_param.xml
 
 When MAV_SYS_ID is set correctly and FMT system is up running, you will see multiple vehicles in QGC.
 
-<img src="figures\multi_vehicle.png" width="50%">
+<p align="center">
+	<img src="./figures/multi_vehicle.png" width="40%">
+</p>

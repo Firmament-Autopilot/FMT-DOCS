@@ -9,18 +9,24 @@ FMT supports the standard Mavlink protocol with HIL messages. Therefore FMT can 
 
 HIL simulation is enabled by adding `#define FMT_USING_HIL` in *fmtconfig.h* at BSP folder. Then rebuild the system.
 
-<img src="figures\using_hil.png" width="20%">
+<p align="center">
+	<img src="./figures/using_hil.png" width="20%">
+</p>
 
 When system is powered on, type `mcn list` command in console. You will find that sensor topic publich frequency are all 0, which is normal, because HIL simualtor (such as AirSim, Gazebo, etc) is not connected and the sensor data for HIL simulation mode comes from outside.
 
-<img src="figures\hil_data.png" width="30%">
+<p align="center">
+	<img src="./figures/hil_data.png" width="25%">
+</p>
 
 ### AirSim Simulation
 FMT supports to simulate with AirSim. You need first download AirSim, either binaries or source. For more information about AirSim, please access https://microsoft.github.io/AirSim/.
 
 Once you have AirSim installed, there will be a AirSim folder created at *User/Documents*.
 
-<img src="figures\airsim_folder.png" width="50%">
+<p align="center">
+	<img src="./figures/airsim_folder.png" width="40%">
+</p>
 
 Open *settings.json* and change the content as follow. Notice that you need change the `SerialPort` to the flight controller's port which connected to your computer.
 
@@ -51,11 +57,17 @@ Open *settings.json* and change the content as follow. Notice that you need chan
 
 Then start the AirSim. The upper left corner shows that you are connected to the flight controller, and then you can control it.
 
-<img src="figures\airsim_play.png" width="100%">
+<p align="center">
+	<img src="./figures/airsim_play.png" width="50%">
+</p>
 
 ### FMT-Sim Simulation
 TBA
 
-<img src="figures\fmt_sim_mc.png" width="50%">
+<p align="center">
+	<img src="./figures/fmt_sim_mc.png" width="50%">
+</p>
 
-<img src="figures\fmt_sim_fw.png" width="50%">
+<p align="center">
+	<img src="./figures/fmt_sim_fw.png" width="50%">
+</p>

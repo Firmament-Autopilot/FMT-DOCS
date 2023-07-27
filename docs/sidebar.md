@@ -29,7 +29,8 @@
 
 - Model-Based Design
 
-  - [Quick Start](mbd/mbd_quickstart.md)
+  - [Introduction](mbd/introduction.md)
+  - [Quick Start](mbd/quick_start.md)
 
   - Model Interface
 

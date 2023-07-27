@@ -5,17 +5,23 @@ Simulation-In-Hardware (SIH) is an alternative to Hardware-In-The-Loop simulatio
 
 In HIL simulations, an external machine is generally required to run the Plant model. However, this is not required for SIH simulation, because Plant runs directly in the flight controller. SIH can be used to familiarize yourself with the operation before flying the real drone.
 
-<img src="figures\sih_diag.png" width="70%">
+<p align="center">
+	<img src="./figures/sih_diag.png" width="40%">
+</p>
 
 ### Setting Up SIH
 
 SIH simulation is enabled by adding `#define FMT_USING_SIH` in *fmtconfig.h* at BSP folder. Then rebuild the system.
 
-<img src="figures\using_sih.png" width="20%">
+<p align="center">
+	<img src="./figures/using_sih.png" width="20%">
+</p>
 
-When system is powered on, the system banner would output **Plant Model** information, which means the SIH simulation mode is activated.
+When system is powered on, the system banner would output **Plant Model** information, which means the SIH simulation mode is activated. Then, you can connect the GCS and RC to operate the SIH simulation just like operating a real aircraft.
 
-<img src="figures\sih_banner.png" width="30%">
+<p align="center">
+	<img src="./figures/sih_banner.png" width="20%">
+</p>
 
 ### SIH Simulation with Multicopter
 FMT has a built-in multicopter plant model, so you can use SIH to simulate with multicopter. Make sure `#define FMT_USING_SIH` is uncommented. Then use the following command to build the firmware.

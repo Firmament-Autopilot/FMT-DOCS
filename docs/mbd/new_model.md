@@ -13,7 +13,9 @@ To add a new controller model into the FMT-Model, kindly adhere to the following
     - *LICENSE*: This file contains the license details for your model.
     - *README.md*: A comprehensive introduction and documentation of the model.
 
-<img src="figures/template_folder.png" width="50%">
+<p align="center">
+	<img src="./figures/template_folder.png" width="40%">
+</p>
 
 - Modify the `Controller.slx` file by incorporating your algorithm into the existing structure, allowing for the seamless integration of your specific implementation.
 - Please update the contents of the `controller_model_init.m` file to align with the specifications of your model. This includes modifying model parameters, defining the appropriate model period, model information (name, version, etc.), and adjusting any other relevant configurations in accordance with your specific model requirements..
