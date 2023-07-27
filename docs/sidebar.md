@@ -27,13 +27,6 @@
   - [Debug](introduction/debug.md)
   - [Logging](introduction/logging.md)
 
-- Modules
-
-  - [uMCN](module/uMCN.md)
-  - [Param](module/param.md)
-  - [Mlog](module/mlog.md)
-  - [Mavproxy](module/mavproxy.md)
-
 - Model-Based Design
 
   - [Quick Start](mbd/mbd_quickstart.md)
@@ -56,3 +49,12 @@
   - [Simulation-In-Hardware](simulation/SIH.md)
   - [Software-In-The-Loop](simulation/SIL.md)
   - [Hardware-In-The-Loop](simulation/HIL.md)
+
+- Developer
+
+    - Modules
+
+      - [uMCN](module/uMCN.md)
+      - [Param](module/param.md)
+      - [Mlog](module/mlog.md)
+      - [Mavproxy](module/mavproxy.md)

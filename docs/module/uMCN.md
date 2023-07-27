@@ -36,23 +36,23 @@ typedef struct {
 } data_content;
 ```
 
-uMCN has no restrictions on the length and type of topic content, so in theory, it can be used to transmit any message type.
+uMCN imposes no limitations on the length or type of topic content, making it theoretically capable of transmitting any message type.
 
-Then you need add topic definition using the macro `MCN_DEFINE(name, size)`. Usually on the top of source file where the topic is published. e.g.
+To define a topic, you should utilize the macro `MCN_DEFINE(name, size)`. This macro is typically added at the beginning of the source file where the topic is published. For example, consider the following:
 
 ```c
 MCN_DEFINE(my_topic, sizeof(data_content));
 ```
 
-uMCN supports multiple publishers and subscribers for one toppic. Note that the same topic name is not allowed, as the compiler will complain about that.
+uMCN supports multiple publishers and subscribers for a single topic. However, it is essential to avoid using the same topic name more than once, as the compiler will generate an error in such cases.
 
 The next step is to register this topic using `mcn_advertise()`. e.g.
 
 ```c
-mcn_advertise(MCN_ID(my_topic), my_topic_echo);
+mcn_advertise(MCN_HUB(my_topic), my_topic_echo);
 ```
 
-`MCN_ID()` is a macro to find the hub node with a given topic name. `my_topic_echo` is the echo callback function which is used to print out the topic data.
+The `MCN_HUB()` macro is used to locate the hub node associated with a specific topic name. On the other hand, the `my_topic_echo` serves as the echo callback function responsible for displaying the topic data.
 
 ```c
 static int my_topic_echo(void* param)
@@ -68,28 +68,28 @@ static int my_topic_echo(void* param)
 
 ## Publish Topic
 
-Publishing a topic can be done from anywhere in the system using function `mcn_publish()`. e.g.
+Publish a topic can be performed from any part of the system using the function `mcn_publish()`. For instance, consider the following:
 
 ```c
 data_content my_data = {50, -2.0, {1，2，3，4}}；
-mcn_publish(MCN_ID(my_topic), &my_data);
+mcn_publish(MCN_HUB(my_topic), &my_data);
 ```
 
 ## Subscribe Topic
 
-The uMCN supports to subscribe a topic with either synchronous or asynchronous method. For synchronous method, you need provide an event handle when subscribing a topic. Here is an example:
+uMCN provides support for subscribing to a topic using either synchronous or asynchronous methods. When opting for the synchronous approach, you will need to provide an event handle while subscribing to the topic. Here is an example to illustrate this:
 
 **Synchronous subscription**
 
 ```c
 rt_sem_t event = rt_sem_create("my_event", 0, RT_IPC_FLAG_FIFO);
-McnNode_t my_nod = mcn_subscribe(MCN_ID(my_topic), event, NULL);
+McnNode_t my_nod = mcn_subscribe(MCN_HUB(my_topic), event, NULL);
 ```
 
 **Asynchronous subscription**
 
 ```c
-McnNode_t my_nod = mcn_subscribe(MCN_ID(my_topic), NULL, NULL);
+McnNode_t my_nod = mcn_subscribe(MCN_HUB(my_topic), NULL, NULL);
 ```
 
 > Note that you need declare a topic with macro `MCN_DECLARE(name)` if you are visiting a topic outside of the source file where the topic defined.
@@ -101,7 +101,7 @@ Correspondingly, there are synchronous and asynchronous methods when reading a t
 ```c
 data_content read_data;
 if(mcn_wait(my_nod, RT_WAIT_FOREVER)){
-	mcn_copy(MCN_ID(my_topic), my_nod, &read_data);
+	mcn_copy(MCN_HUB(my_topic), my_nod, &read_data);
 }
 ```
 
@@ -110,7 +110,7 @@ if(mcn_wait(my_nod, RT_WAIT_FOREVER)){
 ```c
 data_content read_data;
 if(mcn_poll(my_nod){
-	mcn_copy(MCN_ID(my_topic), my_nod, &read_data);
+	mcn_copy(MCN_HUB(my_topic), my_nod, &read_data);
 }
 ```
 

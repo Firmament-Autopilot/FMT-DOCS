@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The parameter module provides functions to define, read and store parameters. The parameters can be stored in any storage device, such sd card or flash. The parameter is load from `/sys/param.xml` in system boot stage. If no parameter file existed, the default parameter value will be used.
+The parameter module offers functions for defining, reading, writing, and storing parameters. These parameters can be stored on various storage devices, such as an SD card or flash memory. During the system boot stage, the parameters are loaded from the `/sys/param.xml` file. In case no parameter file exists, the default parameter values will be utilized.
 
 ## API
 
@@ -32,14 +32,14 @@ fmt_err_t param_link_variable(param_t* param, void* var);
 
 ## Add New Parameter
 
-Parameters are organized in parameter groups. Each parameter group contains one or more parameters. Before adding a new parameter, you must first select a parameter group for the parameter and add the parameter to the parameter group, or create a new parameter group for it.
+Parameters are organized into parameter groups, with each group containing one or more parameters. When adding a new parameter, you must first choose a parameter group to which the parameter belongs. You can either add the parameter to an existing parameter group or create a new parameter group specifically for it. This organization helps to manage and categorize parameters effectively.
 
-As shown below, here we define a new parameter group named `New_Group`. `param_list` is the parameter list for this parameter group. Parameters can be defined in any source file, by convention, they are generally defined at the top of the module file they belong to.
+As illustrated below, we have defined a new parameter group called `New_Group`. The `param_list` represents the list of parameters within this group. Parameters can be defined in any source file, but conventionally, they are placed at the top of the module file they are associated with for better organization.
 
 ```c
 static param_t param_list[] = {
-    PARAM_FLOAT(my_param1, 0.5),
-    PARAM_UINT32(my_param2, 1),
+    PARAM_FLOAT(my_param1, 0.5, false),
+    PARAM_UINT32(my_param2, 1, false),
 };
 PARAM_GROUP_DEFINE(New_Group, param_list);
 ```
@@ -47,21 +47,21 @@ PARAM_GROUP_DEFINE(New_Group, param_list);
 We can define different types of parameters using the macros provided as follows:
 
 ```c
-PARAM_INT8(_name, _default)
-PARAM_UINT8(_name, _default)
-PARAM_INT16(_name, _default)
-PARAM_UINT16(_name, _default)
-PARAM_INT32(_name, _default)
-PARAM_UINT32(_name, _default)
-PARAM_FLOAT(_name, _default)
-PARAM_DOUBLE(_name, _default)
+PARAM_INT8(_name, _default, _readonly)
+PARAM_UINT8(_name, _default, _readonly)
+PARAM_INT16(_name, _default, _readonly)
+PARAM_UINT16(_name, _default, _readonly)
+PARAM_INT32(_name, _default, _readonly)
+PARAM_UINT32(_name, _default, _readonly)
+PARAM_FLOAT(_name, _default, _readonly)
+PARAM_DOUBLE(_name, _default, _readonly)
 ```
 
-Default values of parameters may be overridden by values loaded from the `/sys/param.xml` file during system boot process.
+> During the system boot process, the default values of parameters can be overwritten by the values loaded from the `/sys/param.xml` file. This allows customization of parameter values based on the content stored in the XML file.
 
 ## Read Parameter
 
-The parameter module provides the following macros to easily read parameter values. Note that the user needs to use a macro that matches the parameter type, otherwise the wrong value will be read.
+The parameter module offers the following macros to facilitate easy reading of parameter values. However, it's crucial for the user to utilize a macro that corresponds to the parameter type, otherwise, an incorrect value may be read. Ensuring the proper macro usage is essential to retrieve accurate parameter data.
 
 ```c
 #define PARAM_GET_INT8(_group, _name)
@@ -74,7 +74,7 @@ The parameter module provides the following macros to easily read parameter valu
 #define PARAM_GET_DOUBLE(_group, _name)
 ```
 
-Obtaining parameter values in this way is not particularly efficient, because it uses the query method to find the corresponding parameters. When there are many parameters, the overhead caused by the query will be very large. A more efficient way to read parameters is as follows:
+Retrieving parameter values using the before mentioned method is not particularly efficient since it involves querying to find the corresponding parameters. When dealing with a large number of parameters, this querying overhead can become significant. A more efficient approach to read parameters is as follows:
 
 ```c
 static float my_val;
@@ -82,11 +82,11 @@ static float my_val;
 param_link_variable(PARAM_GET(New_Group, my_param1), &my_val);
 ```
 
-The `param_link_variable()` function links the `my_param1` parameter with the `my_val` variable. When the parameter value changes, the value of my_val will also change accordingly.
+The `param_link_variable()` function establishes a link between the `my_param1` parameter and the `my_val` variable. As a result, whenever the parameter value changes, the value of `my_val` will automatically update to reflect the new parameter value.
 
 ## Set Parameter
 
-Similarly, the parameter module also provides the following macros to easily set parameter values. Because the query method is also used to obtain parameters, the efficiency is low.
+Similarly, the parameter module offers the following macros to easily set parameter values. However, as the query method is utilized to obtain parameters, the efficiency may be relatively low.
 
 ```c
 #define PARAM_SET_INT8(_group, _name, _val)
@@ -99,9 +99,14 @@ Similarly, the parameter module also provides the following macros to easily set
 #define PARAM_SET_DOUBLE(_group, _name, _val)
 ```
 
-A more efficient way is to first find the corresponding parameter through the `PARAM_GET()` macro, and then use the `param_set_val` function to modify the parameter value. This avoids the need to query each time the parameters are modified, so the efficiency is improved.
+A more efficient approach involves using the `PARAM_GET()` macro to find the corresponding parameter and then utilizing the `param_set_val` function to modify its value. By adopting this method, the need for repetitive querying when modifying parameters is eliminated, resulting in improved efficiency.
 
-> Note that you need call `param_save(path)` to save parameters after value changed.
+```
+param_t* param = PARAM_GET(New_Group, my_param1);
+param_set_val(param, &((float) { 3.5 }));
+```
+
+> Please be aware that after making changes to parameter values, you must call `param_save(path)` to save the updated parameters. This step ensures that the modified values are persisted and preserved for future use.
 
 ## Command
 
@@ -114,4 +119,5 @@ command:
  get         Get parameter.
  save        Save parameters to file.
  load        Load parameters from file.
+ restore	 Restore parameters to default value.
 ```
