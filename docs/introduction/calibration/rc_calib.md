@@ -3,15 +3,16 @@
 
 The RC calibration is currently not possible done with the QGC because it is designed for PX4, which would calibrate throttle signal to the range of [0 1], as FMT requires the throttle signal to be calibrated to the [-1 1] range.
 
-To solve this problem, FMT provides an internal rc calibration command `rc calib`.
+To solve this problem, FMT provides an internal rc calibration command `calib rc`.
 
 Follow these steps to do the rc calibration.
 
 - Step1：Before calibration, make sure the rc receiver is connected to the flight controller and the rc is turned on. We can use `mcn list` command to check the public frequency of *rc_channels* topics. If it is not 0, that means the rc signal has been received normally.
 
 <p align="center">
-  <img src="./figures/rc_calib1.png" width="30%">
+  <img src="./figures/rc_calib1.png" width="20%">
 </p>
+
 
 - Step2：Type the `rc calib` command and follow the prompts to finish the calibration process.
 
