@@ -61,3 +61,4 @@
       - [Param](module/param.md)
       - [Mlog](module/mlog.md)
       - [Mavproxy](module/mavproxy.md)
+    - [Contribution](developer/contribution.md)
