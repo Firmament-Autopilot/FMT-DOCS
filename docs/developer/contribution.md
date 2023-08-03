@@ -198,7 +198,7 @@ Install Git: You need to add Git's directory to the system environment variable.
 
 #### Fork
 
-Fork the [Firmament-Autopilot/FMT-Firmware]([Firmament-Autopilot/FMT-Firmware: Firmament Autopilot Embedded System (github.com)](https://github.com/Firmament-Autopilot/FMT-Firmware)) repository into your git repository.
+Fork the [Firmament-Autopilot/FMT-Firmware](https://github.com/Firmament-Autopilot/FMT-Firmware) repository into your git repository.
 
 <p align="center">
   <img src="./figures/fork.png" width="80%">
