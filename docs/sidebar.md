@@ -54,7 +54,7 @@
   - [Hardware-In-The-Loop](simulation/HIL.md)
 
 - Developer
-
+    - [Tasks](developer/tasks.md)
     - Modules
 
       - [uMCN](module/uMCN.md)
@@ -62,3 +62,4 @@
       - [Mlog](module/mlog.md)
       - [Mavproxy](module/mavproxy.md)
     - [Contribution](developer/contribution.md)
+    
