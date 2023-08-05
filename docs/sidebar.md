@@ -57,9 +57,13 @@
     - [Tasks](developer/tasks.md)
     - Modules
 
-      - [uMCN](module/uMCN.md)
-      - [Param](module/param.md)
-      - [Mlog](module/mlog.md)
-      - [Mavproxy](module/mavproxy.md)
+      - [uMCN](developer/module/uMCN.md)
+      - [Param](developer/module/param.md)
+      - [Mlog](developer/module/mlog.md)
+      - [Mavproxy](developer/module/mavproxy.md)
+    - [Drivers](developer/drivers.md)
+    - [Build System](developer/build.md)
     - [Contribution](developer/contribution.md)
-    
+
+- Advanced
+    - [Offboard Control](advanced/offboard.md)
