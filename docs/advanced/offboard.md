@@ -1,6 +1,19 @@
 ## Offboard Control
 
+> Offboard control is dangerous. It is the responsibility of the developer to ensure adequate preparation, testing and safety precautions are taken before offboard flights.
+
+Offboard mode is used for controlling vehicle movement and attitude, by setting position, velocity, acceleration, attitude, attitude rates or thrust/torque setpoints.
+
 The idea behind off-board control is to be able to control the FMT flight stack using software running outside of the autopilot. This is done through the MAVLink protocol, specifically the [SET_POSITION_TARGET_LOCAL_NED](https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_LOCAL_NED) and the [SET_ATTITUDE_TARGET ](https://mavlink.io/en/messages/common.html#SET_ATTITUDE_TARGET) messages.
+
+The standard procedure for offboard control is as follows:
+
+1. Activate offboard control mode.
+2. Issue a takeoff command to initiate ascent to the designated altitude.
+3. Once airborne, the vehicle will transition into a hold mode since no offboard commands have been dispatched yet.
+4. Initiate the offboard task within the onboard computer to transmit commands to the flight controller.
+
+> You can utilize the [SIH](simulation/SIH.md) simulation mode to rehearse offboard control procedures prior to conducting real-world testing.
 
 ### MAVROS Control
 
