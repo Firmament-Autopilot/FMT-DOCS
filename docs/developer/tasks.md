@@ -100,7 +100,9 @@ Task Initialize:
 
 ### Start Task
 
-When `auto_start` is set to true, the task will be initiated automatically by the task manager. However, if `auto_start` is false, it becomes the user's responsibility to manually start the task using the `task start <task_name>` command. For instance, we can start a local task by executing the following command.
+When `auto_start` is set to true, the task will be initiated and started automatically by the task manager. 
+
+However, if `auto_start` is false, it becomes the user's responsibility to manually start the task using the `task start <task_name>` command. For instance, we can start a local task by executing the following command.
 
 ```
 msh />task start local
