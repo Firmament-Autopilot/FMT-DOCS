@@ -416,5 +416,7 @@ TASK_EXPORT __fmt_task_desc = {
 };
 ```
 
-
+ <p align="center">
+ 	<img src="./figures/eight_figure.jpg" width="100%">
+ </p>
 
