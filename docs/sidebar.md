@@ -34,12 +34,12 @@
   - [Introduction](mbd/introduction.md)
   - [Quick Start](mbd/quick_start.md)
 
-  - Model Interface
+  - Bus Interface
 
-    - [FMS Interface](mbd/interface/fms_interface.md)
-    - [INS Interface](mbd/interface/ins_interface.md)
-    - [Controller Interface](mbd/interface/controller_interface.md)
-    - [Plant Interface](mbd/interface/plant_interface.md)
+    - [FMS Bus](mbd/interface/fms_interface.md)
+    - [INS Bus](mbd/interface/ins_interface.md)
+    - [Controller Bus](mbd/interface/controller_interface.md)
+    - [Plant Bus](mbd/interface/plant_interface.md)
 
   - [Add New Model](mbd/new_model.md)
   - [Code Generation](mbd/codegen.md)

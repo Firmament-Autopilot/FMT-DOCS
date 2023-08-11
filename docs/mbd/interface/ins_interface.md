@@ -10,6 +10,8 @@
 | GPS_uBlox    | 5       | [GPS_uBlox_Bus](#GPS_uBlox_Bus)    |
 | Rangefinder  | 6       | [Rangefinder_Bus](#Rangefinder_Bus)        |
 | Optical_Flow | 7       | [Optical_Flow_Bus](#Optical_Flow_Bus) |
+| AirSpeed | 8       | [AirSpeed_Bus](#AirSpeed_Bus) |
+| External_Pos | 9       | [External_Pos_Bus](#External_Pos_Bus) |
 
 ### Output Interface
 
@@ -98,6 +100,27 @@ float  | vy                | m/s        | relative velosity y in body frame
 uint8  | quality           | [0 255]    | optical_flow quality, large is better
 uint8  | reserved1         | -          | -
 uint16 | reserved2         | -          | -
+
+### AirSpeed_Bus
+
+Type   | Name              | Unit       | Comments
+-----  | --------------    | ---------- | ----------------
+uint32 | timestamp         | ms         | airsoeed timestamp
+single | diff_pressure         | Pa         | differential pressure
+single | temperature         | deg         | measured temperature
+
+### External_Pos_Bus
+
+Type   | Name              | Unit       | Comments
+-----  | --------------    | ---------- | ----------------
+uint32 | timestamp         | ms         | external pos timestamp
+uint32 | field_valid         | -         | field bit valid:<br>0: pos(xy) valid<br>1: height(z) valid<br>2: attitude(roll/pitch) valid<br>3: heading(yaw) valid
+single | x         | m         | local position x
+single | y         | m         | local position y
+single | z         | m         | local position z
+single | phi         | rad         | roll angle
+single | theta         | rad         | pitch angle
+single | psi         | rad         | yaw angle
 
 ### INS_Out_Bus
 
