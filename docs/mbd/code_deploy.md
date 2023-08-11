@@ -14,6 +14,19 @@ If a corresponding model directory does not exist for your model, you can follow
 2. Copy all the generated code files (*.c, *.h) to the `FMT-Firmware/src/model/control/my_controller/lib` directory.
 3. Open the `control_interface.c` file and make the necessary modifications. This involves adding parameters and logs based on the requirements of your model, as well as making any other adjustments that may be necessary to ensure proper integration.
 
+## Model Interface
+
+The Model Interface is a C file that establishes a connection between the embedded system and the generated model file. The responsibilities of the model interface include:
+
+- Calling the Init() and Step() functions of the Model.
+- Subscribing to input data of the Model, and publishing Model output data.
+- Defining model parameters and binding them to the Model's parameters (optional).
+- Defining model log data for data simulation or recording purposes (optional).
+
+ <p align="center">
+ 	<img src="./figures/model_interface.png" width="30%">
+ </p>
+
 ## Deploy C/C++ Code
 
 If you have an algorithm written in C/C++ that you wish to integrate into the FMT-Firmware, it is indeed possible. The overall process is similar to deploying a model. For more detailed information and guidance, you can refer to the `FMT-Firmware/src/model/ins/px4_ecl` directory. This directory provides insights into how to integrate custom algorithms into the FMT-Firmware.
