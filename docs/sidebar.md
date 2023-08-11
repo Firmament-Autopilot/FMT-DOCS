@@ -1,7 +1,6 @@
 <!-- docs/_sidebar.md -->
 
 - [Introduction](/)
-
 - Getting started
 
   - [Download](introduction/download.md)
@@ -28,7 +27,11 @@
   - [Debug](introduction/debug.md)
   - [Logging](introduction/logging.md)
   - [Command](introduction/command.md)
-
+- Hardware
+    - [Complete Vehicle](hardware/complete_vehicle.md)
+    - [Flight Controller](hardware/flight_controller.md)
+    - [Peripheral](hardware/peripheral.md)
+    - [Companion Computer](hardware/companion_computer.md)
 - Model-Based Design
 
   - [Introduction](mbd/introduction.md)
@@ -44,7 +47,6 @@
   - [Add New Model](mbd/new_model.md)
   - [Code Generation](mbd/codegen.md)
   - [Code Deployment](mbd/code_deploy.md)
-
 - Simulation
 
   - [Model-In-The-Loop](simulation/MIL.md)
@@ -52,7 +54,6 @@
   - [Simulation-In-Hardware](simulation/SIH.md)
   - [Software-In-The-Loop](simulation/SIL.md)
   - [Hardware-In-The-Loop](simulation/HIL.md)
-
 - Developer
     - [Tasks](developer/tasks.md)
     - Modules
@@ -64,6 +65,5 @@
     - [Drivers](developer/drivers.md)
     - [Build System](developer/build.md)
     - [Contribution](developer/contribution.md)
-
 - Advanced
     - [Offboard Control](advanced/offboard.md)

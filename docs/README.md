@@ -46,6 +46,7 @@ FMT supports a wide range of open-source hardware platforms.
 - [CUAV V5+](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/cuav/v5_plus/README.md)
 - [Pixhawk 4](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/pixhawk/fmu-v5/README.md)
 - [Pixhawk 2.4.6](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/pixhawk/fmu-v2/README.md)
+- [Cube Orange](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/cubepilot/cubeorange/README.md)
 - [QEMU vexpress-a9](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/qemu/qemu-vexpress-a9/README.md)
 
   <p align="center">
