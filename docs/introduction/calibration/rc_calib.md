@@ -14,7 +14,7 @@ Follow these steps to do the rc calibration.
 </p>
 
 
-- Step2：Type the `rc calib` command and follow the prompts to finish the calibration process.
+- Step2：Type the `calib rc` command and follow the prompts to finish the calibration process.
 
 <p align="center">
   <img src="./figures/rc_calib2.jpg" width="30%">
