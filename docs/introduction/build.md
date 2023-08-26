@@ -18,7 +18,7 @@ FMT-Firmware/
 |   |-- ...
 |-- target/
 |   |-- amov
-|   |-- coolflt
+|   |-- coolfly
 |   |-- cuav
 |   |-- cubepilot
 |   |-- minimum

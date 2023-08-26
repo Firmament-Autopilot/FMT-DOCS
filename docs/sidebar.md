@@ -67,3 +67,4 @@
     - [Contribution](developer/contribution.md)
 - Advanced
     - [Offboard Control](advanced/offboard.md)
+    - [Mission Planning](advanced/mission.md)
