@@ -23,3 +23,14 @@ This section contains information about complete vehicles that can FMT. It lists
 <p align="center">
 	<img src="https://gd4.alicdn.com/imgextra/i4/135449951/O1CN01Ee0zR42NNc6jI9zjn_!!135449951.jpg" width="40%">
 </p>
+#### [AmovLab FW-T1](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-22617251051.21.76c2366d8jwSvz&id=739982335792)
+
+- Size: 645mm * 730mm * 140mm
+- Wingspan: 730mm
+- Weight: 205g
+- Maximum Takeoff Weight: 700g
+- Duration: > 40 min
+
+<p align="center">
+	<img src="https://gd2.alicdn.com/imgextra/i2/135449951/O1CN01d2Mzss2NNc88Tf5EJ_!!135449951.jpg" width="40%">
+</p>
