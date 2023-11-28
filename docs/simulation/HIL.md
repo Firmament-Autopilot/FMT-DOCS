@@ -5,6 +5,10 @@ Hardware-in-the-Loop (HIL) is the simulation mode that FMT firmware runs on a re
 
 FMT supports the standard Mavlink protocol with HIL messages. Therefore FMT can support any HIL simulator which support Mavlink protocol.
 
+<p align="center">
+	<img src="./figures/hil_diag.png" width="40%">
+</p>
+
 ### Setting Up HIL
 
 HIL simulation is enabled by adding `#define FMT_USING_HIL` in *fmtconfig.h* at BSP folder. Then rebuild the system.
