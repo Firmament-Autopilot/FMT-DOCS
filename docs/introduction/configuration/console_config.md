@@ -1,11 +1,7 @@
 
 ## Console Configuration
 
-The console module is useful to print system information and provide command interaction. and can be redirected to difference devices. 
-
-<p align="center">
-  <img src="./figures/console_out.png" width="25%">
-</p>
+The console module is useful to print system information and provide command interaction， and can be redirected to difference devices, such as serial, usb, etc.
 
 `[console]` table is used to configure the console module, which contains one or more `[[console.devices]]` that the console can use with. The bellowing is a valid configuration with three devices reserved for console. They are *serial0*, *serial1* and *mav_console* respectively grouped by *[[console.devices]]* subtables. The first two are general serial devices, while the *mav_console* is a special one (virtual device), which provide read/write interface to transfer data with QGC Mavlink Console. 
 
@@ -33,7 +29,7 @@ The system will use the first device by default (serial0 in this case). And cons
 
 The **type** has following choices:
 
-- **serial**: the general serial device.
+- **serial**: the general serial device. You can use serial port assistant (e.g, [MobaXterm](https://mobaxterm.mobatek.net/)) connects to console via serial port.
 
 | Argument  | Type |  Description |
 | ----------- | ------ | ----------- |
@@ -41,9 +37,17 @@ The **type** has following choices:
 | baudrate | integer | serial baudrate       |
 | auto-switch | bool | if true, automatically switch to device if data received        |
 
+<p align="center">
+  <img src="./figures/console_out.png" width="25%">
+</p>
+
 - **mavlink**: mavlink console device, which is able to send and receivce data via mavlink. So you can access the console via QGC mavlink console.
 
 | Argument | Type  | Description |
 | ----------- | ------- | ---------- |
 | name      | string | devie name       |
 | auto-switch | bool | if true, automatically switch to device if data received        |
+
+<p align="center">
+  <img src="./figures/mavlink_console.png" width="30%">
+</p>

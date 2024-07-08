@@ -41,9 +41,9 @@ By setting the `RTT_EXEC_PATH` environment variable, you enable the system to lo
 
 ### Construction Tool
 
-FMT employs SCons as its construction tool, which serves as an enhanced and cross-platform alternative to the traditional Make utility. SCons configuration files are written in Python, offering a user-friendly and powerful approach to address build-related challenges. Python's flexibility and ease of use make configuring the build process a more intuitive and efficient experience. With SCons, developers can enjoy a streamlined and effective build system that adapts smoothly across different platforms.
+FMT employs [SCons](https://scons.org/) as its construction tool, which serves as an enhanced and cross-platform alternative to the traditional Make utility. SCons configuration files are written in Python, offering a user-friendly and powerful approach to address build-related challenges. Python's flexibility and ease of use make configuring the build process a more intuitive and efficient experience. With SCons, developers can enjoy a streamlined and effective build system that adapts smoothly across different platforms.
 
-Prior to installing SCons, it is essential to verify whether Python 3 is already installed on your system. If you don't have Python 3 installed, you can download it from [the official website](https://www.python.org/downloads/). Python serves as a prerequisite for SCons, as SCons configuration files are written in Python scripts. Once Python 3 is installed, you can proceed with the installation of SCons to enable a smoother and more efficient build process for your projects.
+Prior to installing SCons, it is essential to verify whether Python 3 is already installed on your system. If you don't have Python 3 installed, you can download it from [here](https://www.python.org/downloads/). Python serves as a prerequisite for SCons, as SCons configuration files are written in Python scripts. Once Python 3 is installed, you can proceed with the installation of SCons to enable a smoother and more efficient build process for your projects.
 
 After ensuring that Python 3 is installed on your system, follow these steps in the terminal:
 
@@ -52,6 +52,8 @@ After ensuring that Python 3 is installed on your system, follow these steps in 
    ```bash
    > pip3 install scons
    ```
+
+   > If this command is not working on your system, you can download [scons local package](https://scons.org/pages/download.html). The scons-local packages contain versions of SCons that you can execute standalone, out of a local directory, without installation. **Don't forget to add SCons path to your enviroment parameter**.
 
 2. Once the installation is complete, you can check if SCons was installed successfully by entering the following command:
 
