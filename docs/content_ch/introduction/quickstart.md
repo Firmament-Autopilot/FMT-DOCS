@@ -6,7 +6,7 @@ FMT的代码被托管在[Github](https://github.com/Firmament-Autopilot)。请�
 git clone https://github.com/Firmament-Autopilot/FMT-Firmware.git --recursive --shallow-submodules
 ```
 
-> 注意因为FMT-Firmware中包含了子模块的代码，使用*--recursive*同时拉取子模块。
+> 注意因为FMT-Firmware中包含了子模块的代码，使用 *--recursive* 同时拉取子模块。
 
 ## 工具链
 
@@ -26,7 +26,7 @@ FMT使用arm-none-eabi- toolchain *7-2018-q2-update*版本，可上其[官网](h
    - **Windows**:打开控制面板，依次进入“系统和安全 > 系统 > 高级系统设置 > 环境变量”。在“用户变量”下点击“新建”，然后输入变量名为 RTT_EXEC_PATH，变量值为编译器 bin 目录的完整路径。
 
     <p align="center">
-      <img src="./figures/win_exec_path.png" width="50%">
+      <img src="./figures/win_exec_path.png" width="40%">
     </p>
 
    
@@ -90,12 +90,22 @@ VS Code 提供了强大且用户友好的开发环境，具备广泛的扩展和
 
 现在，您已经在 Visual Studio Code 中打开了 FMT-Firmware 项目，可以开始使用 IDE 提供的各种功能和扩展来编写、修改和管理项目了。祝编码愉快！
 <p align="center">
-  <img src="figures/vscode.png" width="200%">
+  <img src="figures/vscode.png" width="60%">
 </p>
 当然，安装有用的 Visual Studio Code (VS Code) 插件可以显著增强您在处理 FMT-Firmware 项目时的开发体验。以下是两个对 FMT-Firmware 项目至关重要的插件：
 
 1. C/C++：这个插件在 VS Code 中为 C 和 C++ 语言提供了优秀的支持，包括代码高亮、智能感知、代码导航以及专为这些语言定制的调试能力。
 2. Clang-Format: Clang-Format 是用于 C、C++ 和其他编程语言的代码格式化工具。在 VS Code 中使用 Clang-Format 插件可以根据特定的风格指南自动格式化您的代码，确保代码一致性和可读性。
+
+要安装这些插件，请按照以下步骤操作：
+
+1. 打开 Visual Studio Code。
+2. 点击左侧边栏上的“扩展”图标（或者使用快捷键 Ctrl+Shift+X，macOS 上使用 Cmd+Shift+X）。
+3. 在扩展市场搜索栏中输入 “C/C++” 和 “Clang-Format”。
+4. 点击每个插件的“安装”按钮。
+5. 安装完成后，您可能需要重启 Visual Studio Code 以激活插件。
+
+安装这些插件后，您的开发环境将更好地处理 FMT-Firmware 项目的复杂性，使编码和格式化任务更加高效和便捷。
 
 ## 编译固件
 
@@ -199,7 +209,7 @@ python3 uploader.py --port COM3
 
 2. **QGC**: 进入 *Firmware Setup(设置)* 界面，然后使用USB将飞控连接到电脑. 在弹出的对话框中选择 *高级设置->自定义固件文件* ，然后选择FMU的bin固件进行下载。
 <p align="center">
-   <img src="figures/QGC_download.jpg" width="100%">
+   <img src="figures/QGC_download.jpg" width="60%">
 </p>
 3. **J-Link**: 如果你有JLink，您可以将其插到硬件的debug端口来下载固件。更多的信息，请参考[Debug](https://firmament-autopilot.github.io/FMT-DOCS/#/content_ch/introduction/debug)章节的内容.
 

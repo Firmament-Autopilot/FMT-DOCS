@@ -7,11 +7,11 @@
 
 基于模型的设计（MBD）在系统开发的各个阶段（包括建模和仿真）中起着关键作用。它显著有助于遵循V模型开发过程，促进更安全、更可靠系统的创建。通过利用MBD，系统开发过程变得更加顺畅，实现有效的建模和仿真，最终提高最终产品的安全性和可靠性。
 <p align="center">
- <img src="figures/v_model.png" width="60%">
+ <img src="figures/v_model.png" width="45%">
 </p>
 从本质上讲，基于模型的设计（MBD）是一种方法论，通过图形表示和自动代码生成，利用MBD设计软件（如Simulink、MWorks等）创建算法模型。这种方法简化了设计过程，实现了图形模型无缝转换为可执行代码，提升了效率并减少了手动实施的工作。
 <p align="center">
- <img src="figures/mbd_software.png" width="100%">
+ <img src="figures/mbd_software.png" width="75%">
 </p>
 
 ## 为什么使用MBD

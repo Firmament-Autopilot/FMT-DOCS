@@ -5,15 +5,15 @@
 
 1. 将机体放置水平并保持不动，然后点击**Gyroscope**传感器按钮。
 <p align="center">
-  <img src="figures/gyro_calib1.png" width="60%">
+  <img src="figures/gyro_calib1.png" width="50%">
 </p>
 2. 点击OK开始校准。顶部的进度条将显示校准进度。
 <p align="center">
-  <img src="figures/gyro_calib2.png" width="60%">
+  <img src="figures/gyro_calib2.png" width="50%">
 </p>
 3. 完成后，QGroundControl将显示进度条*Calibration complete*。
 <p align="center">
-  <img src="figures/gyro_calib3.png" width="60%">
+  <img src="figures/gyro_calib3.png" width="50%">
 </p>
 
 ## 查看&保存结果

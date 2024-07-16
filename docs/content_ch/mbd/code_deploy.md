@@ -24,7 +24,7 @@
 - 定义模型日志数据，用于数据仿真或记录目的（可选）。
 
 <p align="center">
- <img src="figures/model_interface.png" width="50%">
+ <img src="figures/model_interface.png" width="45%">
 </p>
 
 ## 部署 C/C++ 代码

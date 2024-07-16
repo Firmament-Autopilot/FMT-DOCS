@@ -39,6 +39,7 @@
 <p align="center">
  <img src="figures/console_out.png" width="40%">
 </p>
+
 - **mavlink**: mavlink 控制台设备能够通过 mavlink 发送和接收数据。因此，您可以通过 QGC 的 mavlink 控制台访问控制台。。
 
 | Argument | Type  | Description |
@@ -46,5 +47,5 @@
 | name      | string | devie name       |
 | auto-switch | bool | if true, automatically switch to device if data received        |
 <p align="center">
- <img src="figures/mavlink_console.png" width="65%">
+ <img src="figures/mavlink_console.png" width="45%">
 </p>

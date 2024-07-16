@@ -6,7 +6,7 @@
 FMT支持带有HIL消息的标准Mavlink协议。因此，FMT可以支持任何支持Mavlink协议的HIL模拟器。
 
 <p align="center">
-	<img src="./figures/hil_diag.png" width="80%">
+	<img src="./figures/hil_diag.png" width="40%">
 </p>
 
 ### 设置HIL仿真
@@ -14,13 +14,13 @@ FMT支持带有HIL消息的标准Mavlink协议。因此，FMT可以支持任何�
 通过在BSP文件夹中的*fmtconfig.h*文件中添加`#define FMT_USING_HIL`来启用HIL仿真。然后重新构建系统。
 
 <p align="center">
-	<img src="./figures/using_hil.png" width="70%">
+	<img src="./figures/using_hil.png" width="30%">
 </p>
 
 当系统上电后，在控制台中输入`mcn list`命令。您会发现传感器主题的发布频率都是0，这是正常的，因为HIL模拟器（例如AirSim、Gazebo等）尚未连接，HIL仿真模式下的传感器数据来自外部。
 
 <p align="center">
-	<img src="./figures/hil_data.png" width="70%">
+	<img src="./figures/hil_data.png" width="35%">
 </p>
 
 ### AirSim仿真
@@ -30,7 +30,7 @@ FMT支持与AirSim进行仿真。您需要首先下载AirSim，可以选择二�
 安装AirSim后，*User/Documents*目录下会创建一个AirSim文件夹。
 
 <p align="center">
-	<img src="./figures/airsim_folder.png" width="70%">
+	<img src="./figures/airsim_folder.png" width="50%">
 </p>
 
 
@@ -64,16 +64,16 @@ FMT支持与AirSim进行仿真。您需要首先下载AirSim，可以选择二�
 然后启动AirSim。左上角会显示您已连接到飞行控制器，然后您可以进行控制。
 
 <p align="center">
-	<img src="./figures/airsim_play.png" width="50%">
+	<img src="./figures/airsim_play.png" width="45%">
 </p>
 
 ### FMT-Sim Simulation
 待补充
 
 <p align="center">
-	<img src="./figures/fmt_sim_mc.png" width="50%">
+	<img src="./figures/fmt_sim_mc.png" width="45%">
 </p>
 
 <p align="center">
-	<img src="./figures/fmt_sim_fw.png" width="50%">
+	<img src="./figures/fmt_sim_fw.png" width="45%">
 </p>

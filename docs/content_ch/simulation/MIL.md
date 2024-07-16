@@ -5,7 +5,7 @@
 
 模型在环仿真是一种在仿真环境（如 Simulink）中开发和运行仿真模型的方法。 一个典型的自驾仪系统模型结构如图所示：
 <p align="center">
- <img src="figures/mil_model.png" width="80%">
+ <img src="figures/mil_model.png" width="50%">
 </p>
 
 ### 设置 MIL 仿真
@@ -14,7 +14,7 @@
 2. 双击 **FMT_Model.prj** 打开和初始化工程。
 3. 打开仿真模型 `simulation/MILSIM.slx`.
 <p align="center">
-   	<img src="./figures/milsim.png" width="60%">
+   	<img src="./figures/milsim.png" width="50%">
 </p>
 
 
@@ -42,17 +42,17 @@
 默认的可视化工具是MATLAB 3D。双击Simulink可视化模块`MILSIM/Virtualization/3D_Visualization/Matlab_3D/Visualization/VR Sink`。将视点设置为*Isometric - No Rotation*。
 
 <p align="center">
-	<img src="./figures/MILVisualize.jpg" width="100%">
+	<img src="./figures/milvisualize.jpg" width="45%">
 </p>
 
 <p align="center">
-	<img src="./figures/matlab_3D.png" width="60%">
+	<img src="./figures/matlab_3D.png" width="45%">
 </p>
 
 对象模型生成车辆状态，例如姿态、位置等。这些信息可以发送到任何可视化软件，如Flightgear、Gazebo、Webots等。
 
 <p align="center">
-	<img src="./figures/flightgear.png" width="60%">
+	<img src="./figures/flightgear.png" width="645">
 </p>
 
 ### Run Simulation

@@ -5,13 +5,13 @@
 
 1. 点击**Level Horizon**按钮。
 <p align="center">
-  <img src="figures/level_calib1.png" width="60%">
+  <img src="figures/level_calib1.png" width="50%">
 </p>
 2. 将机体按水平飞行方向放置在平面上。
 3. 点击**OK**按钮开始校准。
 4. 等待校准完成。
 <p align="center">
-  <img src="figures/level_calib2.png" width="60%">
+  <img src="figures/level_calib2.png" width="50%">
 </p>
 ## 查看&保存结果
 
