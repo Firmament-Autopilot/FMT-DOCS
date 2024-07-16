@@ -30,7 +30,7 @@ JLINK_SERVER = <J-link server path>/JLinkGDBServerCL
   <img src="./figures/cortex-debug.png" width="20%">
 </p>
 
-5. To initiate the debugging process in VS Code, click on the **Debug Run** button. Then, ensure you select the appropriate configuration for your target. You will find debug configurations for each target already added in the `.vscode/launch` folder. Simply choose the relevant configuration to start debugging your code effortlessly.
+6. To initiate the debugging process in VS Code, click on the **Debug Run** button. Then, ensure you select the appropriate configuration for your target. You will find debug configurations for each target already added in the `.vscode/launch` folder. Simply choose the relevant configuration to start debugging your code effortlessly.
 
 <p align="center">
   <img src="./figures/jlink1.png" width="20%">

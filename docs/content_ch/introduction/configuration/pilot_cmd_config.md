@@ -40,10 +40,10 @@
     range = [1800,2000]
 ```
 
-这个配置的函数时如果遥控通道5的数值在[1800, 2000]的范围内，则自稳模式被选中。这里使用的时校准后的遥控通道值，它将通过`rc_trim_channels`消息发布。您可以通过输入`mcn echo rc_trim_channels`指令来查看各个遥控通道的数值。遥控通道的索引从1开始。
-
-<img src="figures/rc_trim_channels.png" width="30%">
-
+这个配置的函数时如果遥控通道5的数值在[1800, 2000]的范围内，则自稳模式被选中。这里使用的是校准后的遥控通道值，它将通过`rc_trim_channels`消息发布。您可以通过输入`mcn echo rc_trim_channels`指令来查看各个遥控通道的数值。遥控通道的索引从1开始。
+<p align="center">
+   <img src="figures/rc_trim_channels.png" width="50%">
+</p>
 mode的数值定义了遥控模式，它可以被FMS（Flight Management System）识别。完整的遥控模式定义如下所示。您可以添加自己的遥控模式定义，只要能被FMS识别就行。
 
 | Mode | Value | Description |

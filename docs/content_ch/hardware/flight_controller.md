@@ -1,6 +1,8 @@
-## Flight Controller
+## 飞行控制器
 
-This section lists autopilot hardware that can be used to run the FMT flight stack.
+本节列出了可用于运行FMT飞行栈的自动驾驶硬件。
+
+
 - [AMOV ICF5](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/amov/icf5/README.md)
 
 <p align="center">
@@ -30,4 +32,3 @@ This section lists autopilot hardware that can be used to run the FMT flight sta
 <p align="center">
 	<img src="https://a2zrc.com/wp-content/uploads/2021/05/Flight_Controller_Cube_Orange_with_ADS-B_IN.jpg" width="35%">
 </p>
-

@@ -1,11 +1,11 @@
 
 ## 日志
 
-日志系统的目的是为用户提供记录信息并在以后检索它的工具。 为使得调试更加简便，FMT日志系统支持三种日志形式。
+日志系统的目的是为用户提供记录数据并在以后检索数据的手段。为了增强调试能力，FMT 日志系统具有**三种类型**的日志：启动日志、文本日志和数据日志。该功能使开发人员能够通过检查相关的日志文件并检测潜在问题，进行高效和有效的调试操作。
 
 ### 开机日志
 
-Boot log模块记录启动阶段的所有控制台输出，有助于查看系统启动信息。启动日志文件将在每次系统启动时创建并保存到工作日志会话文件夹中。工作日志会话 id 存储在 `/log/session_id`。session id 会在系统每次启动时自加。
+`Boot log`模块记录启动阶段的所有控制台输出，这对于检查系统启动信息非常有用。启动日志文件将在每次启动时创建，并保存到工作日志会话文件夹中。工作日志会话 ID 存储在 `/log/session_id` 中。每次启动时，会话 ID 会递增。
 
 ```
 msh />cat /log/session_5/boot_log.txt
@@ -85,3 +85,11 @@ PARAM_DECLARE_GROUP(SYSTEM) = {
 ```
 
 [script](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) 脚本可以被用来解析日志并生成*.mat*文件。将 *.mat 文件加载到Matlab以进行数据可视化和仿真。
+
+## 下载日志
+要下载日志，您可以使用 QGroundControl (QGC) 版本 3.5.6 或更早版本。QGC 提供了一个名为 **Onboard Files** 的功能，允许通过 FTP 协议访问飞控器的文件系统。借助此功能，您可以轻松地从飞控器中检索日志和其他文件。
+
+<p align="center">
+ <img src="./figures/download_log.png" width="70%">
+</p>
+或者，您可以从飞控器上取下 SD 卡，并使用 SD 卡读卡器直接访问日志。这种方法使您无需依赖 QGroundControl 即可提取日志，并且下载速度更快，为检索日志数据提供了另一种选择。

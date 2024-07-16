@@ -72,23 +72,23 @@ To set up the FMT-Model, please follow these steps:
 1. Open FMT-Model in MATLAB (version 2018b recommended, or higher versdion).
 
    <p align="center">
-   	<img src="./figures/model_setup1.png" width="30%">
+   	<img src="./figures/model_setup1.png" width="60%">
    </p>
 
 2. Double click **FMT_Model.prj** to open and initialize the project.
 
    <p align="center">
-   	<img src="./figures/model_setup2.png" width="30%">
+   	<img src="./figures/model_setup2.png" width="60%">
    </p>
 
 3. To choose specific models, access the **SIMULINK PROJECT** and navigate to **Project Path**. Here, you can view the currently selected models (By default, the multi-copter models are chosen).
 
    <p align="center">
-   	<img src="./figures/model_setup3.png" width="30%">
+   	<img src="./figures/model_setup3.png" width="60%">
    </p>
 
 4. To switch to fixed-wing models, simply remove the multi-copter models from the project path and add the desired fixed-wing models instead. After making this change, close the Simulink Project and clear the variables in the workspace. Finally, re-run the **FMT_Model.prj** to ensure that the changes take effect.
 
    <p align="center">
-   	<img src="./figures/model_setup4.png" width="30%">
+   	<img src="./figures/model_setup4.png" width="60%">
    </p>

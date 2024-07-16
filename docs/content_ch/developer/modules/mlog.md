@@ -2,7 +2,7 @@
 
 ## 介绍
 
-Mlog 模块提供了数据记录的功能。其中日志以二进制方式进行存储，类似于黑匣子的功能。
+MLog模块提供了一个以二进制格式记录数据地函数，作为黑匣子机制运行。同时，它保证了高带宽并满足实时需求，确保了高效和准确的数据记录。
 
 ## 接口函数
 
@@ -47,11 +47,11 @@ mlog_elem_t MAG_Elems[] = {
 MLOG_BUS_DEFINE(MAG, MAG_Elems);
 ```
 
-> 注意：为保证日志数据可以正确记录，日志总线的元素数据应该按4字节进行对齐。
+> 重要提示：为确保日志数据正确记录，必须将日志总线的元素数据对齐到4字节边界。这种对齐保证了在日志记录过程中数据的正确存储和检索。
 
 ## 记录数据
 
-要记录单条数据，你可以使用函数 `mlog_push_msg(const uint8_t* payload, uint8_t msg_id, uint16_t len)`，例如：
+要记录单个日志消息，你可以使用函数 `mlog_push_msg(const uint8_t* payload, uint8_t msg_id, uint16_t len)`，例如：
 
 ```c
     if (ins_handle.mag_updated) {
@@ -62,16 +62,17 @@ MLOG_BUS_DEFINE(MAG, MAG_Elems);
     }
 ```
 
-这里`MLOG_MAG_ID`为该条日志总线的ID，可以通过`mlog_get_bus_id("MAG")`函数进行获取。
+在这个例子中，`MLOG_MAG_ID`表示日志总线的ID，可以使用`mlog_get_bus_id("MAG")`函数获取。
 
-记录日志数据一般是在数据更新之后，以防止记录重复的数据。
+通常，数据在更新后记录，以避免日志中出现重复条目，确保只记录最新的信息。
 
-> 总线通常包含一个时间戳元素，用于将日志解析成带时间信息的 *timeseries* 数据类型。
+> 总线通常包含一个时间戳元素，用于将日志解析成带时间信息的 *timeseries* 数据类型,将时间信息与记录的数据结合起来。
 
 ## 开始 & 结束记录
 
-Mlog 的开始/结束流程由 `MLOG_MODE` 参数进行控制。
+mlog的启动和停止过程的初始化和终止由MLOG_MODE参数或mlog命令控制。这些控制确定日志操作何时开始和停止，从而方便管理数据记录。
 
+- MLOG_MODE
 ```c
 PARAM_DECLARE_GROUP(SYSTEM) = {
     /* Determines when to start and stop logging.
@@ -82,12 +83,12 @@ PARAM_DECLARE_GROUP(SYSTEM) = {
     PARAM_DEFINE_INT32(MLOG_MODE, 0),
 };
 ```
-
-你也可以使用命令来开始或者结束日志的记录。
+- 命令行
+您可以使用命令mlog start来启动记录（这不是启动日志），并使用命令mlog stop停止记录。这些命令提供了一种简单直接的方式来启动和停止数据记录过程。
 
 ## 解析日志
 
-使用 [parse_mlog.m](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) 脚本解析日志并获得 .mat 文件。
+您可以使用[parse_mlog.m](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m)脚本来解析日志文件并生成.mat文件。这些.mat文件将包含从日志中提取的数据，方便在MATLAB中进行简便的分析和进一步处理。
 
 ## 命令
 

@@ -1,6 +1,6 @@
-## Complete Vehicle
+## 整机
+本节包含有关能够运行（FMT）的整机信息。它列出了现成可用的商用机型、可供您进行自主开发的无人机“平台”，以及可用于从零件组装无人驾驶车辆的套件。
 
-This section contains information about complete vehicles that can execute FMT. It lists ready-to-use commercial vehicles, drone "platforms" on which you might base your own development, and kits that you can use to assemble an unmanned vehicle from parts.
 
 #### [AmovLab MFP450](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-22617251051.13.11714df8wcnLO3&id=713417934359)
 

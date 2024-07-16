@@ -5,9 +5,11 @@
 | Port Name   | Port ID | Bus Type        |
 | ----------- | ------- | --------------- |
 | Pilot_Cmd   | 1       | [Pilot_Cmd_Bus](#Pilot_Cmd_Bus)   |
-| INS_Out     | 2       | [INS_Out_Bus](content_ch/mbd/interface/ins_interface.md#INS_Out_Bus)     |
-| Control_Out | 3       | [Control_Out_Bus](content_ch/mbd/interface/controller_interface.md#Control_Out_Bus) |
-
+| GCS_Cmd   | 2       | [GCS_Cmd_Bus](#GCS_Cmd_Bus)   |
+| Auto_Cmd   | 3       | [Auto_Cmd_Bus](#Auto_Cmd_Bus)   |
+| Mission_Data   | 4       | [Mission_Data_Bus](#Mission_Data_Bus)   |
+| INS_Out     | 5       | [INS_Out_Bus](content_ch/mbd/interface/ins_interface.md#INS_Out_Bus)     |
+| Control_Out | 6       | [Control_Out_Bus](content_ch/mbd/interface/controller_interface.md#Control_Out_Bus) |
 ### 输出接口
 
 | Port Name | Port ID | Bus Type    |
