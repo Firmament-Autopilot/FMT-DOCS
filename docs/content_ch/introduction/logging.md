@@ -90,6 +90,6 @@ PARAM_DECLARE_GROUP(SYSTEM) = {
 要下载日志，您可以使用 QGroundControl (QGC) 版本 3.5.6 或更早版本。QGC 提供了一个名为 **Onboard Files** 的功能，允许通过 FTP 协议访问飞控器的文件系统。借助此功能，您可以轻松地从飞控器中检索日志和其他文件。
 
 <p align="center">
- <img src="./figures/download_log.png" width="70%">
+ <img src="./figures/download_log.png" width="45%">
 </p>
 或者，您可以从飞控器上取下 SD 卡，并使用 SD 卡读卡器直接访问日志。这种方法使您无需依赖 QGroundControl 即可提取日志，并且下载速度更快，为检索日志数据提供了另一种选择。

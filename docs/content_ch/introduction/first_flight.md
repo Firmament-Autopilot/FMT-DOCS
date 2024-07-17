@@ -2,7 +2,7 @@
 
 在首次飞行前，您需要进行一些检查以确保安全。
 
-## 检查遥控器
+### 检查遥控器
 
 首先，您需要检查遥控功能是否正常工作。首先通过输入 `mcn list` 来验证是否接收到遥控数据，检查 `rc_channels` 数据的发布频率是否非零。如果发布频率为零，这表示未接收到 RC 信号，请确保您的 RC 接收器正确连接并且您的 `sysconfig.toml` 配置正确。有关 RC 配置的更多信息，请参阅[遥控校准](http://localhost:3000/#/content_ch/introduction/calibration/rc_calib)。
 
@@ -86,17 +86,17 @@ stick_yaw:0.03 stick_throttle:-0.09 stick_roll:0.01 stick_pitch:0.05 mode:5 cmd:
 >这个命令是边缘触发的，因此将 SWD 开关从上位移动到下位只会触发一次 Disarm 命令。要再次触发它，您需要将 SWD 开关先移回上位，然后再次移动到下位。
 
 <p align="center">
-  <img src="figures/rc_figure.png" width="40%">
+  <img src="figures/rc_figure.png" width="30%">
 </p>
 
-## 检查解锁/上锁
+### 检查解锁/上锁
 
 对于飞行器的解锁操作，请将左摇杆移动到右下角并保持在那里，如下图所示。大约1.5秒后，飞行器将解锁，并且电机将开始空转。逐渐增加油门，当油门超过一个阈值（通常是中间位置）时，它将从待机状态过渡到解锁状态。
 
 在待机模式下，将左摇杆移动到左下角并保持在那里；大约1.5秒后，飞行器将被锁定。
 
 <p align="center">
-  <img src="figures/arm_disarm.png" width="40%">
+  <img src="figures/arm_disarm.png" width="30%">
 </p>
 
 解锁飞行器后，减小油门。当飞行器接触地面时，将油门拉到最小位置，飞行器将自动锁定。
@@ -104,10 +104,10 @@ stick_yaw:0.03 stick_throttle:-0.09 stick_roll:0.01 stick_pitch:0.05 mode:5 cmd:
 飞行器的解锁和上锁操作也可以通过 QGroundControl (QGC) 地面站进行。
 
 <p align="center">
-  <img src="figures/qgc_arm.png" width="60%">
+  <img src="figures/qgc_arm.png" width="45%">
 </p>
 
-## 检查电机
+### 检查电机
 
 首先，检查电机的安装顺序和旋转方向非常重要，因为错误安装电机可能会导致飞行器受损。要验证电机的安装顺序和方向，请参考[载具/机架](http://localhost:3000/#/content_ch/introduction/frameref)部分。
 
@@ -158,13 +158,13 @@ mcn resume control_output
 exec check_motor.sh
 ```
 
-## 检查姿态
+### 检查姿态
 在飞行之前，您还应该通过 QGroundControl (QGC) 验证姿态是否正确。这样可以确保您的飞行控制器安装在正确的位置和方向，并且传感器正确校准。
 
-## 检查飞行模式
+### 检查飞行模式
 在起飞前，请确保地面站显示的飞行模式与您设置的飞行模式匹配。
 <p align="center">
-  <img src="figures/check_mode.png" width="60%">
+  <img src="figures/check_mode.png" width="45%">
 </p>
 如果它们不匹配，可能是因为传感器数据未达到要求，导致控制能力下降。例如，如果您已将飞行模式设置为位置模式（Position），但地面站显示为高度模式（Altitude），可能的原因是缺乏 GPS 连接或 GPS 精度不足，导致位置信息不足，从而无法进入位置模式。
 

@@ -71,24 +71,24 @@ FMT-Model/
 1. 在 MATLAB 中打开 FMT-Model（推荐使用版本为 2018b 或更高版本）。
 
    <p align="center">
-   	<img src="./figures/model_setup1.png" width="60%">
+   	<img src="./figures/model_setup1.png" width="40%">
    </p>
 
 
 2. 双击打开 FMT_Model.prj 文件以打开和初始化项目。
 
    <p align="center">
-   	<img src="./figures/model_setup2.png" width="60%">
+   	<img src="./figures/model_setup2.png" width="40%">
    </p>
 
 3. 要选择特定的模型，访问 SIMULINK 项目并导航至项目路径。在这里，您可以查看当前选择的模型（默认情况下选择了多旋翼模型）。
 
   <p align="center">
-   	<img src="./figures/model_setup3.png" width="60%">
+   	<img src="./figures/model_setup3.png" width="40%">
    </p>
 
 4. 要切换到固定翼模型，简单地从项目路径中移除多旋翼模型，并添加所需的固定翼模型。在进行这些更改后，关闭 Simulink 项目并清除工作区中的变量。最后，重新运行 FMT_Model.prj 以确保更改生效。
 
    <p align="center">
-   	<img src="./figures/model_setup4.png" width="60%">
+   	<img src="./figures/model_setup4.png" width="40%">
    </p>

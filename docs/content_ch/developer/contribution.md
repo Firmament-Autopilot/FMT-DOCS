@@ -203,7 +203,7 @@ ColumnLimit: 0
 将 [Firmament-Autopilot/FMT-Firmware](https://github.com/Firmament-Autopilot/FMT-Firmware) 仓库 Fork 到您的 Git 仓库中。
 
 <p align="center">
-  <img src="./figures/fork.png" width="70%">
+  <img src="./figures/fork.png" width="65%">
 </p>
 
 #### 克隆
@@ -211,7 +211,7 @@ ColumnLimit: 0
 在您的仓库中，复制在您 Fork 后的仓库链接：
 
 <p align="center">
-  <img src="./figures/clone.png" width="70%">
+  <img src="./figures/clone.png" width="65%">
 </p>
 
 您可以使用 `git clone` 命令将仓库复制到您的计算机上：
@@ -278,7 +278,7 @@ git push origin YourBranchName
 进入您 Github 账户下的 FMT 仓库，点击 `New pull request -> Create pull request`。确保选择正确的分支。
 
 <p align="center">
-  <img src="./figures/pr.jpg" width="70%">
+  <img src="./figures/pr.jpg" width="65%">
 </p>
 
 - 步骤 1：填写此 Pull Request 的标题

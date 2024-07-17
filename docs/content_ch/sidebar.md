@@ -7,14 +7,14 @@
   - [快速上手](content_ch/introduction/quickstart.md)
   - [地面控制站](content_ch/introduction/gcs.md)
   - [载具/机架](content_ch/introduction/frameref.md)
-  - [系统配置](content_ch/introduction/configuration/configuration.md)
-	- [控制台配置](content_ch/introduction/configuration/console_config.md)
-	- [Mavproxy配置](content_ch/introduction/configuration/mavproxy_config.md)
-	- [遥控配置](content_ch/introduction/configuration/pilot_cmd_config.md)
-	- [输出配置](content_ch/introduction/configuration/actuator_config.md)
+
+  - [系统配置](content_ch/introduction/configuration/sysconfiguration.md)
+	  - [控制台配置](content_ch/introduction/configuration/console_config.md)
+	  - [Mavproxy配置](content_ch/introduction/configuration/mavproxy_config.md)
+	  - [遥控配置](content_ch/introduction/configuration/pilot_cmd_config.md)
+	  - [输出配置](content_ch/introduction/configuration/actuator_config.md)
 
   - 传感器校准
-  
     - [陀螺仪校准](content_ch/introduction/calibration/gyro_calib.md)
     - [加速度计校准](content_ch/introduction/calibration/accel_calib.md)
     - [罗盘校准](content_ch/introduction/calibration/mag_calib.md)

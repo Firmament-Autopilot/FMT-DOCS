@@ -7,13 +7,13 @@ FMT驱动程序采用分层架构模式设计，这些驱动程序可以广泛�
 FMT提供了一个硬件抽象层（HAL），向上提供统一的设备接口（读取/写入/控制），同时向下定义了驱动程序需要实现的操作接口。
 
  <p align="center">
- 	<img src="./figures/driver_arch.png" width="40%">
+ 	<img src="./figures/driver_arch.png" width="30%">
  </p>
 
 在大多数目标板上，HAL建立了适用于标准化驱动程序，尽管可能会存在一些独特的设备，这些设备专属于特定的硬件配置。在这种情况下，你可以选择绕过HAL，而是利用uMCN的发布/订阅机制进行消息传输。
 
  <p align="center">
- 	<img src="./figures/driver_arch2.png" width="40%">
+ 	<img src="./figures/driver_arch2.png" width="30%">
  </p>
 
 ### 创建驱动程序

@@ -55,7 +55,7 @@ param set ROLL_RATE_P 0.1
 您也可以使用 QGC 来修改参数。只需导航到 QGC 的参数页面，输入您想修改的参数，然后点击它来调整其数值。
 
 <p align="center">
-  <img src="figures/qgc_parameter.png" width="70%">
+  <img src="figures/qgc_parameter.png" width="40%">
 </p>
 
 ### 检查控制数据
@@ -64,7 +64,7 @@ param set ROLL_RATE_P 0.1
 #### 在线数据查看
 第一种方法是通过 QGroundControl (QGC) 进行实时数据检查。您可以将数据打包成 MAVLink 消息，使用 ID `MAVLINK_MSG_ID_DEBUG_FLOAT_ARRAY` 发送到 QGC。通过这种方式，您可以在 QGC 的分析页面上访问您的数据，并方便地查看。
 <p align="center">
- <img src="figures/check_data.png" width="70%">
+ <img src="figures/check_data.png" width="40%">
 </p>
 
 以下是发送调试数据的示例代码：
@@ -139,5 +139,5 @@ TASK_EXPORT __fmt_task_desc = {
 第二种方法是通过数据仿真进行离线数据查看，这是一种高度推荐的方法。通过这种方法，您可以获取所有需要进行分析和测试的数据。有关更多详细信息，请参阅[数据仿真](http://localhost:3000/#/content_ch/simulation/openloop)部分。
 
 <p align="center">
- <img src="./figures/sdi_signal.png" width="70%">
+ <img src="./figures/sdi_signal.png" width="40%">
 </p>

@@ -60,7 +60,7 @@ msh />
 如果您需要连接QGC，请在运行QEMU命令之前打开它。当QEMU启动并运行时，QGC会自动连接。
 
 <p align="center">
-	<img src="./figures/qemu_bootlog.png" width="70%">
+	<img src="./figures/qemu_bootlog.png" width="45%">
 </p>
 
 ### 多机仿真
@@ -79,5 +79,5 @@ parameter save to /sys/sih_param.xml
 当MAV_SYS_ID设置正确并且FMT系统正常运行时，您将在QGC中看到多个车辆。
 
 <p align="center">
-	<img src="./figures/multi_vehicle.png" width="70%">
+	<img src="./figures/multi_vehicle.png" width="45%">
 </p>

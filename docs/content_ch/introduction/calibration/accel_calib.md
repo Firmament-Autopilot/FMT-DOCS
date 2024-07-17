@@ -5,12 +5,12 @@
 
 1. 点击**Accelerometer**传感器按钮。
 <p align="center">
-  <img src="figures/accel_calib1.png" width="60%">
+  <img src="figures/accel_calib1.png" width="50%">
 </p>
 2. 点击OK开始校准。
 3. 将机体置于屏幕图片所示方向。一旦黄色框出现，将机体静置。当前方向校准完成后屏幕上对应图标的框将变绿。
 <p align="center">
-  <img src="figures/accel_calib2.png" width="60%">
+  <img src="figures/accel_calib2.png" width="50%">
 </p>
 4. 将机体置于各个方向并重复以上步骤。
 

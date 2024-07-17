@@ -74,13 +74,13 @@
 
 
  <p align="center">
- 	<img src="./figures/ttyacm0.png" width="40%">
+ 	<img src="./figures/ttyacm0.png" width="30%">
  </p>
 
 修改 MAVROS 中的 `px4.launch` 文件，使设备端口和波特率与设备配置一致。
 
  <p align="center">
- 	<img src="./figures/px4_launch.png" width="40%">
+ 	<img src="./figures/px4_launch.png" width="30%">
  </p>
 
 然后，使用以下命令来运行 MAVROS：
@@ -164,7 +164,7 @@ coordinate_frame: 1
 type_mask: 2560
 position:
   x: 100.0
-  y: 50.0
+  y: 50.03
   z: 10.0
 velocity:
   x: 0.0

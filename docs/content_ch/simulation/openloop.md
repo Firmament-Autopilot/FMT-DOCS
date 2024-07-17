@@ -4,7 +4,7 @@
 开环仿真是一种在基于模型设计领域分析软件性能的十分有效的方法。*Mlog* 模块记录必要的模型输入数据，其功能类似于黑匣子。将日志解析并喂给仿真模型进行开环仿真，我们可以获得模型的输出数据和所有的内部信号。
 
 <p align="center">
- <img src="figures/openloop_diagram.png" width="70%">
+ <img src="figures/openloop_diagram.png" width="45%">
 </p>
 
 
@@ -40,13 +40,13 @@ reboot
 要检查当前会话ID，您可以输入boot_log命令。
 
 <p align="center">
-	<img src="./figures/session_id.png" width="60%">
+	<img src="./figures/session_id.png" width="45%">
 </p>
 
 然后，您可以通过QGC的Component->Onboard Files（仅限QGC 3.5.6）或使用SD卡读取器下载日志。
 
 <p align="center">
-	<img src="./figures/download_log.png" width="80%">
+	<img src="./figures/download_log.png" width="45%">
 </p>
 
 ### 解析日志数据。
@@ -54,7 +54,7 @@ reboot
 FMT-Model提供了一个Matlab [脚本](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m)用于解析日志数据。在Matlab中运行该脚本并选择日志文件，脚本将解析日志数据并生成*.mat*文件。
 
 <p align="center">
-	<img src="./figures/parsed_log.png" width="60%">
+	<img src="./figures/parsed_log.png" width="45%">
 </p>
 
 ### 加载日志数据
@@ -66,7 +66,7 @@ FMT-Model提供了一个Matlab [脚本](https://github.com/Firmament-Autopilot/F
 打开数据仿真模型`simulation/DataSIM.slx`，然后点击**运行**按钮开始仿真。
 
 <p align="center">
-	<img src="./figures/data_sim.png" width="90%">
+	<img src="./figures/data_sim.png" width="75%">
 </p>
 
 ### 数据检查

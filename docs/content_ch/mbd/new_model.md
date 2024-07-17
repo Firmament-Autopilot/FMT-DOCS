@@ -14,7 +14,7 @@
   - **LICENSE**: 模型的许可.
   - **README.md**: 模型介绍.
 <p align="center">
-  <img src="figures/template_folder.png" width="80%">
+  <img src="figures/template_folder.png" width="50%">
 </p>
 
 - 通过将您的算法集成到现有结构中，修改 Controller.slx 文件，以便无缝集成您的具体实现。

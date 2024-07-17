@@ -1,6 +1,6 @@
 ## 遥控配置
 
-`[pilot-cmd]`用来对遥控模块进行配置。您可以在`[pilot-cmd.device]`配置遥控的协议，通道数，采样时间，通道数值范围等。摇杆通道可以通过`stick-channel`进行配置，它定义了*yaw*, *throttle*, *roll* and *pitch*对应的遥控通道。一个典型的遥控设备配置如下：
+`[pilot-cmd]`用来对遥控模块进行配置。您可以在`[pilot-cmd.device]`配置遥控的协议，通道数，采样时间，通道数值范围等。摇杆通道可以通过`stick-channel`进行配置，它定义了*yaw*, *throttle*, *roll* and *pitch* 对应的遥控通道。一个典型的遥控设备配置如下：
 
 ```
     # channel mapping for [yaw, throttle, roll, pitch]
@@ -42,7 +42,7 @@
 
 这个配置的函数时如果遥控通道5的数值在[1800, 2000]的范围内，则自稳模式被选中。这里使用的是校准后的遥控通道值，它将通过`rc_trim_channels`消息发布。您可以通过输入`mcn echo rc_trim_channels`指令来查看各个遥控通道的数值。遥控通道的索引从1开始。
 <p align="center">
-   <img src="figures/rc_trim_channels.png" width="50%">
+   <img src="figures/rc_trim_channels.png" width="30%">
 </p>
 mode的数值定义了遥控模式，它可以被FMS（Flight Management System）识别。完整的遥控模式定义如下所示。您可以添加自己的遥控模式定义，只要能被FMS识别就行。
 
