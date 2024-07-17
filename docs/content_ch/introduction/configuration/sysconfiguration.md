@@ -5,7 +5,7 @@
 
 当FMT系统运行起来的时候，它会去自动寻找板载文件系统上的`/sys/sysconfig.toml`配置文件。如果这个文件存在，则会加载里面的配置项。如果这个文件不存在，则会使用`default_config.h`中固化的默认系统配置。注意，默认配置只开启了有限的功能，遥控和电机输出功能都未开启。
 
-每个BSP下的config目录都包含一个默认的配置文件*sysconfig.toml*。为了开启FMT的所有功能，用户需要将*sysconfig.toml*配置文件上传到板子的*/sys*目录。这个文件包含了模块功能需要的配置信息。
+每个BSP下的config目录都包含一个默认的配置文件 *sysconfig.toml* 。为了开启FMT的所有功能，用户需要将 *sysconfig.toml* 配置文件上传到板子的 */sys* 目录。这个文件包含了模块功能需要的配置信息。
 
 - [Amov ICF5 Configuration](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/amov/icf5/config/sysconfig.toml)
 - [CUAV V5+ Configuration](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/amov/icf5/config/sysconfig.toml)

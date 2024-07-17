@@ -1,6 +1,6 @@
 ## 输出配置
 
-`[actuator]`可以被用来配置actuator输出模块，它包含了一个或多个`[[actuator.devices]]`。如下是一个包含了两个输出设备*main_out*和*aux_out*的配置。对于像Pixhawk标准的硬件，包含了2个pwm输出端口（8个主输出口，8个辅助输出口）。不同的输出设备可以分别设置PWM的输出频率。
+`[actuator]`可以被用来配置actuator输出模块，它包含了一个或多个`[[actuator.devices]]`。如下是一个包含了两个输出设备 *main_out* 和 *aux_out* 的配置。对于像Pixhawk标准的硬件，包含了2个pwm输出端口（8个主输出口，8个辅助输出口）。不同的输出设备可以分别设置PWM的输出频率。
 
 ```
     [[actuator.devices]]

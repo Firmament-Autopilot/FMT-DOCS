@@ -13,7 +13,7 @@ git clone https://github.com/Firmament-Autopilot/FMT-Firmware.git --recursive --
 FMT 利用跨平台工具链，支持在各种操作系统上开发，例如 Windows、Linux 和 Mac。这种灵活性确保了开发人员无论使用何种平台都能自由地进行项目开发。
 
 ### 编译器
-FMT使用arm-none-eabi- toolchain *7-2018-q2-update*版本，可上其[官网](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)进行下载安装，在开发过程中，务必要使用指定的编译器版本，以防止出现意外错误或不可预见的行为。不推荐使用其他编译器版本，以保持项目的稳定性和一致性。
+FMT使用arm-none-eabi- toolchain *7-2018-q2-update* 版本，可上其 [官网](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) 进行下载安装，在开发过程中，务必要使用指定的编译器版本，以防止出现意外错误或不可预见的行为。不推荐使用其他编译器版本，以保持项目的稳定性和一致性。
 
 编译器下载完成后，下一步是创建一个名为`RTT_EXEC_PATH`的新环境变量，并该变量应指向编译器 bin 目录的完整路径。以下是设置环境变量的方法：
 
@@ -46,7 +46,7 @@ FMT使用arm-none-eabi- toolchain *7-2018-q2-update*版本，可上其[官网](h
 FMT 采用 [SCons](https://scons.org/) 作为其构建工具，SCons是传统 Make 工具的增强版,是一个有效的跨平台的替代方案。SCons 配置文件使用 Python 编写，提供了一种用户友好且强大的方法来解决与构建相关的挑战。Python 的灵活性和易用性使配置构建过程更加直观和高效。使用 SCons，开发人员可以享受到一个能够适应不同平台并且简化以及高效的构建系统。
 
 
-在安装 SCons 之前，确保系统已经安装了 Python 3 是至关重要的。如果您的系统尚未安装 Python 3，您可以从[这里](https://www.python.org/downloads/)下载。Python 是 SCons 的先决条件，因为 SCons 的配置文件是用 Python 脚本编写的。安装完 Python 3 后，您可以继续安装 SCons，以便为项目启用更顺畅和高效的构建过程。
+在安装 SCons 之前，确保系统已经安装了 Python 3 是至关重要的。如果您的系统尚未安装 Python 3，您可以从 [这里](https://www.python.org/downloads/) 下载。Python 是 SCons 的先决条件，因为 SCons 的配置文件是用 Python 脚本编写的。安装完 Python 3 后，您可以继续安装 SCons，以便为项目启用更顺畅和高效的构建过程。
 
 确保您的系统已经安装了Python 3后，在终端中按照以下步骤操作：
 

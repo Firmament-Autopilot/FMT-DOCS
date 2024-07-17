@@ -1,6 +1,6 @@
 ## 遥控配置
 
-`[pilot-cmd]`用来对遥控模块进行配置。您可以在`[pilot-cmd.device]`配置遥控的协议，通道数，采样时间，通道数值范围等。摇杆通道可以通过`stick-channel`进行配置，它定义了*yaw*, *throttle*, *roll* and *pitch*对应的遥控通道。一个典型的遥控设备配置如下：
+`[pilot-cmd]`用来对遥控模块进行配置。您可以在`[pilot-cmd.device]`配置遥控的协议，通道数，采样时间，通道数值范围等。摇杆通道可以通过`stick-channel`进行配置，它定义了*yaw*, *throttle*, *roll* and *pitch* 对应的遥控通道。一个典型的遥控设备配置如下：
 
 ```
     # channel mapping for [yaw, throttle, roll, pitch]
