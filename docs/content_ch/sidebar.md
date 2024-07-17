@@ -54,7 +54,7 @@
 - 仿真
 
   - [模型在环仿真(MIL)](content_ch/simulation/MIL.md)
-  - [数据放在仿真(Data Sim)](content_ch/simulation/openloop.md)
+  - [数据在环仿真(Data Sim)](content_ch/simulation/openloop.md)
   - [纯硬件仿真(SIH)](content_ch/simulation/SIH.md)
   - [软件在环仿真(SIL)](content_ch/simulation/SIL.md)
   - [硬件在环仿真(HIL)](content_ch/simulation/HIL.md)

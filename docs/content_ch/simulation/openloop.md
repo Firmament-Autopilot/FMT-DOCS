@@ -1,7 +1,7 @@
 
-## 开环仿真
+## 数据在环仿真
 
-开环仿真是一种在基于模型设计领域分析软件性能的十分有效的方法。*Mlog* 模块记录必要的模型输入数据，其功能类似于黑匣子。将日志解析并喂给仿真模型进行开环仿真，我们可以获得模型的输出数据和所有的内部信号。
+数据在环仿真是一种在基于模型设计领域分析软件性能的十分有效的方法。*Mlog* 模块记录必要的模型输入数据，其功能类似于黑匣子。将日志解析并喂给仿真模型进行数据在环仿真，我们可以获得模型的输出数据和所有的内部信号。
 
 <p align="center">
  <img src="figures/openloop_diagram.png" width="45%">
@@ -63,7 +63,7 @@ FMT-Model提供了一个Matlab [脚本](https://github.com/Firmament-Autopilot/F
 ### 运行数据仿真
 现在您可以运行数据仿真。请确保您已通过双击`FMT_Model.prj`初始化了FMT-Model。
 
-打开数据仿真模型`simulation/DataSIM.slx`，然后点击**运行**按钮开始仿真。
+打开数据在环仿真模型`simulation/DataSIM.slx`，然后点击**运行**按钮开始仿真。
 
 <p align="center">
 	<img src="./figures/data_sim.png" width="75%">
