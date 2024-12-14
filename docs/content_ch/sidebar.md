@@ -1,7 +1,6 @@
 <!-- docs/_sidebar.md -->
 
 - [简介](content_ch/)
-
 - 基础入门
 
   - [快速上手](content_ch/introduction/quickstart.md)
@@ -27,14 +26,12 @@
   - [调试](content_ch/introduction/debug.md)
   - [日志](content_ch/introduction/logging.md)
   - [命令行](content_ch/introduction/command.md)
-
 - 硬件设备
 
   - [整机](content_ch/hardware/complete_vehicle.md)
   - [飞行控制器](content_ch/hardware/flight_controller.md)
   - [外设](content_ch/hardware/peripheral.md)
   - [机载电脑](content_ch/hardware/companion_computer.md)
-
 - 基于模型设计
 
   - [介绍](content_ch/mbd/introduction.md)
@@ -50,7 +47,6 @@
   - [添加新模型](content_ch/mbd/new_model.md)
   - [生成代码](content_ch/mbd/codegen.md)
   - [部署代码](content_ch/mbd/code_deploy.md)
-
 - 仿真
 
   - [模型在环仿真(MIL)](content_ch/simulation/MIL.md)
@@ -58,7 +54,6 @@
   - [纯硬件仿真(SIH)](content_ch/simulation/SIH.md)
   - [软件在环仿真(SIL)](content_ch/simulation/SIL.md)
   - [硬件在环仿真(HIL)](content_ch/simulation/HIL.md)
-
 - 开发者
     - [任务](content_ch/developer/tasks.md)
 
@@ -73,3 +68,7 @@
 - 进阶
     - [板外控制](content_ch/advanced/offboard.md)
     - [任务规划](content_ch/advanced/mission.md)
+    - [外部定位](content_ch/advanced/external_pos.md)
+      - [UWB](content_ch/advanced/uwb.md)
+      - [VINS](content_ch/advanced/vins.md)
+      - [MOC](content_ch/advanced/moc.md)

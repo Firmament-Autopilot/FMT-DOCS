@@ -68,3 +68,7 @@
 - Advanced
     - [Offboard Control](advanced/offboard.md)
     - [Mission Planning](advanced/mission.md)
+    - [External Localization](advanced/external_pos.md)
+      - [UWB](advanced/uwb.md)
+      - [VINS](advanced/vins.md)
+      - [MOC](advanced/moc.md)
