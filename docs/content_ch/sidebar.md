@@ -72,3 +72,16 @@
       - [UWB](content_ch/advanced/uwb.md)
       - [VINS](content_ch/advanced/vins.md)
       - [MOC](content_ch/advanced/moc.md)
+    - MAVSDK-C++
+      - [快速开始](content_ch/advanced/MAVSDK-C++/quickstart.md)
+      - [插件](content_ch/advanced/MAVSDK-C++/plugins/plugins.md)
+        - [action](content_ch/advanced/MAVSDK-C++/plugins/action.md)
+        - [telemetry](content_ch/advanced/MAVSDK-C++/plugins/telemetry.md)
+        - [offboard](content_ch/advanced/MAVSDK-C++/plugins/offboard.md)
+    - MAVSDK-Python
+      - [快速开始](content_ch/advanced/MAVSDK-python/quickstart.md)
+      - [插件](content_ch/advanced/MAVSDK-Python/plugins/plugins.md)
+        - [action](content_ch/advanced/MAVSDK-python/plugins/action.md)
+        - [telemetry](content_ch/advanced/MAVSDK-python/plugins/telemetry.md)
+        - [offboard](content_ch/advanced/MAVSDK-python/plugins/offboard.md)
+
