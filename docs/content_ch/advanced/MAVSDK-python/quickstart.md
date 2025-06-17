@@ -10,6 +10,9 @@ MAVSDK-Python 是一个用于控制 MAVLink 无人机（如 PX4）的现代化 P
 ```
 pip3 install mavsdk==2.8.4
 ```
+
+> 安装好后需要在~/.bashrc文件末尾添加一行export PATH=$PATH:/home/ajex/.local/lib/python3.8/site-packages/mavsdk/bin将 MAVSDK 的可执行文件路径加入环境变量 PATH，保存退出后在命令行种运行source ~/.bashrc使修改立即生效
+
 2.克隆MAVSDK-Python(2.8.4)
 ```
 git clone --branch 2.8.4 --recursive https://github.com/mavlink/MAVSDK-Python.git
