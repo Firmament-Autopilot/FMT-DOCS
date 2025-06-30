@@ -72,7 +72,7 @@ int main(int argc, char** argv)
     auto offboard = Offboard{system.value()};    // Offboard插件
     auto telemetry = Telemetry{system.value()};  // 遥测插件
 
-    // 等待系统健康状态检查通过
+    // 等待系统状态检查通过
     while (!telemetry.health_all_ok()) {
         std::cout << "Waiting for system to be ready\n";
         sleep_for(seconds(1));

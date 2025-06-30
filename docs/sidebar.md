@@ -72,3 +72,15 @@
       - [UWB](advanced/uwb.md)
       - [VINS](advanced/vins.md)
       - [MOC](advanced/moc.md)
+    - MAVSDK-C++
+      - [QuickStart](advanced/MAVSDK-C++/quickstart.md)
+      - [Plugins](advanced/MAVSDK-C++/plugins/plugins.md)
+        - [action](advanced/MAVSDK-C++/plugins/action.md)
+        - [telemetry](advanced/MAVSDK-C++/plugins/telemetry.md)
+        - [offboard](advanced/MAVSDK-C++/plugins/offboard.md)
+    - MAVSDK-Python
+      - [QuickStart](advanced/MAVSDK-python/quickstart.md)
+      - [Plugins](advanced/MAVSDK-Python/plugins/plugins.md)
+        - [action](advanced/MAVSDK-python/plugins/action.md)
+        - [telemetry](advanced/MAVSDK-python/plugins/telemetry.md)
+        - [offboard](advanced/MAVSDK-python/plugins/offboard.md)
