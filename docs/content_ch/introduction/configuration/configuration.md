@@ -7,6 +7,7 @@
 
 每个BSP下的config目录都包含一个默认的配置文件*sysconfig.toml*。为了开启FMT的所有功能，用户需要将*sysconfig.toml*配置文件上传到板子的*/sys*目录。这个文件包含了模块功能需要的配置信息。
 
+- [S1 Configuration](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/sieon/s1/config/sysconfig.toml)
 - [Amov ICF5 Configuration](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/amov/icf5/config/sysconfig.toml)
 - [CUAV V5+ Configuration](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/amov/icf5/config/sysconfig.toml)
 - [HEX Cubeorange Configuration](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/cubepilot/cubeorange/config/sysconfig.toml)

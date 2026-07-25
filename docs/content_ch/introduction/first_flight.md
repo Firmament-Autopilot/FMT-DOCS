@@ -113,53 +113,14 @@ stick_yaw:0.03 stick_throttle:-0.09 stick_roll:0.01 stick_pitch:0.05 mode:5 cmd:
 
 要验证电机的安装情况，您可以使用 act 命令逐个驱动每个电机。不过，在执行此操作之前，请出于安全考虑移除所有电机螺旋桨。
 
-首先禁用控制器的输出，以防止其覆盖 act 指令的输出。
+要选择电机通道，您可以使用 `-c` 或 `--channel` 选项，后面跟着一个表示通道位掩码的十六进制值。例如，使用以下命令可以驱动电机1，然后输入任意键停止。将 "1" 替换为 "2" 可以控制电机2，"4" 控制电机3，"8" 控制电机4，依此类推。
 
 ```
-mcn suspend control_output
-```
-
-要选择电机通道，您可以使用 `-c` 或 `--channel` 选项，后面跟着一个表示通道位掩码的十六进制值。例如，使用以下命令可以驱动或停止电机1。将 "1" 替换为 "2" 可以控制电机2，"4" 控制电机3，"8" 控制电机4，依此类推。
-
-```
-act set -d main_out -c 1 1200
-act set -d main_out -c 1 1000
-```
-
-经测试过后，若电机运转正常，你可以恢复控制器的输出。
-```
-mcn resume control_output
-```
-
-为了简化这个过程，您可以将所有这些命令整合到一个名为 `check_motor.sh` 的脚本中，如下所示：
-
-```
-mcn suspend control_output
-act set -d main_out -c 1 1200
-delay 3000
-act set -d main_out -c 1 1000
-delay 1000
-act set -d main_out -c 2 1200
-delay 3000
-act set -d main_out -c 2 1000
-delay 1000
-act set -d main_out -c 4 1200
-delay 3000
-act set -d main_out -c 4 1000
-delay 1000
-act set -d main_out -c 8 1200
-delay 3000
-act set -d main_out -c 8 1000
-delay 1000
-mcn resume control_output
-```
-然后通过执行以下命令来运行这个脚本
-```
-exec check_motor.sh
+act set -d main_out -c 1 1150
 ```
 
 ### 检查姿态
-在飞行之前，您还应该通过 QGroundControl (QGC) 验证姿态是否正确。这样可以确保您的飞行控制器安装在正确的位置和方向，并且传感器正确校准。
+在飞行之前，您还应该通过 QGroundControl 地面站验证姿态是否正确。这样可以确保您的飞行控制器安装在正确的位置和方向，并且传感器正确校准。
 
 ### 检查飞行模式
 在起飞前，请确保地面站显示的飞行模式与您设置的飞行模式匹配。

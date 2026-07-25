@@ -1,38 +1,90 @@
 
-## 硬件在环（HIL）仿真
+#### 硬件在环仿真
 
-硬件在环（HIL）是指FMT固件在真实飞行控制器（如ICF5或Pixhawk）上运行的仿真模式。这种方法的好处是可以测试实际飞行代码在真实硬件上的性能。
+硬件在环仿真（Hardware-in-loop Simulation，HIL）是指FMT飞控固件在真实飞控硬件平台，而被控对象模型（如动力学、传感器建模等）运行在单独的仿真主机的仿真手段。HIL仿真结果是最接近真实工程的仿真手段，因为飞控软件运行在真实硬件平台，除了算法，嵌入式软件以及硬件也能进行仿真和验证。
 
-FMT支持带有HIL消息的标准Mavlink协议。因此，FMT可以支持任何支持Mavlink协议的HIL模拟器。
+FMT支持HIL仿真模式，其通过标准Mavlink的HIL消息来跟外部仿真主机进行通信。
 
 <p align="center">
 	<img src="./figures/hil_diag.png" width="40%">
 </p>
 
-### 设置HIL仿真
+#### 编译下载仿真固件
 
-通过在BSP文件夹中的*fmtconfig.h*文件中添加`#define FMT_USING_HIL`来启用HIL仿真。然后重新构建系统。
+要开启HIL仿真，只需在编译固件时添加`--sim=HIL`的仿真选项，然后将编译好的固件下载到目标飞控硬件平台。
 
-<p align="center">
-	<img src="./figures/using_hil.png" width="30%">
-</p>
+```
+scons -j16 --sim=HIL
+```
 
-当系统上电后，在控制台中输入`mcn list`命令。您会发现传感器主题的发布频率都是0，这是正常的，因为HIL模拟器（例如AirSim、Gazebo等）尚未连接，HIL仿真模式下的传感器数据来自外部。
+
+下载HIL仿真固件后，在飞控控制台中输入`mcn list`命令，会发现传感器主题的发布频率都是0，这是正常的，因为当前为HIL仿真模式，其传感器数据需连接外部仿真主机获得。
 
 <p align="center">
 	<img src="./figures/hil_data.png" width="35%">
 </p>
 
-### AirSim仿真
+#### 连接外部仿真机
 
-FMT支持与AirSim进行仿真。您需要首先下载AirSim，可以选择二进制文件或源代码。有关AirSim的更多信息，请访问 [AirSim官方网站](https://microsoft.github.io/AirSim/)。
+准备一台PC主机，运行FMT官方的仿真平台FMT-SIM，也可以使用其它支持Mavlink的第三方仿真平台，如AirSim。
 
-安装AirSim后，*User/Documents*目录下会创建一个AirSim文件夹。
+FMT默认使用USB与外部仿真主机通信，将飞控通过与仿真机连接即可。也可以使用其它通信链路，如串口、网口等，具体请参考**通信配置**章节。
+
+##### FMT-SIM
+
+FMT-SIM是FMT官方团队基于UE虚幻引擎开发的视景仿真系统。可以关注`FMT智驾仪`公众号，并在后台回复**S1**获取。
 
 <p align="center">
-	<img src="./figures/airsim_folder.png" width="50%">
+	<img src="./figures/fmt_sim_mc.png" width="45%">
 </p>
 
+修改FMT-SIM的`setting.jason`配置文件，将SimMode修改为HIL，并且正确配置MavproxyFCS与飞控进行连接，如下所示。
+
+```
+{
+	"Map": "MainMenu",
+	"Vehicles": [
+		{
+			"VehicleType": "Multicopter",
+			"ID": 1,
+			"SimMode": "HIL",
+			"MoveScale": 1.0,
+			"SpawnPos": {
+				"X": 0, "Y": 0, "Z": 0
+			},
+			"SpawnRot": {
+				"Roll": 0, "Pitch": 0, "Yaw":0
+			},
+			"MavproxyFCS": {
+				"Interface": "Serial",
+				"SerialPort": 21,
+				"SerialBaudRate": 115200,
+				"LocalIP": "127.0.0.1",
+				"LocalPort": 14553,
+				"RemoteIP": "0.0.0.0",
+				"RemotePort": 0,
+				"Autobound": true		
+			},
+			"MavproxyGCS": {
+				"Interface": "UDP",
+				"LocalIP": "127.0.0.1",
+				"LocalPort": 0,
+				"RemoteIP": "127.0.0.1",
+				"RemotePort": 14550,
+				"Autobound": false		
+			}
+		}
+	]
+}
+```
+
+
+
+##### AirSim
+
+FMT支持AirSim等第三方的视景平台进行仿真。您需要首先下载AirSim，可以选择二进制文件或源代码。有关AirSim的更多信息，请访问 [AirSim官方网站](https://microsoft.github.io/AirSim/)。
+
+安装AirSim后，*User/Documents*目录下会创建一个AirSim文件夹。
 
 打开settings.json文件并将内容更改如下。请注意，您需要将SerialPort更改为连接到您计算机的飞行控制器的端口。
 
@@ -65,15 +117,4 @@ FMT支持与AirSim进行仿真。您需要首先下载AirSim，可以选择二�
 
 <p align="center">
 	<img src="./figures/airsim_play.png" width="45%">
-</p>
-
-### FMT-Sim Simulation
-待补充
-
-<p align="center">
-	<img src="./figures/fmt_sim_mc.png" width="45%">
-</p>
-
-<p align="center">
-	<img src="./figures/fmt_sim_fw.png" width="45%">
 </p>

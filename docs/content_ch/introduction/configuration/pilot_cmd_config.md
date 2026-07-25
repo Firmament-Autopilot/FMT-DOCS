@@ -1,10 +1,18 @@
 ## 遥控配置
 
-`[pilot-cmd]`用来对遥控模块进行配置。您可以在`[pilot-cmd.device]`配置遥控的协议，通道数，采样时间，通道数值范围等。摇杆通道可以通过`stick-channel`进行配置，它定义了*yaw*, *throttle*, *roll* and *pitch* 对应的遥控通道。一个典型的遥控设备配置如下：
+`[pilot-cmd]`用来对遥控模块进行配置。您可以在`[pilot-cmd.device]`配置遥控的协议，通道数，采样时间，通道数值范围等。
+
+摇杆通道可以通过`stick-channel`进行配置，它定义了*yaw*, *throttle*, *roll* and *pitch* 对应的遥控通道。
+
+也可以通过`aux-channel`来配置辅助通道（最多4路），辅助通道的值会传输给Pilot_Cmd总线。
+
+一个典型的遥控设备配置如下：
 
 ```
     # channel mapping for [yaw, throttle, roll, pitch]
     stick-channel = [4,3,1,2]
+    # channel mapping for aux channel 1,2,3,4
+    aux-channel = [7,8]
 
     [pilot-cmd.device]
     type = "rc"
@@ -14,6 +22,10 @@
     sample-time = 0.05          # sample time in second (-1 for inherit)
     range = [1000,2000]
 ```
+
+​	rc的4,3,1,2通道分别被配置为偏航，油门，横滚和俯仰通道。rc的7,8通道数值将作为辅助通道被直接传递给Pilot_Cmd总线，这意味着可以在Pilot_Cmd总线中直接读取辅助通道的数值。
+
+​	rc设备的protocol被设置为auto，意味着系统会自动判断接收机的协议是sbus或ppm。
 
 **type** 包含如下选项:
 
@@ -25,7 +37,7 @@
 | protocol | string | rc protocol (auto, sbus or ppm). auto protocol can automatically decide the protocol (sbus or ppm) that connected but need driver's support      |
 | channel-num | interger | rc channels number |
 | sample-time | float | rc topic publish sample time |
-| range | interger[2] | rc channel value range |
+| range | [int  int] | rc channel value range |
 
 ### 模式配置
 

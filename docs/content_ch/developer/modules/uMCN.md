@@ -49,7 +49,7 @@ uMCN支持单个主题的多个发布者和订阅者。然而，重要的是避�
 接下来的步骤是使用`mcn_advertise()`注册这个主题。例如：
 
 ```c
-mcn_advertise(MCN_ID(my_topic), my_topic_echo);
+mcn_advertise(MCN_HUB(my_topic), my_topic_echo);
 ```
 
 `MCN_ID()` 宏根据主题名获得枢纽节点。`my_topic_echo` 是一个回调函数，用来打印主题的数据。
@@ -72,21 +72,14 @@ static int my_topic_echo(void* param)
 
 ```c
 data_content my_data = {50, -2.0, {1，2，3，4}}；
-mcn_publish(MCN_ID(my_topic), &my_data);
+mcn_publish(MCN_HUB(my_topic), &my_data);
 ```
 
 ## 订阅主题
 
-uMCN支持使用同步或异步方法订阅主题。当选择同步方法时，您需要在订阅主题时提供一个事件处理句柄。以下是一个示例来说明这一点：
+uMCN支持使用同步或异步方法订阅主题。
 
-**同步订阅**
-
-```c
-rt_sem_t event = rt_sem_create("my_event", 0, RT_IPC_FLAG_FIFO);
-McnNode_t my_nod = mcn_subscribe(MCN_ID(my_topic), event, NULL);
-```
-
-**异步订阅**
+**订阅主题**
 
 ```c
 McnNode_t my_nod = mcn_subscribe(MCN_ID(my_topic), NULL, NULL);

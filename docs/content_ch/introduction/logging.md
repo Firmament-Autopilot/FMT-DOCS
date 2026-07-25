@@ -3,7 +3,7 @@
 
 日志系统的目的是为用户提供记录数据并在以后检索数据的手段。为了增强调试能力，FMT 日志系统具有**三种类型**的日志：启动日志、文本日志和数据日志。该功能使开发人员能够通过检查相关的日志文件并检测潜在问题，进行高效和有效的调试操作。
 
-### 开机日志
+### 启动日志
 
 `Boot log`模块记录启动阶段的所有控制台输出，这对于检查系统启动信息非常有用。启动日志文件将在每次启动时创建，并保存到工作日志会话文件夹中。工作日志会话 ID 存储在 `/log/session_id` 中。每次启动时，会话 ID 会递增。
 
@@ -72,19 +72,26 @@ log file: /log/session_10/mlog1.bin
 
 MLog的启动/停止过程也可以通过参数`MLOG_MODE`来控制。 你可以使用 `param` 命令来修改该参数的值。 不要忘记在参数值更改后使用 `param save`。 否则所有未保存的参数值将丢失并在下次启动时使用其默认值。
 
+MLOG_MODE参数含义：
+
+- **0**：关闭日志。
+- **1**：解锁开启日志，上锁关闭日志。
+- **2**：开机后自动开启日志，上锁关闭日志，解锁后再次开启日志。
+- **3**：开机后自动开启日志，日志将一直持续，指导关机或者手动输入`mlog stop`指令关闭日志记录。
+
 ```c
 PARAM_GROUP(SYSTEM)
 PARAM_DECLARE_GROUP(SYSTEM) = {
     /* Determines when to start and stop logging.
 	0: disabled
 	1: when armed until disarm
-	2: from boot until disarm
+	2: from boot until disarm and restart when arm
 	3: from boot until shutdown  */
-    PARAM_DEFINE_INT32(MLOG_MODE, 0),
+    PARAM_INT32(MLOG_MODE, 1, false),
 };
 ```
 
-[script](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) 脚本可以被用来解析日志并生成*.mat*文件。将 *.mat 文件加载到Matlab以进行数据可视化和仿真。
+> [script](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m) 脚本可以被用来解析日志并生成*.mat*文件。将 *.mat 文件加载到Matlab以进行数据可视化和仿真。
 
 ## 下载日志
 要下载日志，您可以使用 QGroundControl (QGC) 版本 3.5.6 或更早版本。QGC 提供了一个名为 **Onboard Files** 的功能，允许通过 FTP 协议访问飞控器的文件系统。借助此功能，您可以轻松地从飞控器中检索日志和其他文件。

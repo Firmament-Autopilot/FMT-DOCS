@@ -11,10 +11,19 @@
 </p>
 从本质上讲，基于模型的设计（MBD）是一种方法论，通过图形表示和自动代码生成，利用MBD设计软件（如Simulink、MWorks等）创建算法模型。这种方法简化了设计过程，实现了图形模型无缝转换为可执行代码，提升了效率并减少了手动实施的工作。
 <p align="center">
- <img src="figures/mbd_software.png" width="75%">
+ <img src="figures/mbd_software.png" width="60%">
 </p>
 
-## 为什么使用MBD
+
+### MBD开发流程
+
+FMT支持MBD的全流程开发，涵盖从需求分析->算法建模->模型仿真->代码生成->硬件在环仿真->实机飞行->数据分析等过程。基于FMT的MBD开发流程如下图所示：
+
+<p align="center">
+ <img src="figures/mbd_process.png" width="80%">
+</p>
+
+### 为什么使用MBD
 
 - 提升开发效率：MBD利用图形化编程，使开发人员能够直观地表示复杂系统。这种图形化表示简化了开发过程，使其更高效且易于理解。
 
@@ -25,24 +34,3 @@
 - 自动代码生成：MBD的一个关键优势是自动代码生成。这一特性显著减少了手动编码引起的错误可能性，确保了代码的一致性和可靠性。
 
 - 通过建模标准和检查增强安全性：MBD强制执行严格的建模标准，并进行彻底的模型检查，这有助于提升系统的整体安全性和可靠性。遵循已建立的标准可以最大程度地减少设计缺陷的风险，改善系统的鲁棒性。
-
-<!-- 
-## 下载
-使用如下指令来下载 FMT-Model 和所有子模块的代码（INS，FMS，Controller，Plant）。
-```
-git clone https://github.com/Firmament-Autopilot/FMT-Model.git --recursive
-```
-
-## 代码目录
-
-FMT-Model 的源码目录如下所示：
-
-| Name          | Description                               |
-| ------------- | ----------------------------------------- |
-| bus           | Scripts to generate simulink bus objects. |
-| figures       | Project figures.                          |
-| lib           | FMT-Model toolbox model library.          |
-| model         | Simulink model source file.               |
-| script        | Matlab scripts.                           |
-| simulation    | Simulation related simulink model.        |
-| utils         | Project utils.                            | -->

@@ -8,6 +8,16 @@ git clone https://github.com/Firmament-Autopilot/FMT-Firmware.git --recursive --
 
 > 注意因为FMT-Firmware中包含了子模块的代码，使用 *--recursive* 同时拉取子模块。
 
+
+
+FMT-Firmware为飞控嵌入式代码，如需拉取Simulink算法模型，请拉取FMT-Model的代码。
+
+```
+git clone https://github.com/Firmament-Autopilot/FMT-Model.git --recursive
+```
+
+
+
 ## 工具链
 
 FMT 利用跨平台工具链，支持在各种操作系统上开发，例如 Windows、Linux 和 Mac。这种灵活性确保了开发人员无论使用何种平台都能自由地进行项目开发。
@@ -15,7 +25,9 @@ FMT 利用跨平台工具链，支持在各种操作系统上开发，例如 Win
 ### 编译器
 FMT使用arm-none-eabi- toolchain *7-2018-q2-update* 版本，可上其 [官网](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) 进行下载安装，在开发过程中，务必要使用指定的编译器版本，以防止出现意外错误或不可预见的行为。不推荐使用其他编译器版本，以保持项目的稳定性和一致性。
 
-编译器下载完成后，下一步是创建一个名为`RTT_EXEC_PATH`的新环境变量，并该变量应指向编译器 bin 目录的完整路径。以下是设置环境变量的方法：
+编译器下载完成后，下一步是创建一个名为`RTT_EXEC_PATH`的新环境变量，并该变量应指向编译器` bin `目录的完整路径。
+
+以下是设置环境变量的方法：
 
 
 1. 找到编辑器文件夹中包含 `gcc`、`gdb` 等可执行文件的编译器 bin 目录的路径。
@@ -28,17 +40,17 @@ FMT使用arm-none-eabi- toolchain *7-2018-q2-update* 版本，可上其 [官网]
     <p align="center">
       <img src="./figures/win_exec_path.png" width="40%">
     </p>
-
    
-   - **Linux/Mac**: 打开终端并编辑 shell 配置文件(例如, `~/.bashrc`, `~/.bash_profile`, or `~/.zshrc`, 具体取决于您使用的 shell). 在文件中添加以下一行：
+   
+   - **Linux/Mac**: 打开终端并编辑 shell 配置文件(例如, `~/.bashrc`, `~/.bash_profile`, or `~/.zshrc`, 具体取决于您使用的 shell). 在文件中添加以下一行（请将<path-to-compiler>修改为编译器的完整路径）。保存文件并运行 source ~/.bashrc（或对应的 shell 配置文件）以使更改生效。
    
     ```bash
-     export RTT_EXEC_PATH=/path/to/compiler/bin
+     export RTT_EXEC_PATH=<path-to-compiler>/bin
     ```
    
-   保存文件并运行 source ~/.bashrc（或对应的 shell 配置文件）以使更改生效。
+   
 
-通过设置 `RTT_EXEC_PATH` 环境变量，您可以使系统在开发过程中轻松定位和使用编译器工具。
+​		通过设置 `RTT_EXEC_PATH` 环境变量，FMT的构建工具可以找到编译器的路径。通常在设置了环境变量以后，需要重启你的IDE或者终端来使得新增加的环境变量生效。
 
 
 ### 构建工具
@@ -131,17 +143,20 @@ VS Code 提供了强大且用户友好的开发环境，具备广泛的扩展和
 
 对于特定硬件的编译，请参考对应BSP目录下的README：
 
+- [SIEON S1](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/sieon/s1/README.md)
 - [AMOV ICF5](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/amov/icf5/README.md)
 - [CUAV V5+](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/cuav/v5_plus/README.md)
 - [Pixhawk 4](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/pixhawk/fmu-v5/README.md)
 - [Pixhawk 2.4.6](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/pixhawk/fmu-v2/README.md)
 - [QEMU vexpress-a9](https://github.com/Firmament-Autopilot/FMT-Firmware/blob/master/target/qemu/qemu-vexpress-a9/README.md)
 
+-----
+
 在以下说明介绍中，我们将以 编译pixhawk/fmu-v5 作为示例，来阐述固件构建过程。
 
 要为多旋翼飞行器构建固件，请按照以下步骤操作：
 
-1. 导航到多旋翼飞行器目标的相关目录：
+1. 导航到飞控硬件目标的相关目录：
 
 ```
 cd FMT-Firmware/taget/pixhawk/fmu-v5
@@ -150,21 +165,23 @@ cd FMT-Firmware/taget/pixhawk/fmu-v5
 2. 使用 scons 命令启动构建过程：
 
 ```
-scons -j4
+scons -j16
 ```
-使用 `-j4` 标志可以启用并行构建，使用 4 个任务同时进行，加快构建过程并减少编译时间。默认情况下，固件是为多旋翼飞行器 (vehicle=Multicopter --airframe=1) 构建的。对于其他车辆和机架类型，请参考[载具/机架](introduction/vehicle_type.md)部分。
+使用 `-j16 标志可以启用并行构建，使用 16 个任务同时进行，加快构建过程并减少编译时间。默认情况下，固件是为多旋翼飞行器 (vehicle=Multicopter --airframe=1) 构建的。对于其他车辆和机架类型，请参考[载具/机架](introduction/vehicle_type.md)部分。
 
 对于编译其它的机型，比如固定翼，使用如下命令
 
 ```
-scons -j4 --vehicle=Fixwing
+scons -j16 --vehicle=Fixwing
 ```
 
-Pixhawk 4有一个板载协处理器（io处理器）。使用如下指令编译协处理器的固件
+pixhawk/fmu-v5有一个板载协处理器（io处理器）。对于有协处理器的平台，我们还需要编译协处理器的固件并将其下载到协处理器中。
+
+使用如下指令编译协处理器的固件
 
 ```
 cd FMT-Firmware/target/pixhawk/fmt-io/project
-scons -j4
+scons -j16
 ```
 
 ## 下载固件
@@ -200,11 +217,7 @@ scons -j4
 
 > 如果出现 `"ModuleNotFoundError: No module named 'serial'"`错误, 说明缺少 **pyserial** 组件, 输入`pip3 install pyserial` 进行安装.
 
-如果脚本无法自动检测到端口，您可以使用 `--port` 选项手动指定端口。例如，您可以使用以下命令显式指定端口：
-
-```
-python3 uploader.py --port COM3
-```
+> 如果脚本无法自动检测到端口，可以尝试多插拔几次飞控.
 
 
 2. **QGC**: 进入 *Firmware Setup(设置)* 界面，然后使用USB将飞控连接到电脑. 在弹出的对话框中选择 *高级设置->自定义固件文件* ，然后选择FMU的bin固件进行下载。
@@ -213,9 +226,9 @@ python3 uploader.py --port COM3
 </p>
 3. **J-Link**: 如果你有JLink，您可以将其插到硬件的debug端口来下载固件。更多的信息，请参考[Debug](https://firmament-autopilot.github.io/FMT-DOCS/#/content_ch/introduction/debug)章节的内容.
 
-> 请小心不要覆盖掉bootloader!
 
-当系统启动并运行时，系统横幅可以通过 `serial0`（串行控制台）显示，或者可以在 QGroundControl（QGC）的 mavlink 控制台中输入 `boot_log` 来查看。这些信息提供了关于系统状态和配置的重要信息，帮助用户监控系统行为，确保系统正常运行。
+
+当系统启动并运行时，系统横幅可以通过 `serial0`（飞控默认控制台输出）显示，或者可以在 QGroundControl（QGC）的 mavlink 控制台中输入 `boot_log` 来查看。这些信息提供了关于系统状态和配置的重要信息，帮助用户监控系统行为，确保系统正常运行。
 
 ```
    _____                               __ 
@@ -235,7 +248,7 @@ Task Initialize:
   logger................................OK
   fmtio.................................OK
   status................................OK
-  vehicle...............................OKCopy to clipboardErrorCopied
+  vehicle...............................OK
 ```
 
 ### 下载IO固件
@@ -256,8 +269,6 @@ msh /usr>fmtio upload /usr/fmt_io.bin
 [314151] I/Uploader: program...
 [316275] I/Uploader: CRC check ok, received: 8a27ed4f, expected: 8a27ed4fCopy to clipboardErrorCopied
 ```
-> 编译fmt-io，进入 *targets/pixhawk/fmt-io/projet* 运行编译命令行 `scons -j4` 
-
 > 对于第一次下载io固件，您需要在输入fmtio指令后按下侧边的io复位键来让io处理器重启并进入bootloader。
 
 

@@ -92,6 +92,18 @@
 
 首先将导航中相关参数设置为如下所示的值，其中EXT_PSI_MODE设置为1，表示使用EXT_PSI的参数值作为UWB的朝向。
 
+```
+                EXTPOS_POS_GAIN: 2.000000
+                EXTPOS_VEL_GAIN: 1.500000
+                EXTPOS_BIAS_A_GAIN: 0.100000
+[*]             EXTPOS_POS_DELAY: 20
+[*]             EXTPOS_PSI_MODE: 1 [3]
+[*]             EXTPOS_USE_POS: 1 [0]
+[*]             EXTPOS_USE_ALT: 1 [0]
+                EXTPOS_USE_ATT: 0
+                EXTPOS_USE_PSI: 0
+```
+
  <p align="left">
  	<img src="./content_ch/advanced/figures/uwb_parameter.png" width="50%">
  </p>

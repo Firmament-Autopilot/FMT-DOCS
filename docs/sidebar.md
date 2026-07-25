@@ -28,8 +28,8 @@
   - [Logging](introduction/logging.md)
   - [Command](introduction/command.md)
 - Hardware
-    - [Complete Vehicle](hardware/complete_vehicle.md)
     - [Flight Controller](hardware/flight_controller.md)
+    - [Complete Vehicle](hardware/complete_vehicle.md)
     - [Peripheral](hardware/peripheral.md)
     - [Companion Computer](hardware/companion_computer.md)
 - Model-Based Design
