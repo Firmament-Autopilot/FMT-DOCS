@@ -1,0 +1,87 @@
+<!-- docs/_sidebar.md -->
+
+- [简介](content_cn/)
+- 基础入门
+
+  - [快速上手](content_cn/introduction/quickstart.md)
+  - [地面控制站](content_cn/introduction/gcs.md)
+  - [载具/机架](content_cn/introduction/frameref.md)
+  - [系统配置](content_cn/introduction/configuration/sysconfiguration.md)
+    - [控制台配置](content_cn/introduction/configuration/console_config.md)
+	  - [通信配置](content_cn/introduction/configuration/mavproxy_config.md)
+	  - [遥控配置](content_cn/introduction/configuration/pilot_cmd_config.md)
+	  - [作动器配置](content_cn/introduction/configuration/actuator_config.md)
+	  - [以太网配置](content_cn/introduction/configuration/eth_config.md)
+    - [GNSS配置](content_cn/introduction/configuration/gnss_config.md)
+  - 传感器校准
+    - [陀螺仪校准](content_cn/introduction/calibration/gyro_calib.md)
+    - [加速度计校准](content_cn/introduction/calibration/accel_calib.md)
+    - [罗盘校准](content_cn/introduction/calibration/mag_calib.md)
+    - [水平校准](content_cn/introduction/calibration/level_calib.md)
+    - [遥控校准](content_cn/introduction/calibration/rc_calib.md)
+    - [电调校准](content_cn/introduction/calibration/esc_calib.md)
+    - [空速校准](content_cn/introduction/calibration/airspeed_calib.md)
+  - [首次飞行](content_cn/introduction/first_flight.md)
+  - 参数调整
+    - [在线调参](content_cn/introduction/param_tuning_online.md)
+    - [离线调参](content_cn/introduction/param_tuning_offline.md)
+  - [调试](content_cn/introduction/debug.md)
+  - [日志](content_cn/introduction/logging.md)
+  - [命令行](content_cn/introduction/command.md)
+- 硬件设备
+
+  - [飞行控制器](content_cn/hardware/flight_controller.md)
+  - [整机](content_cn/hardware/complete_vehicle.md)
+  - [外设](content_cn/hardware/peripheral.md)
+  - [机载电脑](content_cn/hardware/companion_computer.md)
+- 基于模型设计
+
+  - [介绍](content_cn/mbd/introduction.md)
+  - [快速开始](content_cn/mbd/quickstart.md)
+  - [添加新模型](content_cn/mbd/new_model.md)
+  - [模型生成代码](content_cn/mbd/codegen.md)
+  - [模型部署](content_cn/mbd/code_deploy.md)
+  - 模型接口
+    - [FMS 接口](content_cn/mbd/interface/fms_interface.md)
+    - [INS 接口](content_cn/mbd/interface/ins_interface.md)
+    - [Controller 接口](content_cn/mbd/interface/controller_interface.md)
+    - [Plant 接口](content_cn/mbd/interface/plant_interface.md)
+- 仿真
+
+  - [模型在环仿真(MIL)](content_cn/simulation/MIL.md)
+  - [软件在环仿真(SIL)](content_cn/simulation/SIL.md)
+  - [硬件在环仿真(HIL)](content_cn/simulation/HIL.md)
+  - [纯硬件仿真(SIH)](content_cn/simulation/SIH.md)
+  - [数据在环仿真(Data Sim)](content_cn/simulation/DIL.md)
+- 开发者
+    - [任务](content_cn/developer/tasks.md)
+
+    - 模块
+      - [uMCN](content_cn/developer/modules/uMCN.md)
+      - [Param](content_cn/developer/modules/param.md)
+      - [Mlog](content_cn/developer/modules/mlog.md)
+      - [Mavproxy](content_cn/developer/modules/mavproxy.md)
+    - [驱动](content_cn/developer/drivers.md)
+    - [构建系统](content_cn/developer/build.md)
+    - [贡献](content_cn/developer/contribution.md)
+- 进阶
+    - [板外控制](content_cn/advanced/offboard.md)
+    - [任务规划](content_cn/advanced/mission.md)
+    - [外部定位](content_cn/advanced/external_pos.md)
+      - [UWB](content_cn/advanced/uwb.md)
+      - [VINS](content_cn/advanced/vins.md)
+      - [动捕](content_cn/advanced/moc.md)
+      - [激光雷达](content_cn/advanced/lidar.md)
+    - MAVSDK-C++
+      - [快速开始](content_cn/advanced/MAVSDK-C++/quickstart.md)
+      - [插件](content_cn/advanced/MAVSDK-C++/plugins/plugins.md)
+        - [action](content_cn/advanced/MAVSDK-C++/plugins/action.md)
+        - [telemetry](content_cn/advanced/MAVSDK-C++/plugins/telemetry.md)
+        - [offboard](content_cn/advanced/MAVSDK-C++/plugins/offboard.md)
+    - MAVSDK-Python
+      - [快速开始](content_cn/advanced/MAVSDK-python/quickstart.md)
+      - [插件](content_cn/advanced/MAVSDK-Python/plugins/plugins.md)
+        - [action](content_cn/advanced/MAVSDK-python/plugins/action.md)
+        - [telemetry](content_cn/advanced/MAVSDK-python/plugins/telemetry.md)
+        - [offboard](content_cn/advanced/MAVSDK-python/plugins/offboard.md)
+
