@@ -6,15 +6,13 @@
   - [快速上手](content_ch/introduction/quickstart.md)
   - [地面控制站](content_ch/introduction/gcs.md)
   - [载具/机架](content_ch/introduction/frameref.md)
-
   - [系统配置](content_ch/introduction/configuration/sysconfiguration.md)
-	  - [控制台配置](content_ch/introduction/configuration/console_config.md)
+    - [控制台配置](content_ch/introduction/configuration/console_config.md)
 	  - [通信配置](content_ch/introduction/configuration/mavproxy_config.md)
 	  - [遥控配置](content_ch/introduction/configuration/pilot_cmd_config.md)
 	  - [作动器配置](content_ch/introduction/configuration/actuator_config.md)
-    - [以太网配置](content_ch/introduction/configuration/eth_config.md)
+	  - [以太网配置](content_ch/introduction/configuration/eth_config.md)
     - [GNSS配置](content_ch/introduction/configuration/gnss_config.md)
-    
   - 传感器校准
     - [陀螺仪校准](content_ch/introduction/calibration/gyro_calib.md)
     - [加速度计校准](content_ch/introduction/calibration/accel_calib.md)
@@ -24,7 +22,9 @@
     - [电调校准](content_ch/introduction/calibration/esc_calib.md)
     - [空速校准](content_ch/introduction/calibration/airspeed_calib.md)
   - [首次飞行](content_ch/introduction/first_flight.md)
-  - [参数调整](content_ch/introduction/param_tuning.md)
+  - 参数调整
+    - [在线调参](content_ch/introduction/param_tuning_online.md)
+    - [离线调参](content_ch/introduction/param_tuning_offline.md)
   - [调试](content_ch/introduction/debug.md)
   - [日志](content_ch/introduction/logging.md)
   - [命令行](content_ch/introduction/command.md)
@@ -70,7 +70,8 @@
     - [外部定位](content_ch/advanced/external_pos.md)
       - [UWB](content_ch/advanced/uwb.md)
       - [VINS](content_ch/advanced/vins.md)
-      - [MOC](content_ch/advanced/moc.md)
+      - [动捕](content_ch/advanced/moc.md)
+      - [激光雷达](content_ch/advanced/lidar.md)
     - MAVSDK-C++
       - [快速开始](content_ch/advanced/MAVSDK-C++/quickstart.md)
       - [插件](content_ch/advanced/MAVSDK-C++/plugins/plugins.md)
