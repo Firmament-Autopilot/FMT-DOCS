@@ -6,7 +6,7 @@
 当FMT系统运行起来的时候，它会去自动寻找板载文件系统上的`/sys/sysconfig.toml`配置文件。如果这个文件存在，则会加载里面的配置项。如果这个文件不存在，则会使用`default_config.h`中固化的默认系统配置。注意，默认配置只开启了有限的功能，遥控和电机输出功能可能未开启。
 
  <p align="center">
-  <img src="./figures/config_flow.png" width="30%">
+  <img src="content_cn/introduction/figures/config_flow.png" width="30%">
  </p>
 
 
@@ -19,7 +19,7 @@
 1. QGC Onboard File(QGC 3.5.6 only):如果您正在使用QGround-Control 3.5.6，您可以利用其提供的 "Onboard Files" 功能直接将配置文件上传到系统中。这样做简化了整个配置过程，并且能够通过 QGC 轻松地管理配置。
 
  <p align="center">
-  <img src="./figures/onboard_files.png" width="50%">
+  <img src="content_cn/introduction/figures/onboard_files.png" width="50%">
  </p>
 
 

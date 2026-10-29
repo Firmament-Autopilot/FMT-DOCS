@@ -8,10 +8,10 @@
   - [载具/机架](content_cn/introduction/frameref.md)
   - [系统配置](content_cn/introduction/configuration/sysconfiguration.md)
     - [控制台配置](content_cn/introduction/configuration/console_config.md)
-	  - [通信配置](content_cn/introduction/configuration/mavproxy_config.md)
-	  - [遥控配置](content_cn/introduction/configuration/pilot_cmd_config.md)
-	  - [作动器配置](content_cn/introduction/configuration/actuator_config.md)
-	  - [以太网配置](content_cn/introduction/configuration/eth_config.md)
+	- [通信配置](content_cn/introduction/configuration/mavproxy_config.md)
+	- [遥控配置](content_cn/introduction/configuration/pilot_cmd_config.md)
+	- [作动器配置](content_cn/introduction/configuration/actuator_config.md)
+	- [以太网配置](content_cn/introduction/configuration/eth_config.md)
     - [GNSS配置](content_cn/introduction/configuration/gnss_config.md)
   - 传感器校准
     - [陀螺仪校准](content_cn/introduction/calibration/gyro_calib.md)
@@ -39,7 +39,7 @@
   - [介绍](content_cn/mbd/introduction.md)
   - [快速开始](content_cn/mbd/quickstart.md)
   - [添加新模型](content_cn/mbd/new_model.md)
-  - [模型生成代码](content_cn/mbd/codegen.md)
+  - [代码生成](content_cn/mbd/codegen.md)
   - [模型部署](content_cn/mbd/code_deploy.md)
   - 模型接口
     - [FMS 接口](content_cn/mbd/interface/fms_interface.md)

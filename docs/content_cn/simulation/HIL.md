@@ -6,7 +6,7 @@
 FMT支持HIL仿真模式，其通过标准Mavlink的HIL消息来跟外部仿真主机进行通信。
 
 <p align="center">
-	<img src="./figures/hil_diag.png" width="40%">
+	<img src="content_cn/simulation/figures/hil_diag.png" width="40%">
 </p>
 
 #### 编译下载仿真固件
@@ -21,7 +21,7 @@ scons -j16 --sim=HIL
 下载HIL仿真固件后，在飞控控制台中输入`mcn list`命令，会发现传感器主题的发布频率都是0，这是正常的，因为当前为HIL仿真模式，其传感器数据需连接外部仿真主机获得。
 
 <p align="center">
-	<img src="./figures/hil_data.png" width="35%">
+	<img src="content_cn/simulation/figures/hil_data.png" width="35%">
 </p>
 
 #### 连接外部仿真机
@@ -35,7 +35,7 @@ FMT默认使用USB与外部仿真主机通信，将飞控通过与仿真机连�
 FMT-SIM是FMT官方团队基于UE虚幻引擎开发的视景仿真系统。可以关注`FMT智驾仪`公众号，并在后台回复**S1**获取。
 
 <p align="center">
-	<img src="./figures/fmt_sim_mc.png" width="45%">
+	<img src="content_cn/simulation/figures/fmt_sim_mc.png" width="45%">
 </p>
 
 修改FMT-SIM的`setting.jason`配置文件，将SimMode修改为HIL，并且正确配置MavproxyFCS与飞控进行连接，如下所示。
@@ -116,5 +116,5 @@ FMT支持AirSim等第三方的视景平台进行仿真。您需要首先下载Ai
 然后启动AirSim。左上角会显示您已连接到飞行控制器，然后您可以进行控制。
 
 <p align="center">
-	<img src="./figures/airsim_play.png" width="45%">
+	<img src="content_cn/simulation/figures/airsim_play.png" width="45%">
 </p>

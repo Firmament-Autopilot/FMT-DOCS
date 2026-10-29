@@ -68,5 +68,5 @@
 - **代码维护**: FMT官方团队
 
 <p align="left">
-	<img src="figures/pixhawk4.jpg" width="20%">
+	<img src="content_cn/hardware/figures/pixhawk4.jpg" width="20%">
 </p>

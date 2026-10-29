@@ -86,7 +86,7 @@ stick_yaw:0.03 stick_throttle:-0.09 stick_roll:0.01 stick_pitch:0.05 mode:5 cmd:
 >这个命令是边缘触发的，因此将 SWD 开关从上位移动到下位只会触发一次 Disarm 命令。要再次触发它，您需要将 SWD 开关先移回上位，然后再次移动到下位。
 
 <p align="center">
-  <img src="figures/rc_figure.png" width="30%">
+  <img src="content_cn/introduction/figures/rc_figure.png" width="30%">
 </p>
 
 ### 检查解锁/上锁
@@ -96,7 +96,7 @@ stick_yaw:0.03 stick_throttle:-0.09 stick_roll:0.01 stick_pitch:0.05 mode:5 cmd:
 在待机模式下，将左摇杆移动到左下角并保持在那里；大约1.5秒后，飞行器将被锁定。
 
 <p align="center">
-  <img src="figures/arm_disarm.png" width="30%">
+  <img src="content_cn/introduction/figures/arm_disarm.png" width="30%">
 </p>
 
 解锁飞行器后，减小油门。当飞行器接触地面时，将油门拉到最小位置，飞行器将自动锁定。
@@ -104,7 +104,7 @@ stick_yaw:0.03 stick_throttle:-0.09 stick_roll:0.01 stick_pitch:0.05 mode:5 cmd:
 飞行器的解锁和上锁操作也可以通过 QGroundControl (QGC) 地面站进行。
 
 <p align="center">
-  <img src="figures/qgc_arm.png" width="45%">
+  <img src="content_cn/introduction/figures/qgc_arm.png" width="45%">
 </p>
 
 ### 检查电机
@@ -125,7 +125,7 @@ act set -d main_out -c 1 1150
 ### 检查飞行模式
 在起飞前，请确保地面站显示的飞行模式与您设置的飞行模式匹配。
 <p align="center">
-  <img src="figures/check_mode.png" width="45%">
+  <img src="content_cn/introduction/figures/check_mode.png" width="45%">
 </p>
 如果它们不匹配，可能是因为传感器数据未达到要求，导致控制能力下降。例如，如果您已将飞行模式设置为位置模式（Position），但地面站显示为高度模式（Altitude），可能的原因是缺乏 GPS 连接或 GPS 精度不足，导致位置信息不足，从而无法进入位置模式。
 

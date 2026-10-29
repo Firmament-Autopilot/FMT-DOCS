@@ -14,7 +14,7 @@
   - **LICENSE**: 模型的许可.
   - **README.md**: 模型介绍.
 <p align="left">
-  <img src="figures/template_folder.png" width="50%">
+  <img src="content_cn/mbd/figures/template_folder.png" width="50%">
 </p>
 
 
@@ -69,5 +69,5 @@ CONTROL_PARAM.CoderInfo.StorageClass = 'ExportedGlobal';
 添加完后的模型目录在执行初始化后将变为高亮（未使能的模型目录为灰色），如下所示：
 
 <p align="left">
-  <img src="figures/new_controller.png" width="50%">
+  <img src="content_cn/mbd/figures/new_controller.png" width="50%">
 </p>

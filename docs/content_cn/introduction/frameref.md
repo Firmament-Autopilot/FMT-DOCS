@@ -7,19 +7,19 @@ FMT 能够控制多种载具和机架，而且可以轻松添加算法来控制�
 #### 多旋翼
 | Airframe                        | Build Command                             | Description                          |
 | ------------------------------- | ----------------------------------------- | ------------------------------------ |
-| Quadcopter x, Airframe=1        | scons --vehicle=Multicopter --airframe=1  | ![quad_x](../../figures/quad_x.png)     |
-| Quadcopter +, Airframe=2        | scons --vehicle=Multicopter --airframe=2  | ![quad_+](../../figures/quad_+.png)     |
-| Coxial Quadcopter x, Airframe=3 | scons  --vehicle=Multicopter --airframe=3 | ![quad_+](../../figures/cox_quad_x.png) |
-| Hexacopter x, Airframe=4        | scons --vehicle=Multicopter --airframe=4  | ![quad_+](../../figures/hexa_x.png)     |
-| Hexacopter +, Airframe=5        | scons --vehicle=Multicopter --airframe=5  | ![quad_+](../../figures/hexa_+.png)     |
-| Coxial Hexacopter x, Airframe=6 | scons --vehicle=Multicopter --airframe=6  | ![quad_+](../../figures/cox_hexa_x.png) |
-| Octocopter x, Airframe=7        | scons --vehicle=Multicopter --airframe=7  | ![quad_+](../../figures/octo_x.png)     |
-| Octocopter +, Airframe=8        | scons --vehicle=Multicopter --airframe=8  | ![quad_+](../../figures/octo_+.png)     |
+| Quadcopter x, Airframe=1        | scons --vehicle=Multicopter --airframe=1  | ![quad_x](figures/quad_x.png)     |
+| Quadcopter +, Airframe=2        | scons --vehicle=Multicopter --airframe=2  | ![quad_+](figures/quad_+.png)     |
+| Coxial Quadcopter x, Airframe=3 | scons  --vehicle=Multicopter --airframe=3 | ![quad_+](figures/cox_quad_x.png) |
+| Hexacopter x, Airframe=4        | scons --vehicle=Multicopter --airframe=4  | ![quad_+](figures/hexa_x.png)     |
+| Hexacopter +, Airframe=5        | scons --vehicle=Multicopter --airframe=5  | ![quad_+](figures/hexa_+.png)     |
+| Coxial Hexacopter x, Airframe=6 | scons --vehicle=Multicopter --airframe=6  | ![quad_+](figures/cox_hexa_x.png) |
+| Octocopter x, Airframe=7        | scons --vehicle=Multicopter --airframe=7  | ![quad_+](figures/octo_x.png)     |
+| Octocopter +, Airframe=8        | scons --vehicle=Multicopter --airframe=8  | ![quad_+](figures/octo_+.png)     |
 
 #### 固定翼
 | Airframe                     | Build Command                        | Description                       |
 | ---------------------------- | ------------------------------------ | --------------------------------- |
-| Standard Fixwing, Airframe=1 | scons --vehicle=Fixwing --airframe=1 | ![quad_x](../../figures/fixwing.png) |
+| Standard Fixwing, Airframe=1 | scons --vehicle=Fixwing --airframe=1 | ![quad_x](figures/fixwing.png) |
 
 #### VTOL
 

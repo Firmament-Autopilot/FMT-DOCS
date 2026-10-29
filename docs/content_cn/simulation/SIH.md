@@ -10,7 +10,7 @@ SIH 相比 HIL 具有以下优点:
 - 操作简介方便，无需连接大量外部设备以及复杂的接线，省去了与外部数据传输的延时，具有更高的实时性。
 
 <p align="center">
-	<img src="./figures/sih_diag.png" width="45%">
+	<img src="content_cn/simulation/figures/sih_diag.png" width="45%">
 </p>
 
 #### 编译下载仿真固件

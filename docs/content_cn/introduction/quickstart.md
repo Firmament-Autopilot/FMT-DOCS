@@ -38,8 +38,9 @@ FMT使用arm-none-eabi- toolchain *7-2018-q2-update* 版本，可上其 [官网]
    - **Windows**:打开控制面板，依次进入“系统和安全 > 系统 > 高级系统设置 > 环境变量”。在“用户变量”下点击“新建”，然后输入变量名为 RTT_EXEC_PATH，变量值为编译器 bin 目录的完整路径。
 
     <p align="center">
-      <img src="./figures/win_exec_path.png" width="40%">
+      <img src="content_cn/introduction/figures/win_exec_path.png" width="40%">
     </p>
+   
    
    
    - **Linux/Mac**: 打开终端并编辑 shell 配置文件(例如, `~/.bashrc`, `~/.bash_profile`, or `~/.zshrc`, 具体取决于您使用的 shell). 在文件中添加以下一行（请将<path-to-compiler>修改为编译器的完整路径）。保存文件并运行 source ~/.bashrc（或对应的 shell 配置文件）以使更改生效。
@@ -102,8 +103,9 @@ VS Code 提供了强大且用户友好的开发环境，具备广泛的扩展和
 
 现在，您已经在 Visual Studio Code 中打开了 FMT-Firmware 项目，可以开始使用 IDE 提供的各种功能和扩展来编写、修改和管理项目了。祝编码愉快！
 <p align="center">
-  <img src="figures/vscode.png" width="60%">
+  <img src="content_cn/introduction/figures/vscode.png" width="60%">
 </p>
+
 当然，安装有用的 Visual Studio Code (VS Code) 插件可以显著增强您在处理 FMT-Firmware 项目时的开发体验。以下是两个对 FMT-Firmware 项目至关重要的插件：
 
 1. C/C++：这个插件在 VS Code 中为 C 和 C++ 语言提供了优秀的支持，包括代码高亮、智能感知、代码导航以及专为这些语言定制的调试能力。
@@ -123,8 +125,9 @@ VS Code 提供了强大且用户友好的开发环境，具备广泛的扩展和
 
 在编译固件之前，理解 FMT-Firmware 的目录结构非常重要。以下是您在 FMT-Firmware 项目中通常可以找到的典型目录结构的概述：
 <p align="center">
-  <img src="figures/fmt_dir_structure.png" width="25%">
+  <img src="content_cn/introduction/figures/fmt_dir_structure.png" width="25%">
 </p>
+
 
 
 目录和文件的解释：
@@ -222,8 +225,9 @@ scons -j16
 
 2. **QGC**: 进入 *Firmware Setup(设置)* 界面，然后使用USB将飞控连接到电脑. 在弹出的对话框中选择 *高级设置->自定义固件文件* ，然后选择FMU的bin固件进行下载。
 <p align="center">
-   <img src="figures/QGC_download.jpg" width="60%">
+   <img src="content_cn/introduction/figures/QGC_download.jpg" width="60%">
 </p>
+
 3. **J-Link**: 如果你有JLink，您可以将其插到硬件的debug端口来下载固件。更多的信息，请参考[Debug](https://firmament-autopilot.github.io/FMT-DOCS/#/content_ch/introduction/debug)章节的内容.
 
 
@@ -255,7 +259,7 @@ Task Initialize:
 
 下一步是通过fmu来下载io固件。首先将io固件`target/pixhawk/fmt-io/project/build/fmt_io.bin`拷贝到系统的sd卡上。您可以通过QGC的 *组件-> Onboard Files* 界面来上传（仅QGC3.5.6版本支持）或者使用SD读卡器来实现。 `（注意：本步骤仅针对包含协处理，即IO芯片的硬件平台）`
 <p align="center">
-  <img src="figures/io_hardware.png" width="50%">
+  <img src="content_cn/introduction/figures/io_hardware.png" width="50%">
 </p>
 
 在FMT控制台输入如下指令来下载io固件到io处理器中。

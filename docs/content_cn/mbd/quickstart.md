@@ -64,31 +64,31 @@ FMT-Model/
 1. 在 MATLAB 中打开 FMT-Model所在目录。
 
    <p align="center">
-   	<img src="./figures/model_setup1.png" width="40%">
+   	<img src="content_cn/mbd/figures/model_setup1.png" width="40%">
    </p>
 
 
 2. 双击打开 `FMT_Model.prj `文件以进行初始化项目。
 
    <p align="center">
-   	<img src="./figures/model_setup2.png" width="40%">
+   	<img src="content_cn/mbd/figures/model_setup2.png" width="40%">
    </p>
 
 3. 默认选择多旋翼模型，要更改选择的模型，访问Simulink Project并打开`Project Path`。将想选择的模型添加到路劲中，并移除不需要的模型。注意修改了模型后，组重新初始化项目。
 
      <p align="center">
-      	<img src="./figures/model_setup3.png" width="40%">
+      	<img src="content_cn/mbd/figures/model_setup3.png" width="40%">
       </p>
 
 
 4. 打开`Project Path`，确认使用的模型跟你的载具相匹配。比如如下是默认选用多旋翼的算法模型，如果要切换到其它机型比如固定翼，则需要对应多旋翼的模型替换为固定翼的模型。若替换了模型，需关闭 Simulink 项目并清除工作区中的变量。最后，重新运行 FMT_Model.prj 以确保更改生效。
 
    <p align="center">
-   	<img src="./figures/model_setup4.png" width="40%">
+   	<img src="content_cn/mbd/figures/model_setup4.png" width="40%">
    </p>
 
 5. 打开`simulation/MILSIM.slx`模型，查看对应载具的算法模型，包括Plant，INS，FMS和Controller等。
 
    <p align="center">
-   	<img src="./figures/milsim.png" width="40%">
+   	<img src="content_cn/mbd/figures/milsim.png" width="40%">
    </p>

@@ -8,7 +8,7 @@
 通过数据在环仿真就能完美解决这个问题，仅需记录少量的模型输入数据，即可通过数据在环仿真还原出所有数据，并且仿真得到的结果跟真实数据完全一致！
 
 <p align="center">
- <img src="figures/datasim.png" width="80%">
+ <img src="content_cn/simulation/figures/datasim.png" width="80%">
 </p>
 
 
@@ -73,14 +73,14 @@ Control_Out          id:14  record:49       lost:0
 要获得当前会话ID，您可以输入`boot_log`命令，当前*boot_log.txt*文件所在的目录即为当前的日志绘画目录。
 
 <p align="center">
-	<img src="./figures/session_id.png" width="30%">
+	<img src="content_cn/simulation/figures/session_id.png" width="30%">
 </p>
 <br>
 
 在停止日志记录后，可以通过`QGC 3.5.6`地面站来下载日志，具体操作是的进入到*Component->Onboard Files*，点击列出文件，然后选中待下载的日志文件点击下载文件。
 
 <p align="center">
-	<img src="./figures/download_log.png" width="40%">
+	<img src="content_cn/simulation/figures/download_log.png" width="40%">
 </p>
 
 > 若日志较多或者文件较大，可以将SD卡取下使用读卡器进行下载
@@ -90,7 +90,7 @@ Control_Out          id:14  record:49       lost:0
 FMT-Model提供了一个Matlab [脚本](https://github.com/Firmament-Autopilot/FMT-Model/blob/master/utils/log_parser/parse_mlog.m)用于解析日志数据。在Matlab中运行该脚本并选择需要解析的日志文件，脚本将解析日志数据并生成*.mat*文件，这些文件可以被导入到Matlab中用于数据在环仿真。
 
 <p align="center">
-	<img src="./figures/parsed_log.png" width="45%">
+	<img src="content_cn/simulation/figures/parsed_log.png" width="45%">
 </p>
 
 #### 运行数据在环仿真
@@ -103,7 +103,7 @@ FMT-Model提供了一个Matlab [脚本](https://github.com/Firmament-Autopilot/F
 5. 点击`Run`按钮运行仿真，等待仿真完成
 
 <p align="center">
-	<img src="./figures/data_sim.png" width="50%">
+	<img src="content_cn/simulation/figures/data_sim.png" width="50%">
 </p>
 
 
@@ -112,7 +112,7 @@ FMT-Model提供了一个Matlab [脚本](https://github.com/Firmament-Autopilot/F
 当仿真完成后，可以点击右上角的`CompareModelOut`蓝色按钮，绘制仿真模型输出数据（红色）与真实数据（蓝色）的对比图。
 
 <p align="center">
-	<img src="./figures/compare_model_out.png" width="50%">
+	<img src="content_cn/simulation/figures/compare_model_out.png" width="50%">
 </p>
 
 
@@ -128,13 +128,13 @@ FMT-Model提供了一个Matlab [脚本](https://github.com/Firmament-Autopilot/F
 在数据在环仿真跑完后，可以在`Simulink Data Inspector（SDI）`中检索模型的数据。
 
 <p align="center">
-	<img src="./figures/sdi_signal.png" width="50%">
+	<img src="content_cn/simulation/figures/sdi_signal.png" width="50%">
 </p>
 
 您可以在Simulink模型中单机选择要查看的信号线，为其命名，然后点选`Enable Data Logging`，信号线上将出现一个小的”信号“标志。这表示该信号数据将被记录，那么在下次运行数据在环仿真后，将能在SDI中查找到该数据。
 
 <p align="center">
-	<img src="./figures/enable_data_log.png" width="50%">
+	<img src="content_cn/simulation/figures/enable_data_log.png" width="50%">
 </p>
 
 

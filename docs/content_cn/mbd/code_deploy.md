@@ -31,7 +31,7 @@
 - 定义模型日志数据，用于数据仿真或记录目的。
 
 <p align="left">
- <img src="figures/model_interface.png" width="30%">
+ <img src="content_cn/mbd/figures/model_interface.png" width="30%">
 </p>
 
 

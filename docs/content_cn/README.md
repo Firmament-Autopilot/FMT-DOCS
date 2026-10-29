@@ -11,7 +11,7 @@ FMT系统是一个全面且先进的无人系统解决方案，主要由三个�
 - **FMT-SIM**: 基于3D引擎实现的模拟仿真环境，提供逼真的渲染效果和丰富的仿真场景，以及相机、激光雷达等多种传感器数据的模拟。
 
  <p align="center">
-   <img src="./figures/structure_diag.png" width="50%">
+   <img src="content_cn/figures/structure_diag.png" width="50%">
  </p>
 
 ### 基于模型开发
@@ -19,7 +19,7 @@ FMT系统是一个全面且先进的无人系统解决方案，主要由三个�
 支持基于模型的设计（Model-Based Design，MBD）方法基于MATLAB/Simulink快速搭建无人平台算法原型，如惯性导航，控制率，飞行管理系统，被控对象模型等。模型可直接生成目标硬件平台的C/C++代码，减少手动编码的繁琐，大大提高开发效率。模型贯穿整个开发周期，从需求规格到设计和验证，直到最终的实现和测试，符合V-Model开发标准，提升系统安全可靠性。
 
  <p align="center">
-   <img src="./figures/v_model.png" width="60%">
+   <img src="content_cn/figures/v_model.png" width="60%">
  </p>
 
 ### 多平台支持
@@ -27,7 +27,7 @@ FMT系统是一个全面且先进的无人系统解决方案，主要由三个�
 支持多种无人平台，包含多旋翼（四旋翼，六旋翼，八旋翼等），固定翼，VTOL，无人车，无人船等。同时也可用于其它的异构无人平台，更多无人平台的应用等待你去探索！
 
  <p align="center">
-   <img src="./figures/support_vehicle.png" width="40%">
+   <img src="content_cn/figures/support_vehicle.png" width="40%">
  </p>
 
 ### 完善的仿真功能
@@ -37,18 +37,18 @@ FMT平台支持完善的仿真功能，包括硬件在环仿真（Hardware-in-lo
 其中数据在环仿真可以通道少量记录的日志数据还原出算法的所有数据，极大提升了调试和开发效率。
 
 <p align="center">
-  <img src="./figures/mil_sim.png" width="50%">
+  <img src="content_cn/figures/mil_sim.png" width="50%">
   <br>
   <span style="color: #666; font-size: 14px;">MIL模型在环仿真</span>
 </p>
 
 <p align="center">
-  <img src="./figures/hil_sim.png" width="50%">
+  <img src="content_cn/figures/hil_sim.png" width="50%">
   <br>
   <span style="color: #666; font-size: 14px;">HIL硬件在环仿真</span>
 </p>
 <p align="center">
-  <img src="./figures/datasim.png" width="80%">
+  <img src="content_cn/figures/datasim.png" width="80%">
   <br>
   <span style="color: #666; font-size: 14px;">数据在环仿真</span>
 </p>

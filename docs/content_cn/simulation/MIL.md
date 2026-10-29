@@ -10,7 +10,7 @@
 典型的模型在环仿真结构图如下所示：
 
 <p align="center">
-  <img src="figures/mil_model.png" width="40%">
+  <img src="content_cn/simulation/figures/mil_model.png" width="40%">
   <br>
   <span style="color: #666; font-size: 14px;">MIL仿真框图</span>
 </p>
@@ -18,7 +18,7 @@
 
 
 <p align="center">
-  <img src="./figures/milsim.png" width="40%">
+  <img src="content_cn/simulation/figures/milsim.png" width="40%">
   <br>
   <span style="color: #666; font-size: 14px;">MIL Simulink模型</span>
 </p>
@@ -36,7 +36,7 @@ MIL仿真遵循以下步骤：
 3. 通过RC或者GCS模块设置飞行模式，如`PilotMode.Position`，然后将cmd_1（变化有效）设置为`FMS_Cmd.Takeoff`，让飞机起飞。
 
 <p align="center">
-  <img src="./figures/mil_sim.png" width="40%">
+  <img src="content_cn/simulation/figures/mil_sim.png" width="40%">
   <br>
   <span style="color: #666; font-size: 14px;">MIL模型在环仿真</span>
 </p>
@@ -45,7 +45,7 @@ MIL仿真遵循以下步骤：
 
 当仿真完成后，您可以通过Simulink自带的*Simulation Data Inspector*数据分析工具查看任意的仿真数据。
 <p align="left">
-	<img src="./figures/mil_sdi.png" width="50%">
+	<img src="content_cn/simulation/figures/mil_sdi.png" width="50%">
 </p>
 
 #### 其它模块
@@ -62,7 +62,7 @@ RC（Remote Control）遥控模块用来构建和模拟遥控输出数据。目�
 - **None**：用来模拟遥控器未连接的情况。这很有用，因为遥控器失效的情况下才能通过地面站模块（GCS）来设置飞行模式，因为遥控的模式相比地面站拥有更高优先级。
 
 <p align="left">
-	<img src="./figures/rc_block.png" width="20%">
+	<img src="content_cn/simulation/figures/rc_block.png" width="20%">
 </p>
 
 ##### GCS模块
@@ -71,7 +71,7 @@ RC（Remote Control）遥控模块用来构建和模拟遥控输出数据。目�
 > 注意，遥控相比于地面站拥有更高的模式优先级，所以只有当遥控模块无效（设置为None）的时候，地面站模块的模式设置才会生效
 
 <p align="left">
-	<img src="./figures/gcs_block.png" width="30%">
+	<img src="content_cn/simulation/figures/gcs_block.png" width="30%">
 </p>
 
 ##### Auto_Cmd模块
@@ -89,5 +89,5 @@ RC（Remote Control）遥控模块用来构建和模拟遥控输出数据。目�
 可视化模块当前支持3种外部视景软件，分别是**Matlab-3D**, **Flightgear**或者**UE4**，默认的可视化工具是UE4, 需搭配FMT-SIM来使用；Matlab-3D是Simulink自带的3D显示模块，可以双击进行打开。
 
 <p align="left">
-	<img src="./figures/milvisualize.png" width="35%">
+	<img src="content_cn/simulation/figures/milvisualize.png" width="35%">
 </p>

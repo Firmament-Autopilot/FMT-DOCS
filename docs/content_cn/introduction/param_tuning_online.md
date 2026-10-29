@@ -90,19 +90,30 @@ param set MC_ROLLRATE_P 0.1
 ```
 > 我们可以通过`param set <parameter> <value>`指令来设定参数值，其中*parameter*是待修改的参数名称，*value*的新的参数值。注意，如果待修改的值为负数，则需要在其前面加上双斜杠`--`，例如`param set RATE_I_MIN -- -0.1`。关于更多param set的用法，可以输入param set --help。
 
-修改参数后，无需重新启动飞控器，修改会立即生效。因此理论上，您可以在飞行过程中进行参数微调。然而，出于安全考虑，建议在起飞前在地面上调整参数。
-调整一组控制效果稳定的参数后，请记得输入 `param save` 保存它们，以防止在断电时丢失参数。
-
 除了指令以外，我们也可以通过地面站来修改参数，我们可以在地面站的参数界面的搜索框中输入我们要修改的参数名，然后点击该参数即可输入新的数值。
 
 <p align="center">
-  <img src="figures/qgc_parameter.png" width="40%">
+  <img src="content_cn/introduction/figures/qgc_parameter.png" width="40%">
+</p>
+修改参数后，无需重新启动飞控器，修改会立即生效。因此理论上，您可以在飞行过程中进行参数微调。然而，出于安全考虑，建议在起飞前在地面上调整参数。
+调整一组控制效果稳定的参数后，请记得输入 `param save` 保存它们，以防止在断电时丢失参数。
+
+
+
+### 查看控制曲线
+
+为了观察控制器的控制效果，我们通常需要将控制器的目标信号和实际信号绘制出来。
+
+首先在控制器的Simulink模型中找到要查看的角速度环的目标信号和实际信号，并对其命名。然后右键单击信号线选择*Properties*，将*Storage class*修改为`ExportedGlobal`将其进行导出，以便我们在飞控嵌入式中进行读取。
+
+<p align="center">
+ <img src="content_cn/introduction/figures/signal_export.png" width="40%">
 </p>
 
 重新编译生成Controller的代码，在*Controller.h*中我们将可以看到我们导出的目标信号。
 
 <p align="center">
- <img src="figures/signal_export_gen.png" width="40%">
+ <img src="content_cn/introduction/figures/signal_export_gen.png" width="40%">
 </p>
 
 然后我们在`control_interface.c`文件中添加如下代码，将信号以50ms周期发送到地面站。
@@ -131,5 +142,5 @@ void control_interface_step(uint32_t timestamp)
 打开地面站的`Mavlink Analyze`界面，我们可以看到发送过来的信号信息。通过观察目标信号（rate_cmd）和实际信号（rate_est）就可以知道控制的误差，根据误差来实时调节控制参数。
 
 <p align="center">
- <img src="./figures/qgc_analyze.png" width="40%">
+ <img src="./content_cn/introduction/figures/qgc_analyze.png" width="40%">
 </p>
